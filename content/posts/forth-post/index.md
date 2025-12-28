@@ -1,9 +1,10 @@
-+++
-date = '2025-12-25T17:16:04+07:00'
-draft = false
-title = 'This is My Second Post'
-layout = 'page'
-+++
+---
+title: "Forth Post"
+highlight: true
+result: "Rp 83.7Bn monthly uplift"
+summary: "Personalized offer optimization using segmentation"
+weight: 4
+---
 
 # Testing Testing
 

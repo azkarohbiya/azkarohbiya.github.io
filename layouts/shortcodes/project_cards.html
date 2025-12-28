@@ -1,0 +1,54 @@
+{{/* Renders 3 cards in columns from pages flagged with Params.highlight=true.
+     Usage:
+       {{< project_cards section="posts" >}}
+     If section not provided, defaults to "posts".
+*/}}
+
+{{- $section := .Get "section" | default "posts" -}}
+
+{{- $items := where site.RegularPages "Section" $section -}}
+{{- $items = where $items "Params.highlight" true -}}
+
+{{/* Optional ordering: weight first, then date (newest). */}}
+{{- $items = sort $items "Weight" "asc" -}}
+{{- $items = first 3 $items -}}
+
+{{- if lt (len $items) 1 -}}
+  <div style="opacity:.8; padding:12px 0;">
+    No highlighted pages found in section "<strong>{{ $section }}</strong>".
+    Add <code>highlight: true</code> in the page front matter.
+  </div>
+{{- else -}}
+
+<style>
+  .pc-grid { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:16px; margin-top:16px; }
+  @media (max-width: 900px){ .pc-grid{ grid-template-columns:repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 600px){ .pc-grid{ grid-template-columns:1fr; } }
+
+  .pc-card { display:block; text-decoration:none; border-radius:16px; border:1px solid rgba(120,120,120,0.25);
+             padding:16px; box-shadow:0 10px 30px rgba(0,0,0,0.12); }
+  .pc-title { font-weight:800; font-size:16px; margin-bottom:8px; }
+  .pc-result { font-weight:700; margin-bottom:8px; opacity:0.95; color: rgb(189, 189, 189)}
+  .pc-summary { opacity:0.85; line-height:1.35; color: rgb(189, 189, 189)}
+  .pc-cta { margin-top:12px; font-weight:300; opacity:0.6; }
+</style>
+
+<div class="pc-grid">
+  {{- range $items -}}
+    <a class="pc-card" href="{{ .RelPermalink }}">
+      <div class="pc-title">{{ .Title }}</div>
+
+      {{- with .Params.result -}}
+        <div class="pc-result">{{ . }}</div>
+      {{- end -}}
+
+      {{- with .Params.summary -}}
+        <div class="pc-summary">{{ . }}</div>
+      {{- end -}}
+
+      <div class="pc-cta">View project →</div>
+    </a>
+  {{- end -}}
+</div>
+
+{{- end -}}

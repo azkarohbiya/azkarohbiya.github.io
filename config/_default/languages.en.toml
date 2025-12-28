@@ -3,7 +3,7 @@ languageName = "English"
 languageDirection = "ltr"
 weight = 1
 
-title = "Azka Rohbiya"
+title = "azkarohbiya"
 # copyright = "Copy, _right?_ :thinking_face:"
 
 [params]
@@ -14,16 +14,17 @@ title = "Azka Rohbiya"
 
 [params.author]
   name = "Azka Rohbiya Ramadani"
-  image = "img/image.png"
-  headline = "I'm only human who wants to make a change for improving quality of life"
-# bio = "A little bit about you"
+  image = "img/01_profile.png"
+  headline = "Napoleon Bonaparte said that winning a war is 90% information, so I provide the remaining 10%, turning the data into victory. With my experience for over 5 years in analytics, I specialize in solving challenges, communicating the insights, and pitching teams to make real changes in business cases."
+  # bio = "A little bit about you"
   links = [
-     { youtube = "https://youtube.com/username" },
-     { github = "https://github.com/username" },
-     { linkedin = "https://linkedin.com/in/username" },
+     { email = "mailto:azkarohbiya@gmail.com" },
+     { github = "https://github.com/azuka31" },
+     { linkedin = "https://www.linkedin.com/in/azka-rohbiya-21587a145" },
 ]
   #   { email = "mailto:hello@your_domain.com" },
   #   { link = "https://link-to-some-website.com/" },
+  #   { youtube = "https://youtube.com/username" },
   #   { amazon = "https://www.amazon.com/hz/wishlist/ls/wishlist-id" },
   #   { apple = "https://www.apple.com" },
   #   { blogger = "https://username.blogspot.com/" },

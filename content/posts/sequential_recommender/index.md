@@ -1,9 +1,14 @@
-+++
-date = '2025-12-26T17:16:04+07:00'
-draft = false
-title = 'This is My First Post'
-description = "Testing Testing Testing"
-+++
+---
+date : '2025-12-26T17:16:04+07:00'
+draft : false
+title : 'Sequential Recommender System'
+description : ""
+highlight: true
+result: "Growing the digital revenue around 150% percent"
+summary: "This model was used to enhance collaborative filtering approach, offering digital subscription products. The model was able to introduce niche and seasonal products, which are more personalized"
+weight : 1
+showTableOfContents: true
+---
 
 # Title
 
@@ -11,12 +16,6 @@ description = "Testing Testing Testing"
 ### Introduction
 
 [scond](../second-post/index.md)
-
-
-
-{{< preview page="posts/second-post" >}}
-Preview Second Post
-{{< /preview >}}
 
 ---
 

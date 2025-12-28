@@ -1,32 +1,60 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Welcome to congo on Azka Rohbiya</title>
+    <title>Azka Rohbiya on azkarohbiya</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content in Welcome to congo on Azka Rohbiya</description>
+    <description>Recent content in Azka Rohbiya on azkarohbiya</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 26 Dec 2025 17:16:04 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 27 Dec 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>This is My First Post</title>
-      <link>http://localhost:1313/posts/first-post/</link>
+      <title>Sequential Recommender System</title>
+      <link>http://localhost:1313/posts/sequential_recommender/</link>
       <pubDate>Fri, 26 Dec 2025 17:16:04 +0700</pubDate>
-      <guid>http://localhost:1313/posts/first-post/</guid>
+      <guid>http://localhost:1313/posts/sequential_recommender/</guid>
+      <description>This model was used to enhance collaborative filtering approach, offering digital subscription products. The model was able to introduce niche and seasonal products, which are more personalized</description>
+    </item>
+    <item>
+      <title>Digital DNA</title>
+      <link>http://localhost:1313/posts/digital_dna/</link>
+      <pubDate>Fri, 26 Dec 2025 17:16:04 +0700</pubDate>
+      <guid>http://localhost:1313/posts/digital_dna/</guid>
+      <description>Classication of Multi-apps Users as the new segmentation in digital lifestyle of customers</description>
+    </item>
+    <item>
+      <title>Propensity Score Matching</title>
+      <link>http://localhost:1313/posts/propensity_score_matching/</link>
+      <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/propensity_score_matching/</guid>
+      <description>The algorithm that helps to find artificial control group for apple-to-apple comparison, avoiding bias in measurement impacts</description>
+    </item>
+    <item>
+      <title>Forth Post</title>
+      <link>http://localhost:1313/posts/forth-post/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/forth-post/</guid>
+      <description>Personalized offer optimization using segmentation</description>
+    </item>
+    <item>
+      <title>Contact</title>
+      <link>http://localhost:1313/contact/</link>
+      <pubDate>Sat, 27 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/contact/</guid>
       <description></description>
     </item>
     <item>
-      <title>This is My Second Post</title>
-      <link>http://localhost:1313/posts/second-post/</link>
-      <pubDate>Thu, 25 Dec 2025 17:16:04 +0700</pubDate>
-      <guid>http://localhost:1313/posts/second-post/</guid>
+      <title>Introduction</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Sat, 27 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
       <description></description>
     </item>
     <item>
-      <title>This is My Third Post</title>
-      <link>http://localhost:1313/posts/third-post/</link>
-      <pubDate>Wed, 25 Dec 2024 17:16:04 +0700</pubDate>
-      <guid>http://localhost:1313/posts/third-post/</guid>
+      <title>Journey</title>
+      <link>http://localhost:1313/journey/</link>
+      <pubDate>Sat, 27 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/journey/</guid>
       <description></description>
     </item>
   </channel>
