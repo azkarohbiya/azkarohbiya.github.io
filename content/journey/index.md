@@ -2,18 +2,20 @@
 title : "Journey"
 menu: "main"
 date: "2025-12-27"
+showTableOfContents: true
 ---
-
-# Working Experience
-
-- Telkomsel
-- JDid
-- Kinarya Alihdaya Mandiri 
-- Foom
 
 ---
 
-# Education Background
+
+
+## Career Timeline
+{{< timeline src="work_career" >}}
+
+---
+
+## Educational Background
+{{< timeline src="edu_career" >}}
 
 - Universitas Pertamina
     - Final Thesis : Delignification Lignin, Computational Chemistry, Linux
@@ -26,7 +28,7 @@ date: "2025-12-27"
 
 ---
 
-# Language Proficiency
+## Language Proficiency
 
 IELTS : 6.5
 Date : 2025-12-10
@@ -38,7 +40,7 @@ Preview Cert
 
 ---
 
-# Certification
+## Certification
 
 - LinkedIn
 - Datacamp

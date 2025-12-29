@@ -1,0 +1,10 @@
+items:
+  - date: "2016 - 2020"
+    title: "Universitas Pertamina"
+    text: "Jakarta"
+    link: "/posts/first-post/"
+    linkText: "Read more"
+
+  - date: "2019"
+    title: "Universiti Teknologi Petronas"
+    text: "Built pipelines and dashboards for performance tracking."

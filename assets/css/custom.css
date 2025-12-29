@@ -1,0 +1,122 @@
+/* =========================
+   Congo Custom CSS
+   ========================= */
+
+/* -------- Vertical Timeline (tlv) -------- */
+.tlv { 
+  list-style: none; 
+  padding: 0; 
+  margin: 1rem 0; 
+}
+
+.tlv-item {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 14px;
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.tlv-rail { 
+  position: relative; 
+}
+
+.tlv-dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(120,120,120,.35);
+  background: rgba(147,197,253,.14);
+}
+
+.tlv-icon { 
+  width: 12px; 
+  height: 12px; 
+  color: rgba(147,197,253,.95); 
+}
+
+.tlv-line {
+  position: absolute;
+  left: 10px;
+  top: 26px;
+  bottom: -18px;
+  width: 2px;
+  background: rgba(120,120,120,.28);
+}
+
+.tlv-item:last-child .tlv-line { 
+  display: none; 
+}
+
+/* Card */
+.tlv-card {
+  border: 1px solid rgba(120,120,120,.22);
+  background: rgba(120,120,120,.08);
+  border-radius: 14px;
+  padding: 14px 14px;
+
+  /* ✅ polish: modern hover behavior */
+  transition: transform .15s ease, background .15s ease, border-color .15s ease, box-shadow .15s ease;
+  cursor: pointer;
+}
+
+/* ✅ polish: subtle lift + accent border */
+.tlv-card:hover {
+  transform: translateY(-2px);
+  background: rgba(120,120,120,.12);
+  border-color: rgba(147,197,253,.28);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+}
+
+.tlv-time {
+  display: inline-block;
+  font-size: .75rem;
+  padding: .2rem .5rem;
+  border-radius: 999px;
+  border: 1px solid rgba(120,120,120,.25);
+  background: rgba(120,120,120,.10);
+  opacity: .95;
+}
+
+.tlv-title { 
+  margin: .55rem 0 .35rem; 
+  font-weight: 750; 
+  font-size: 1.05rem; 
+}
+
+.tlv-text { 
+  margin: 0 0 .75rem; 
+  opacity: .9; 
+  line-height: 1.45; 
+}
+
+/* Button / link inside card */
+.tlv-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .45rem .75rem;
+  border-radius: 10px;
+  border: 1px solid rgba(120,120,120,.28);
+  background: rgba(120,120,120,.10);
+  text-decoration: none;
+}
+
+/* Hover for button */
+.tlv-btn:hover { 
+  background: rgba(120,120,120,.18); 
+}
+
+/* ✅ If you later wrap the whole card with <a>, this keeps styling clean */
+.tlv-card a { 
+  text-decoration: none; 
+}
+
+/* ✅ If you later make the card clickable via JS, ensure links still work */
+.tlv-card a { 
+  pointer-events: auto; 
+}
