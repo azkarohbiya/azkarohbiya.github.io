@@ -24,6 +24,6 @@ In analytics, I'm really into grasping the domain knowledge first over the techn
 
 To see more about professional journey, please refer to my resume!
 
-{{< button href="../second-post/" >}}
+{{< button href="https://drive.google.com/file/d/1THHRr1Q9f30gr6BeknUTKtjSN7JmMh1H/view?usp=sharing" >}}
 Resume
 {{< /button >}}

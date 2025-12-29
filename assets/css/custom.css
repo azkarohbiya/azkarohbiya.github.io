@@ -1,5 +1,5 @@
 /* =========================
-   Congo Custom CSS
+   Timeline
    ========================= */
 
 /* -------- Vertical Timeline (tlv) -------- */
@@ -30,13 +30,13 @@
   justify-content: center;
 
   border: 1px solid rgba(120,120,120,.35);
-  background: rgba(147,197,253,.14);
+  background: rgba(198, 147, 253, 0.14);
 }
 
 .tlv-icon { 
   width: 12px; 
   height: 12px; 
-  color: rgba(147,197,253,.95); 
+  color: rgba(191, 147, 253, 0.95); 
 }
 
 .tlv-line {
@@ -68,7 +68,7 @@
 .tlv-card:hover {
   transform: translateY(-2px);
   background: rgba(120,120,120,.12);
-  border-color: rgba(147,197,253,.28);
+  border-color: rgba(170, 147, 253, 0.28);
   box-shadow: 0 10px 30px rgba(0,0,0,0.18);
 }
 
@@ -119,4 +119,148 @@
 /* ✅ If you later make the card clickable via JS, ensure links still work */
 .tlv-card a { 
   pointer-events: auto; 
+}
+
+/* =========================
+   Info Card (ic-card)
+   ========================= */
+
+.ic-card{
+  /* structure */
+  border-radius: 16px;                 /* nicer than base */
+  border: 1px solid rgba(120,120,120,.22);
+  background: rgba(120,120,120,.08);
+  padding: 18px;
+
+  /* feel */
+  box-shadow: 0 10px 30px rgba(0,0,0,.14);
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease, background .15s ease;
+}
+
+/* ✅ hover lift like the timeline */
+.ic-card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 16px 44px rgba(0,0,0,.22);
+  background: rgba(120,120,120,.10);
+  border-color: rgba(147,197,253,.28);
+}
+
+/* icon polish */
+.ic-card svg.w-7{
+  opacity: .95;
+}
+
+/* title */
+.ic-card h5{
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+}
+
+/* body text */
+.ic-card p{
+  opacity: .88;
+  line-height: 1.5;
+}
+
+/* CTA link */
+.ic-card a.inline-flex{
+  gap: .35rem;
+  padding-top: 2px;
+}
+
+/* small arrow animation */
+.ic-card a.inline-flex svg{
+  transition: transform .15s ease, opacity .15s ease;
+  opacity: .9;
+}
+
+.ic-card:hover a.inline-flex svg{
+  transform: translateX(2px);
+  opacity: 1;
+}
+/* =========================
+   List Group (lg-*)
+   Premium styling (Flowbite-like)
+   ========================= */
+
+.lg-card{
+  border-radius: 16px;
+  border: 1px solid rgba(120,120,120,.22);
+  background: rgba(120,120,120,.08);
+  box-shadow: 0 10px 30px rgba(0,0,0,.14);
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease, background .15s ease;
+}
+.lg-card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 16px 44px rgba(0,0,0,.20);
+  border-color: rgba(147,197,253,.22);
+}
+
+/* ✅ Reset list styling so Congo .prose doesn't mess it up */
+.lg-list{
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* ✅ Single source of truth for item spacing */
+.lg-item{
+  padding: 10px 0;
+  border-color: rgba(120,120,120,.18) !important;
+}
+
+/* row hover + tight padding */
+.lg-row{
+  padding: 4px 8px;
+  border-radius: 12px;
+  transition: background .15s ease, transform .15s ease;
+}
+.lg-row:hover{
+  background: rgba(120,120,120,.10);
+  transform: translateY(-1px);
+}
+
+
+/* avatar: force exact size */
+.lg-avatar{
+  width: 28px;               /* ✅ change this number to 24/26/30 as you like */
+  height: 28px;
+  flex: 0 0 28px;
+
+  object-fit: cover;         /* ✅ keeps faces centered */
+  border: 1px solid rgba(147,197,253,.18);
+  box-shadow: 0 6px 14px rgba(0,0,0,.18);
+}
+
+/* text */
+.lg-name{
+  font-weight: 700;
+  color: rgba(255,255,255,.92);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+
+.lg-sub{
+  margin-top: 0;
+  font-size: .85rem;
+  line-height: 1.15;
+  opacity: .82;
+  color: rgba(209,206,206,.92);
+}
+
+/* date pill */
+.lg-date{
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(120,120,120,.25);
+  background: rgba(120,120,120,.10);
+  color: rgba(209,206,206,.92);
+  font-size: .75rem;
+  white-space: nowrap;
+}
+
+.lg-row:hover .lg-date{
+  border-color: rgba(147,197,253,.25);
 }

@@ -1,10 +1,11 @@
 items:
   - date: "2016 - 2020"
     title: "Universitas Pertamina"
-    text: "Jakarta"
-    link: "/posts/first-post/"
-    linkText: "Read more"
+    text: "Final Projects : Computational Chemistry : Molecular Dynamics Simulation in the Delignification Process by Low Transition Temperature Mixtures (LTTM) Solvents Using the GROMACS Application (Linux-based Apps). GPA : 3.8"
+    link: "https://universitaspertamina.ac.id/profile/sejarah"
+    # linkText: "Read more"
 
   - date: "2019"
     title: "Universiti Teknologi Petronas"
-    text: "Built pipelines and dashboards for performance tracking."
+    text: "in Exchange Student Program"
+    link: "https://www.utp.edu.my/Pages/The-University/About-Us.aspx"

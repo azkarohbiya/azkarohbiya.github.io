@@ -5,11 +5,8 @@ date: "2025-12-27"
 showTableOfContents: true
 ---
 
----
+## Professional Background
 
-
-
-## Career Timeline
 {{< timeline src="work_career" >}}
 
 ---
@@ -17,26 +14,17 @@ showTableOfContents: true
 ## Educational Background
 {{< timeline src="edu_career" >}}
 
-- Universitas Pertamina
-    - Final Thesis : Delignification Lignin, Computational Chemistry, Linux
-    - Publication : Paper
-    - GPA : Paper
-    - Best Achievement : Best Speaker in International Conference
-
-- Universiti Teknologi Petronas
-    - Applied Chemistry
-
 ---
 
 ## Language Proficiency
 
-IELTS : 6.5
-Date : 2025-12-10
-CERF : B2 (Upper Intermediate)
+{{< info_card
+  title="IELTS"
+  text="Score : 6.5 (CERF B2), issued by IDP IELTS"
+  href="https://drive.google.com/file/d/1Gfn7t9jXF9w9COKOZiw_GC-WEDmD4Z0d/view?usp=sharing"
+  cta="Preview Certificate"
+>}}
 
-{{< button href="../second-post/" >}}
-Preview Cert
-{{< /button >}}
 
 ---
 
@@ -46,4 +34,8 @@ Preview Cert
 - Datacamp
 - Sololearn
 
+# Resume
 
+{{< button href="https://drive.google.com/file/d/1THHRr1Q9f30gr6BeknUTKtjSN7JmMh1H/view?usp=sharing" >}}
+Resume
+{{< /button >}}
