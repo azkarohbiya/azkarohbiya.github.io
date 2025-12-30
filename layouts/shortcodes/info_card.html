@@ -3,6 +3,12 @@
 {{- $href  := .Get "href"  | default "#" -}}
 {{- $cta   := .Get "cta"   | default "Learn more" -}}
 
+{{/* ✅ Option B: convert \n in text param into <br> */}}
+{{- $textHTML := "" -}}
+{{- if $text -}}
+  {{- $textHTML = replace $text "\n" "<br>" -}}  {{/* ✅ */}}
+{{- end -}}
+
 <div class="ic-card bg-neutral-primary-soft block max-w-sm p-6 border border-default rounded-base shadow-xs">
   <svg class="w-7 h-7 mb-3 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -12,10 +18,10 @@
   <h5 class="mb-2 text-2xl font-semibold tracking-tight text-heading">{{ $title }}</h5>
 
   {{- if $text -}}
-    <p class="mb-3 text-body">{{ $text }}</p>
+    <p class="mb-3 text-body">{{ $textHTML | safeHTML }}</p>  {{/* ✅ render <br> */}}
   {{- end -}}
 
   <a href="{{ $href }}" class="inline-flex items-center font-medium text-fg-brand hover:underline" style="white-space:nowrap;">
-  <span>{{ $cta }}</span>
-</a>
+    <span>{{ $cta }}</span>
+  </a>
 </div>
