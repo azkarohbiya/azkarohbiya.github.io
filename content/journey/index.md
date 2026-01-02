@@ -8,7 +8,7 @@ showTableOfContents: true
 ## 💼 Professional Background
 
 {{< alert >}}
-**TODO** next, add total years working in the companies to ease the readers
+**TODO** next, add total years working in the companies to ease the readers, add bullet points
 {{< /alert >}}
 
 

@@ -89,9 +89,11 @@
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2023-12-01T00:00:00+00:00">
     <meta property="article:modified_time" content="2023-12-01T00:00:00+00:00">
+    <meta property="og:image" content="http://localhost:1313/posts/propensity_score_matching/cover.jpg">
 
   
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/posts/propensity_score_matching/cover.jpg">
   <meta name="twitter:title" content="Propensity Score Matching">
   <meta name="twitter:description" content="The algorithm that helps to find artificial control group for apple-to-apple comparison, avoiding bias in measurement impacts">
 
@@ -120,7 +122,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "14"
+    "wordCount": "437"
   }
   </script>
     
@@ -158,7 +160,7 @@
     
       <link href="mailto:azkarohbiya@gmail.com" rel="me" />
     
-      <link href="https://github.com/azuka31" rel="me" />
+      <link href="https://github.com/azkarohbiya" rel="me" />
     
       <link href="https://www.linkedin.com/in/azka-rohbiya-21587a145" rel="me" />
     
@@ -336,28 +338,272 @@
         </div>
       
       
+        <div class="prose">
+          
+          
+          
+          
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mb-6 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/propensity_score_matching/cover_hu_5329b5afcd87a92c.webp 330w,http://localhost:1313/posts/propensity_score_matching/cover_hu_511a7bcc1a60091a.webp 660w
+            
+              
+                ,http://localhost:1313/posts/propensity_score_matching/cover_hu_67d64da294a81c4b.webp 936w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/propensity_score_matching/cover_hu_67d64da294a81c4b.webp 936w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="936"
+        height="594"
+        class="mb-6 rounded-md"
+        
+        
+        
+          src="http://localhost:1313/posts/propensity_score_matching/cover_hu_168f1abdd4d309ed.jpg" srcset="http://localhost:1313/posts/propensity_score_matching/cover_hu_41fb17e50f61537a.jpg 330w,http://localhost:1313/posts/propensity_score_matching/cover_hu_168f1abdd4d309ed.jpg 660w
+          
+            ,http://localhost:1313/posts/propensity_score_matching/cover.jpg 936w
+          
+          
+            ,http://localhost:1313/posts/propensity_score_matching/cover.jpg 936w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+          
+        </div>
+      
     </header>
     <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
       
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8">
+          <div class="toc pe-5 lg:sticky lg:top-10 print:hidden">
+            <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
+  <summary
+    class="block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    Table of Contents
+  </summary>
+  <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#-what-does-it-matter">❓ What does it matter?</a>
+      <ul>
+        <li><a href="#-understanding-the-scenario">📢 Understanding the scenario</a></li>
+        <li><a href="#-the-bias-comes-here">📉 The bias comes here</a></li>
+        <li><a href="#-the-solution">🎯 The solution</a></li>
+      </ul>
+    </li>
+    <li><a href="#-into-matching-algorithm">🧮 Into Matching Algorithm</a>
+      <ul>
+        <li><a href="#-a-brief-of-algorithm">🤖 A brief of algorithm</a></li>
+        <li><a href="#-the-improvement">⬆️ the Improvement</a></li>
+      </ul>
+    </li>
+    <li><a href="#insight-explaination">Insight Explaination</a>
+      <ul>
+        <li><a href="#the-data">The data</a></li>
+        <li><a href="#matching">Matching</a></li>
+        <li><a href="#evaluation">Evaluation</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
       <div class="min-h-0 min-w-0 max-w-prose grow">
-        <h1 id="testing-testing" class="relative group">Testing Testing <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#testing-testing" aria-label="Anchor">#</a></span></h1><p>How to be a millionare</p>
-<table>
-  <thead>
-      <tr>
-          <th>Column1</th>
-          <th>Column2</th>
-          <th>Column3</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Item1</td>
-          <td>Item1</td>
-          <td>Item1</td>
-      </tr>
-  </tbody>
-</table>
-<p><a href="second-post">test</a></p>
+        <h2 id="-what-does-it-matter" class="relative group">❓ What does it matter? <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#-what-does-it-matter" aria-label="Anchor">#</a></span></h2><h3 id="-understanding-the-scenario" class="relative group">📢 Understanding the scenario <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#-understanding-the-scenario" aria-label="Anchor">#</a></span></h3><p>It&rsquo;s commonly believed that smoking increases the risk of stroke, yet it requires futher observastion to validate the assumption. One of the most trusted ways to understand this phenomenon by using AB testing experiment, splitting a group to target subgroup, who is allowed to smoke, and the control one who isn&rsquo;t, then comparing them afterwards. On the other hand, doing such an experiment can be hardly executed due to ethical reasons. Likewise, a similar challenge also happens to the other sector like marketing, the field where I&rsquo;m working. Consequently, measuring the existing data, comparing smokers and non-smokers, is an effective option to answer the hypothesis.</p>
+<h3 id="-the-bias-comes-here" class="relative group">📉 The bias comes here <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#-the-bias-comes-here" aria-label="Anchor">#</a></span></h3><p>Here is the twist, after learning the two groups (the smokers and those who don&rsquo;t), we found that the two have different physical condition such as age, weight, and other status. As a result, comparing stroke status of both groups can be bias since those difference could interfere the output</p>
+<h3 id="-the-solution" class="relative group">🎯 The solution <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#-the-solution" aria-label="Anchor">#</a></span></h3><p>To resolve the issue, propensity matching score, as a part of causal approach, can be implemented to match the available data of the two in the same profile, ensuring the making the decision based on apple-to-apple comparison.</p>
+<h2 id="-into-matching-algorithm" class="relative group">🧮 Into Matching Algorithm <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#-into-matching-algorithm" aria-label="Anchor">#</a></span></h2><h3 id="-a-brief-of-algorithm" class="relative group">🤖 A brief of algorithm <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#-a-brief-of-algorithm" aria-label="Anchor">#</a></span></h3><p>The main calculation is finding every smoker&rsquo;s pair. This looks easy until so many features we have to involve in the calculation. This is very similar in seeking a couple, which is getting more complex to match all the criteria. To address this, probability score of logistic regression is used, representing all features, than finding the pair using neighbor algorithm. For your information, I used sklearn neigbor finder to solve computational issues, as this is compatible for handling large amount of data.</p>
+<h3 id="-the-improvement" class="relative group">⬆️ the Improvement <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#-the-improvement" aria-label="Anchor">#</a></span></h3><p>When it comes to big data, calculating propensity score matching requires so much computational process, as the algorithm involves combination. That&rsquo;s the reason why my team designed our own algorithm, despite the availibility out there. The algorithm we made approximately can handle around ~10 millions. According to my experience, it took minutes to complete calculation using M1 apple sillicon. So, it eventually depends on the computing power.</p>
+<p>For detail explanation about technical details, including how to use my library and to call the syntax, please refer to my github:</p>
+<a
+  class="inline-block !rounded-md bg-primary-600 px-4 py-1 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700"
+  href="https://github.com/azkarohbiya/Propensity-Score-Matching"
+  target="_blank"
+  
+  role="button"
+>
+  
+View on GitHub
+
+</a>
+
+<p>To find out more about the algorithm, you better watch this youtube video:
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/ACVyPp1Fy6Y?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
+</p>
+<h2 id="insight-explaination" class="relative group">Insight Explaination <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#insight-explaination" aria-label="Anchor">#</a></span></h2><h3 id="the-data" class="relative group">The data <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#the-data" aria-label="Anchor">#</a></span></h3><p>Explain about the feature,
+Treatment,
+and Outcome
+Add a table here to tell a lil bit about the data</p>
+<h3 id="matching" class="relative group">Matching <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#matching" aria-label="Anchor">#</a></span></h3><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_200546_hu_773a0258e942c38e.webp 330w,http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_200546_hu_996465c935b1f23b.webp 660w
+            
+              ,http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_200546_hu_d950887e2e42542c.webp 1024w
+            
+            
+              
+                ,http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_200546_hu_92a2f58b61cb62e3.webp 1275w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1275"
+        height="971"
+        class="mx-auto my-0 rounded-md"
+        alt="image"
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_200546_hu_38905a6748882f35.png" srcset="http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_200546_hu_955fadfe92f9e879.png 330w,http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_200546_hu_38905a6748882f35.png 660w
+          
+            ,http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_200546_hu_63fc6a8a09ffead6.png 1024w
+          
+          
+            ,http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_200546.png 1275w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+
+
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_200554_hu_ef648f1cef004f4a.webp 330w,http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_200554_hu_303e646d413597d.webp 660w
+            
+              ,http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_200554_hu_8fd40c605a0be6c6.webp 1024w
+            
+            
+              
+                ,http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_200554_hu_b2cc54402da733bb.webp 1275w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1275"
+        height="997"
+        class="mx-auto my-0 rounded-md"
+        alt="image"
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_200554_hu_802f34de48ff19bc.png" srcset="http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_200554_hu_24a02e6194771225.png 330w,http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_200554_hu_802f34de48ff19bc.png 660w
+          
+            ,http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_200554_hu_e9d50c89726ceeea.png 1024w
+          
+          
+            ,http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_200554.png 1275w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="evaluation" class="relative group">Evaluation <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#evaluation" aria-label="Anchor">#</a></span></h3><p>Microsoft
+Big data</p>
 
       </div>
     </section>
@@ -441,7 +687,7 @@
         <a
           class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
           style="will-change:transform;"
-          href="https://github.com/azuka31"
+          href="https://github.com/azkarohbiya"
           target="_blank"
           aria-label="Github"
           rel="me noopener noreferrer"
@@ -558,7 +804,7 @@
       
         <p class="text-sm text-neutral-500 dark:text-neutral-400">
             &copy;
-            2025
+            2026
             Azka Rohbiya Ramadani
         </p>
       

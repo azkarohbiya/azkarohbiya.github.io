@@ -15,11 +15,11 @@ title = "azkarohbiya"
 [params.author]
   name = "Azka Rohbiya Ramadani"
   image = "img/01_profile.png"
-  headline = "Napoleon Bonaparte said that winning a war is 90% information, so I provide the remaining 10%, turning the data into victory. With my experience for over 5 years in analytics, I specialize in solving challenges, communicating the insights, and pitching teams to make real changes in business cases."
+  headline = "Napoleon Bonaparte said that winning a war is 90% information, so I'll provide the remaining 10%, turning the data into the victory. With my experience for over 5 years in analytics, I specialize in solving challenges, communicating the insights, and pitching teams from various background to make real changes in business."
   # bio = "A little bit about you"
   links = [
      { email = "mailto:azkarohbiya@gmail.com" },
-     { github = "https://github.com/azuka31" },
+     { github = "https://github.com/azkarohbiya" },
      { linkedin = "https://www.linkedin.com/in/azka-rohbiya-21587a145" },
 ]
   #   { email = "mailto:hello@your_domain.com" },
