@@ -41,23 +41,41 @@ View on GitHub
 To find out more about the algorithm, you better watch this youtube video:
 {{< youtube ACVyPp1Fy6Y >}}
 
-## Insight Explaination
+## 💡 Insight Explaination
 
-### The data
+### 🔢 The data
 
-Explain about the feature,
-Treatment,
-and Outcome
-Add a table here to tell a lil bit about the data
+From the data, there are three terminologies that are important to remember, consisiting of feature, treatment, and outcome. The following table are the explanation of terminologies and description that are going to be discuss.
 
-### Matching
+| Terminology          | Description                                                       | Fields                                                                        |
+|----------------------|-------------------------------------------------------------------|-------------------------------------------------------------------------------|
+| Features/Confounders | Possible causes that might influence the outcome                  | hypertension, gender, heart_disease, bmi (body mass index), avg_glucose_level |
+| Treatment            | The variable that indicates the indvidual has been treated or not | smoking status                                                                |
+| Outcome              | The result that we want to observe                                | stroke                                                                        |
+
+In addition, proba was added to indicate score of logistic regression, representing of all confounders.
+
+### 🖥️ Matching
+
+![image](screenshot_20260102_at_222928.png)
+
+Before applying the algorithm, the data shows that both smokers and non-smokers have different profile. One of the noticable one is that the total of non-smokers are far larger than the smokers. Again, the distribution of all confounders are different, heart disease status for example, that there are 18.9% of smokers out of total heart disease sufferers, meanwhile in negative group, the smokers only makes 15.1%. The imbalance might interfere the conclusion because smokers group mostly suffering heart disease.
+
+![image](screenshot_20260102_at_222935.png)
+
+Compared to data after matching process, the distribution of smokers and non-smokers are similar almost in every feature. For example, in hypertension, the ratio of smokers and non-smokers in the positive hypertension group is 50:50, and so the negative one is. As a result, measuring stroke status between the two groups can be much more reliable as both have already similar.
+
+### 🔎 Evaluation
+
+![image](screenshot_20260102_at_223003.png)
 
 
-![image](screenshot_20260102_at_200546.png)
-![image](screenshot_20260102_at_200554.png)
+To support distribution analysis, Standard Mean Difference ([SMD](https://onlinelibrary.wiley.com/doi/10.1002/cesm.12047)) is used as the indicators whether two values of distribution are similar or not. In simple explanation, smaller SMD value means that two groups are in common. 
 
+According to the experiment, there are four confounders (hypertension, age, bmi, and heart_disease) decreasing SMD values, meaning that those features are getting similar after calculation. Despite an increase of glucose level and gender, this is still acceptable.
 
-### Evaluation
+The result shows that 5.3% of smoking group suffers stroke. Before matching, non-smoker group accounted for 4.8%, making 1.1% difference of percentage point with smoking group. In fact, post calculation reveals that the difference of percentage points are larger, around 3.4 percentage points, meaning that smokers are more riskier to suffer stroke
 
-Microsoft
-Big data
+## ⛳️ Further Development
+
+In the theory of causal model, more common term to evaluate result is [ATT](https://causalwizard.app/inference/article/att) (average treatment on treated). This involves further model, instead of directly comparing the treated group with the synthetic one. The actual algorithm has already covered this, yet discussing the usage will be discussed later article.
