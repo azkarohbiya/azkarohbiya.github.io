@@ -29,12 +29,5 @@
       <guid>http://localhost:1313/posts/propensity_score_matching/</guid>
       <description>The algorithm that helps to find artificial control group for apple-to-apple comparison, avoiding bias in measurement impacts</description>
     </item>
-    <item>
-      <title>Forth Post</title>
-      <link>http://localhost:1313/posts/forth-post/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/forth-post/</guid>
-      <description>Personalized offer optimization using segmentation</description>
-    </item>
   </channel>
 </rss>

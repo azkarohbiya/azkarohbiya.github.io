@@ -12,7 +12,7 @@ showTableOfContents: true
 
 ### 📢 Understanding the scenario 
 
-It's commonly believed that smoking increases the risk of stroke, yet it requires futher observastion to validate the assumption. One of the most trusted ways to understand this phenomenon by using AB testing experiment, splitting a group to target subgroup, who is allowed to smoke, and the control one who isn't, then comparing them afterwards. On the other hand, doing such an experiment can be hardly executed due to ethical reasons. Likewise, a similar challenge also happens to the other sector like marketing, the field where I'm working. Consequently, measuring the existing data, comparing smokers and non-smokers, is an effective option to answer the hypothesis.
+It's commonly believed that smoking increases the risk of stroke, yet it requires futher observation to validate the assumption. One of the most trusted ways to understand this phenomenon by using AB testing experiment, splitting a group to target subgroup, who is allowed to smoke, and the control one who isn't, then comparing them afterward. On the other hand, doing such an experiment can be hardly executed due to ethical reasons. Likewise, a similar challenge also happens to the other sector like marketing, the field where I'm working. Consequently, measuring the existing data, comparing smokers and non-smokers, is an effective option to answer the hypothesis.
 
 ### 📉 The bias comes here
 
@@ -47,34 +47,33 @@ To find out more about the algorithm, you better watch this youtube video:
 
 From the data, there are three terminologies that are important to remember, consisiting of feature, treatment, and outcome. The following table are the explanation of terminologies and description that are going to be discuss.
 
-| Terminology          | Description                                                       | Fields                                                                        |
-|----------------------|-------------------------------------------------------------------|-------------------------------------------------------------------------------|
-| Features/Confounders | Possible causes that might influence the outcome                  | hypertension, gender, heart_disease, bmi (body mass index), avg_glucose_level |
-| Treatment            | The variable that indicates the indvidual has been treated or not | smoking status                                                                |
-| Outcome              | The result that we want to observe                                | stroke                                                                        |
+| Terminology          | Description                                                       | Fields                                                                             |
+|----------------------|-------------------------------------------------------------------|------------------------------------------------------------------------------------|
+| Features/Confounders | Possible causes that might influence the outcome                  | hypertension, gender, heart_disease, bmi (body mass index), avg_glucose_level, age |
+| Treatment            | The variable that indicates the indvidual has been treated or not | smoking status                                                                     |
+| Outcome              | The result that we want to observe                                | stroke                                                                             |
 
-In addition, proba was added to indicate score of logistic regression, representing of all confounders.
 
 ### 🖥️ Matching
 
-![image](screenshot_20260102_at_222928.png)
+
+![image](screenshot_20260103_at_195341.png)
 
 Before applying the algorithm, the data shows that both smokers and non-smokers have different profile. One of the noticable one is that the total of non-smokers are far larger than the smokers. Again, the distribution of all confounders are different, heart disease status for example, that there are 18.9% of smokers out of total heart disease sufferers, meanwhile in negative group, the smokers only makes 15.1%. The imbalance might interfere the conclusion because smokers group mostly suffering heart disease.
 
-![image](screenshot_20260102_at_222935.png)
+![image](screenshot_20260103_at_195351.png)
 
 Compared to data after matching process, the distribution of smokers and non-smokers are similar almost in every feature. For example, in hypertension, the ratio of smokers and non-smokers in the positive hypertension group is 50:50, and so the negative one is. As a result, measuring stroke status between the two groups can be much more reliable as both have already similar.
 
 ### 🔎 Evaluation
 
-![image](screenshot_20260102_at_223003.png)
-
+![image](screenshot_20260103_at_145324.png)
 
 To support distribution analysis, Standard Mean Difference ([SMD](https://onlinelibrary.wiley.com/doi/10.1002/cesm.12047)) is used as the indicators whether two values of distribution are similar or not. In simple explanation, smaller SMD value means that two groups are in common. 
 
-According to the experiment, there are four confounders (hypertension, age, bmi, and heart_disease) decreasing SMD values, meaning that those features are getting similar after calculation. Despite an increase of glucose level and gender, this is still acceptable.
+According to the experiment, there are four confounders (hypertension, age, bmi, and heart_disease) decreasing SMD values, meaning that those features are getting similar after calculation. Despite an increase of glucose level and gender, this is still acceptable as only 2 out of 6 features which only experienced this.
 
-The result shows that 5.3% of smoking group suffers stroke. Before matching, non-smoker group accounted for 4.8%, making 1.1% difference of percentage point with smoking group. In fact, post calculation reveals that the difference of percentage points are larger, around 3.4 percentage points, meaning that smokers are more riskier to suffer stroke
+The result shows that 5.3% of smoking group suffers stroke. Before matching, non-smoker group accounted for 4.8%, making 0.5% difference of percentage point with smoking group. In fact, post calculation reveals that the difference of percentage points are larger, around 1.4 percentage points, meaning that smokers are more riskier to suffer stroke
 
 ## ⛳️ Further Development
 

@@ -122,7 +122,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "827"
+    "wordCount": "824"
   }
   </script>
     
@@ -446,7 +446,7 @@
         </div>
       
       <div class="min-h-0 min-w-0 max-w-prose grow">
-        <h2 id="-what-does-it-matter" class="relative group">❓ What does it matter? <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#-what-does-it-matter" aria-label="Anchor">#</a></span></h2><h3 id="-understanding-the-scenario" class="relative group">📢 Understanding the scenario <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#-understanding-the-scenario" aria-label="Anchor">#</a></span></h3><p>It&rsquo;s commonly believed that smoking increases the risk of stroke, yet it requires futher observastion to validate the assumption. One of the most trusted ways to understand this phenomenon by using AB testing experiment, splitting a group to target subgroup, who is allowed to smoke, and the control one who isn&rsquo;t, then comparing them afterwards. On the other hand, doing such an experiment can be hardly executed due to ethical reasons. Likewise, a similar challenge also happens to the other sector like marketing, the field where I&rsquo;m working. Consequently, measuring the existing data, comparing smokers and non-smokers, is an effective option to answer the hypothesis.</p>
+        <h2 id="-what-does-it-matter" class="relative group">❓ What does it matter? <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#-what-does-it-matter" aria-label="Anchor">#</a></span></h2><h3 id="-understanding-the-scenario" class="relative group">📢 Understanding the scenario <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#-understanding-the-scenario" aria-label="Anchor">#</a></span></h3><p>It&rsquo;s commonly believed that smoking increases the risk of stroke, yet it requires futher observation to validate the assumption. One of the most trusted ways to understand this phenomenon by using AB testing experiment, splitting a group to target subgroup, who is allowed to smoke, and the control one who isn&rsquo;t, then comparing them afterward. On the other hand, doing such an experiment can be hardly executed due to ethical reasons. Likewise, a similar challenge also happens to the other sector like marketing, the field where I&rsquo;m working. Consequently, measuring the existing data, comparing smokers and non-smokers, is an effective option to answer the hypothesis.</p>
 <h3 id="-the-bias-comes-here" class="relative group">📉 The bias comes here <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#-the-bias-comes-here" aria-label="Anchor">#</a></span></h3><p>Here is the twist, after learning the two groups (the smokers and those who don&rsquo;t), we found that the two have different physical condition such as age, weight, and other status. As a result, comparing stroke status of both groups can be bias since those difference could interfere the output</p>
 <h3 id="-the-solution" class="relative group">🎯 The solution <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#-the-solution" aria-label="Anchor">#</a></span></h3><p>To resolve the issue, propensity matching score, as a part of causal approach, can be implemented to match the available data of the two in the same profile, ensuring the making the decision based on apple-to-apple comparison.</p>
 <h2 id="-into-matching-algorithm" class="relative group">🧮 Into Matching Algorithm <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#-into-matching-algorithm" aria-label="Anchor">#</a></span></h2><h3 id="-a-brief-of-algorithm" class="relative group">🤖 A brief of algorithm <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#-a-brief-of-algorithm" aria-label="Anchor">#</a></span></h3><p>The main calculation is finding every smoker&rsquo;s pair. This looks easy until so many features we have to involve in the calculation. This is very similar in seeking a couple, which is getting more complex to match all the criteria. To address this, probability score of logistic regression is used, representing all features, than finding the pair using neighbor algorithm. For your information, I used sklearn neigbor finder to solve computational issues, as this is compatible for handling large amount of data.</p>
@@ -482,7 +482,7 @@ View on GitHub
       <tr>
           <td>Features/Confounders</td>
           <td>Possible causes that might influence the outcome</td>
-          <td>hypertension, gender, heart_disease, bmi (body mass index), avg_glucose_level</td>
+          <td>hypertension, gender, heart_disease, bmi (body mass index), avg_glucose_level, age</td>
       </tr>
       <tr>
           <td>Treatment</td>
@@ -496,7 +496,6 @@ View on GitHub
       </tr>
   </tbody>
 </table>
-<p>In addition, proba was added to indicate score of logistic regression, representing of all confounders.</p>
 <h3 id="-matching" class="relative group">🖥️ Matching <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#-matching" aria-label="Anchor">#</a></span></h3><p>
 
 
@@ -525,15 +524,13 @@ View on GitHub
       
         <source
           
-            srcset="http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_222928_hu_4730e32c4b56f4d4.webp 330w,http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_222928_hu_190c93ed48d89abb.webp 660w
+            srcset="http://localhost:1313/posts/propensity_score_matching/screenshot_20260103_at_195341_hu_50bb57dfe40e86d0.webp 330w,http://localhost:1313/posts/propensity_score_matching/screenshot_20260103_at_195341_hu_a92f0c382eb45794.webp 660w
             
-              
-                ,http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_222928_hu_c0c8809776e6682e.webp 915w
-              
+              ,http://localhost:1313/posts/propensity_score_matching/screenshot_20260103_at_195341_hu_d617c4a4e2a16119.webp 1024w
             
             
               
-                ,http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_222928_hu_c0c8809776e6682e.webp 915w
+                ,http://localhost:1313/posts/propensity_score_matching/screenshot_20260103_at_195341_hu_d0dda72133d34960.webp 1268w
               
             "
           
@@ -542,18 +539,18 @@ View on GitHub
         />
       
       <img
-        width="915"
-        height="664"
+        width="1268"
+        height="951"
         class="mx-auto my-0 rounded-md"
         alt="image"
         loading="lazy" decoding="async"
         
-          src="http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_222928_hu_e353205fae3cc53b.png" srcset="http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_222928_hu_696f48344cf7b4b0.png 330w,http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_222928_hu_e353205fae3cc53b.png 660w
+          src="http://localhost:1313/posts/propensity_score_matching/screenshot_20260103_at_195341_hu_3fb35de698d0e091.png" srcset="http://localhost:1313/posts/propensity_score_matching/screenshot_20260103_at_195341_hu_d095ad5f4b4de930.png 330w,http://localhost:1313/posts/propensity_score_matching/screenshot_20260103_at_195341_hu_3fb35de698d0e091.png 660w
           
-            ,http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_222928.png 915w
+            ,http://localhost:1313/posts/propensity_score_matching/screenshot_20260103_at_195341_hu_78c6f7cf2c04c293.png 1024w
           
           
-            ,http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_222928.png 915w
+            ,http://localhost:1313/posts/propensity_score_matching/screenshot_20260103_at_195341.png 1268w
           "
           sizes="100vw"
         
@@ -593,15 +590,13 @@ View on GitHub
       
         <source
           
-            srcset="http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_222935_hu_53fab811a3140b14.webp 330w,http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_222935_hu_e47aedd907e0c5e.webp 660w
+            srcset="http://localhost:1313/posts/propensity_score_matching/screenshot_20260103_at_195351_hu_7689ffc41b2b05a9.webp 330w,http://localhost:1313/posts/propensity_score_matching/screenshot_20260103_at_195351_hu_faf3582cc46de426.webp 660w
             
-              
-                ,http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_222935_hu_54c0f1684aa98248.webp 914w
-              
+              ,http://localhost:1313/posts/propensity_score_matching/screenshot_20260103_at_195351_hu_3fe61f22bde4fbc4.webp 1024w
             
             
               
-                ,http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_222935_hu_54c0f1684aa98248.webp 914w
+                ,http://localhost:1313/posts/propensity_score_matching/screenshot_20260103_at_195351_hu_204538f5aeb4d00d.webp 1269w
               
             "
           
@@ -610,18 +605,18 @@ View on GitHub
         />
       
       <img
-        width="914"
-        height="667"
+        width="1269"
+        height="943"
         class="mx-auto my-0 rounded-md"
         alt="image"
         loading="lazy" decoding="async"
         
-          src="http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_222935_hu_5ad367b1db3b6068.png" srcset="http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_222935_hu_6dfe76ac98d4deac.png 330w,http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_222935_hu_5ad367b1db3b6068.png 660w
+          src="http://localhost:1313/posts/propensity_score_matching/screenshot_20260103_at_195351_hu_9342c7bf206e07fb.png" srcset="http://localhost:1313/posts/propensity_score_matching/screenshot_20260103_at_195351_hu_6e9ccb00355b71d4.png 330w,http://localhost:1313/posts/propensity_score_matching/screenshot_20260103_at_195351_hu_9342c7bf206e07fb.png 660w
           
-            ,http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_222935.png 914w
+            ,http://localhost:1313/posts/propensity_score_matching/screenshot_20260103_at_195351_hu_d3cf927100c490cb.png 1024w
           
           
-            ,http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_222935.png 914w
+            ,http://localhost:1313/posts/propensity_score_matching/screenshot_20260103_at_195351.png 1269w
           "
           sizes="100vw"
         
@@ -661,14 +656,12 @@ View on GitHub
       
         <source
           
-            srcset="http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_223003_hu_3cd3cc7d77982bb.webp 330w,http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_223003_hu_f5b96d05b95ea92d.webp 660w
+            srcset="http://localhost:1313/posts/propensity_score_matching/screenshot_20260103_at_145324_hu_c186b6f96efa7090.webp 330w,http://localhost:1313/posts/propensity_score_matching/screenshot_20260103_at_145324_hu_7d725b113969b989.webp 660w
             
-              ,http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_223003_hu_6b74088718cc489f.webp 1024w
+              ,http://localhost:1313/posts/propensity_score_matching/screenshot_20260103_at_145324_hu_756a15f9e9220884.webp 1024w
             
             
-              
-                ,http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_223003_hu_1e8c4ec35d4ff323.webp 1246w
-              
+              ,http://localhost:1313/posts/propensity_score_matching/screenshot_20260103_at_145324_hu_92e154058cad9f16.webp 1320w
             "
           
           sizes="100vw"
@@ -676,18 +669,18 @@ View on GitHub
         />
       
       <img
-        width="1246"
-        height="654"
+        width="1706"
+        height="1046"
         class="mx-auto my-0 rounded-md"
         alt="image"
         loading="lazy" decoding="async"
         
-          src="http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_223003_hu_56e9d80728c9626f.png" srcset="http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_223003_hu_902595cb42ee690a.png 330w,http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_223003_hu_56e9d80728c9626f.png 660w
+          src="http://localhost:1313/posts/propensity_score_matching/screenshot_20260103_at_145324_hu_21c468c5ed3300db.png" srcset="http://localhost:1313/posts/propensity_score_matching/screenshot_20260103_at_145324_hu_38191b3957cf0952.png 330w,http://localhost:1313/posts/propensity_score_matching/screenshot_20260103_at_145324_hu_21c468c5ed3300db.png 660w
           
-            ,http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_223003_hu_786d3d3ba43883ee.png 1024w
+            ,http://localhost:1313/posts/propensity_score_matching/screenshot_20260103_at_145324_hu_44b2049668036703.png 1024w
           
           
-            ,http://localhost:1313/posts/propensity_score_matching/screenshot_20260102_at_223003.png 1246w
+            ,http://localhost:1313/posts/propensity_score_matching/screenshot_20260103_at_145324_hu_c18d684a87506bb5.png 1320w
           "
           sizes="100vw"
         
@@ -699,8 +692,8 @@ View on GitHub
 </figure>
 </p>
 <p>To support distribution analysis, Standard Mean Difference (<a href="https://onlinelibrary.wiley.com/doi/10.1002/cesm.12047" target="_blank" rel="noreferrer">SMD</a>) is used as the indicators whether two values of distribution are similar or not. In simple explanation, smaller SMD value means that two groups are in common.</p>
-<p>According to the experiment, there are four confounders (hypertension, age, bmi, and heart_disease) decreasing SMD values, meaning that those features are getting similar after calculation. Despite an increase of glucose level and gender, this is still acceptable.</p>
-<p>The result shows that 5.3% of smoking group suffers stroke. Before matching, non-smoker group accounted for 4.8%, making 1.1% difference of percentage point with smoking group. In fact, post calculation reveals that the difference of percentage points are larger, around 3.4 percentage points, meaning that smokers are more riskier to suffer stroke</p>
+<p>According to the experiment, there are four confounders (hypertension, age, bmi, and heart_disease) decreasing SMD values, meaning that those features are getting similar after calculation. Despite an increase of glucose level and gender, this is still acceptable as only 2 out of 6 features which only experienced this.</p>
+<p>The result shows that 5.3% of smoking group suffers stroke. Before matching, non-smoker group accounted for 4.8%, making 0.5% difference of percentage point with smoking group. In fact, post calculation reveals that the difference of percentage points are larger, around 1.4 percentage points, meaning that smokers are more riskier to suffer stroke</p>
 <h2 id="-further-development" class="relative group">⛳️ Further Development <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#-further-development" aria-label="Anchor">#</a></span></h2><p>In the theory of causal model, more common term to evaluate result is <a href="https://causalwizard.app/inference/article/att" target="_blank" rel="noreferrer">ATT</a> (average treatment on treated). This involves further model, instead of directly comparing the treated group with the synthetic one. The actual algorithm has already covered this, yet discussing the usage will be discussed later article.</p>
 
       </div>
@@ -825,25 +818,6 @@ View on GitHub
       <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
       <div class="flex justify-between pt-3">
         <span>
-          
-            <a class="group flex" href="http://localhost:1313/posts/forth-post/">
-              <span
-                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
-                ><span class="ltr:inline rtl:hidden">&larr;</span
-                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
-              >
-              <span class="flex flex-col">
-                <span
-                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Forth Post</span
-                >
-                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-                  
-                    <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">1 January 0001</time>
-                  
-                </span>
-              </span>
-            </a>
           
         </span>
         <span>
