@@ -1,10 +1,10 @@
 ---
 title: "Propensity Score Matching"
 highlight: true
-date : "2023-12-01"
+date : "2025-12-01"
 result: "Think the impact"
 summary: "The algorithm that helps to find artificial control group for apple-to-apple comparison, avoiding bias in measurement impacts"
-weight: 3
+weight: 2
 showTableOfContents: true
 ---
 

@@ -2,6 +2,11 @@
 Usage:
   {{< timeline src="career" >}}     -> loads data/timelines/career.yml
   {{< timeline >}}                  -> uses .Page.Params.timeline (fallback)
+
+✅ CHANGE NOTES (Jan 2026):
+- .text now supports clickable links by rendering Markdown via `markdownify`
+- Keeps multiline text readable (YAML `|` works naturally)
+- Uses <div> instead of <p> because markdownify may emit its own <p> tags
 */}}
 
 {{- $src := .Get "src" | default "" -}}
@@ -31,6 +36,17 @@ Usage:
     {{- $link := .link | default "" -}}
     {{- $linkText := .linkText | default "Read more" -}}
 
+    {{/* ✅ CHANGE: render .text as Markdown so links work:
+         Example in YAML:
+           text: |
+             Built X.
+             Shipped [Dashboard](/projects/dashboard/).
+    */}}
+    {{- $textHTML := "" -}}
+    {{- if $text -}}
+      {{- $textHTML = $text | markdownify -}}
+    {{- end -}}
+
     <li class="tlv-item">
       <div class="tlv-rail">
         <div class="tlv-dot">
@@ -42,7 +58,12 @@ Usage:
       <div class="tlv-card">
         {{- if $date -}}<time class="tlv-time">{{ $date }}</time>{{- end -}}
         {{- if $title -}}<h3 class="tlv-title">{{ $title }}</h3>{{- end -}}
-        {{- if $text -}}<p class="tlv-text">{{ $text }}</p>{{- end -}}
+
+        {{/* ✅ CHANGE: use <div> so markdownify output (often <p>...</p>) is valid */}}
+        {{- if $text -}}
+          <div class="tlv-text">{{ $textHTML }}</div>
+        {{- end -}}
+
         {{- if $link -}}<a class="tlv-btn" href="{{ $link }}">{{ $linkText }}</a>{{- end -}}
       </div>
     </li>

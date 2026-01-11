@@ -1,24 +1,31 @@
 items:
   - date: "Sep'22 — Present"
     title: "Data Analyst · Telkomsel"
-    text: "One of the best projects was developing recommendation system, our team developed the algorithm to assist our customers, with the total target around ~80 Mn ,find what they seek according individual profile. The result was significant, contributing around ~USD 256 million in 2024"
+    text: |
+      One of the best projects was developing recommendation system, our team developed the algorithm to assist our customers, with the total target around ~80 Mn, decide their best internet package choices. The result was significant, contributing around ~USD 256 million in 2024.*
     link: "https://www.telkomsel.com/en/about-us"
     linkText: "About the Company"
 
   - date: "Jul'22 - Sep'22"
     title: "Data Analyst · JD.id (Jingdong Group)"
-    text: "Created three web scrapers for internal company websites with the goals of automating data uploads to a data warehouse, checking that files are complete, and validating data against real-time data. Libraries like Scrappy, Selenium, and Google Sheet API were used in this."
+    text: |
+      Created three web scrapers for internal company websites with the goals of automating data uploads to a data warehouse and validating data against real-time data. 
+      Libraries like Scrappy, Selenium, and Google Sheet API were used in this.
     link: "https://corporate.jd.com/ourBusiness"
     linkText: "About the Company"
 
   - date: "Oct'21 - Jun'22"
     title: "Data Analyst · Kinarya Alihdaya Mandiri"
-    text: "I focused on Games and Video campaings, uplifting revenue around ~1.5% permonth. Furthermore, I was involved in developing algorithm of Propensity Matching Score in order to measure campaign impact on Above-The-Line campaign"
+    text: |
+      Focusing on Games and Video campaings, successfully uplifted revenue around ~1.5% permonth. 
+      Involved in developing algorithm of Propensity Matching Score in order to measure campaign impact on Above-The-Line campaign
     link: "https://ptkam.co.id/en/about/"
     linkText: "About the Company"
 
   - date: "Sep'20 - Sep'21"
     title: "Flavorist and Production · Foom Lab Global"
-    text: "Initiated digitalisation in production reports, automating messy google sheets based forms using Googls Apps Script. This implemetation improve producation planning, indicated by growing number production by around 133% within 6 months"
+    text: |
+      Initiated digitalisation in production reports, automating tons of google sheets based forms using Googls Apps Script. 
+      The implemetation improved producation planning, indicated by growing number production by around 133% within 6 months
     link : "https://foom.id"
     linkText: "About the Company"

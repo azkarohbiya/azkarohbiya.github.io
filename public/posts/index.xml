@@ -16,17 +16,24 @@
       <description>This model was used to enhance collaborative filtering approach, offering digital subscription products. The model was able to introduce niche and seasonal products, which are more personalized</description>
     </item>
     <item>
-      <title>Digital DNA</title>
-      <link>http://localhost:1313/posts/digital_dna/</link>
-      <pubDate>Fri, 26 Dec 2025 17:16:04 +0700</pubDate>
-      <guid>http://localhost:1313/posts/digital_dna/</guid>
-      <description>Classication of Multi-apps Users as the new segmentation in digital lifestyle of customers</description>
-    </item>
-    <item>
       <title>Propensity Score Matching</title>
       <link>http://localhost:1313/posts/propensity_score_matching/</link>
-      <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/propensity_score_matching/</guid>
+      <description>The algorithm that helps to find artificial control group for apple-to-apple comparison, avoiding bias in measurement impacts</description>
+    </item>
+    <item>
+      <title>Sentiment Annotation</title>
+      <link>http://localhost:1313/posts/sentiment_annotation/</link>
+      <pubDate>Fri, 26 Dec 2025 17:16:04 +0700</pubDate>
+      <guid>http://localhost:1313/posts/sentiment_annotation/</guid>
+      <description>This model was used to enhance collaborative filtering approach, offering digital subscription products. The model was able to introduce niche and seasonal products, which are more personalized</description>
+    </item>
+    <item>
+      <title>Digital DNA</title>
+      <link>http://localhost:1313/posts/digital_dna/</link>
+      <pubDate>Sun, 07 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/digital_dna/</guid>
       <description>The algorithm that helps to find artificial control group for apple-to-apple comparison, avoiding bias in measurement impacts</description>
     </item>
   </channel>

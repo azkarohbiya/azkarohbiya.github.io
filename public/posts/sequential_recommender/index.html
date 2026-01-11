@@ -122,7 +122,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "58"
+    "wordCount": "512"
   }
   </script>
     
@@ -414,11 +414,20 @@
   <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#introduction">Introduction</a>
+    <li><a href="#background">Background</a>
       <ul>
-        <li><a href="#introduction-1">Introduction</a></li>
+        <li><a href="#-the-revenue-gap-after-a-purchase">💰 The revenue gap after a purchase</a></li>
+        <li><a href="#-invisible-pattern-products-come-in-sequence">🗺️ Invisible pattern: products come in sequence</a></li>
+        <li><a href="#-networkx-to-appraoch-sequential-model">⚛️ NetworkX to appraoch sequential model</a></li>
       </ul>
     </li>
+    <li><a href="#-implementing-real-scenario">🛒 Implementing real scenario</a>
+      <ul>
+        <li><a href="#-graph-result">📈 Graph result</a></li>
+        <li><a href="#-incresing-the-probability">⬆️ Incresing the probability</a></li>
+      </ul>
+    </li>
+    <li><a href="#-further-improvements">🎯 Further improvements</a></li>
   </ul>
 </nav>
   </div>
@@ -428,75 +437,345 @@
         </div>
       
       <div class="min-h-0 min-w-0 max-w-prose grow">
-        <h1 id="title" class="relative group">Title <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#title" aria-label="Anchor">#</a></span></h1><h2 id="introduction" class="relative group">Introduction <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#introduction" aria-label="Anchor">#</a></span></h2><h3 id="introduction-1" class="relative group">Introduction <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#introduction-1" aria-label="Anchor">#</a></span></h3><p>
+        <h2 id="background" class="relative group">Background <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#background" aria-label="Anchor">#</a></span></h2><h3 id="-the-revenue-gap-after-a-purchase" class="relative group">💰 The revenue gap after a purchase <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#-the-revenue-gap-after-a-purchase" aria-label="Anchor">#</a></span></h3><p>One of the effective campaigns to customers is introducing other products during the transaction. This approach has been applied in various ways such as e-commerce apps show other products through banners right when customers are doing the payment, or in minimarket, you probably found the storekeepers mentioning flash sale products to attract customers.</p>
+<h3 id="-invisible-pattern-products-come-in-sequence" class="relative group">🗺️ Invisible pattern: products come in sequence <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#-invisible-pattern-products-come-in-sequence" aria-label="Anchor">#</a></span></h3><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_140656_hu_cfc8869cef613962.webp 330w,http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_140656_hu_3ebb90c1c8ea2c0.webp 660w
+            
+              ,http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_140656_hu_39e8485428debff6.webp 1024w
+            
+            
+              
+                ,http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_140656_hu_71d40121ef8068cf.webp 1280w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1280"
+        height="526"
+        class="mx-auto my-0 rounded-md"
+        alt="image"
+        loading="lazy" decoding="async"
         
-      <a href="../second-post/index.md">scond</a></p>
-<hr>
+          src="http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_140656_hu_40929d4ed584f363.png" srcset="http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_140656_hu_2c25353c374d8a80.png 330w,http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_140656_hu_40929d4ed584f363.png 660w
+          
+            ,http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_140656_hu_a803ed49ff481b1a.png 1024w
+          
+          
+            ,http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_140656.png 1280w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Surprisingly, some stores are smart enough to guess what the next products that the customers are morelikely to buy. For example, after purchasing a phone, storekeepers are going to offer phone case. In addition, if a customer comes to buy a case, then the next product wouldn&rsquo;t be a phone, but probably other gadget accessories. Therefore, customers choose items sequentially, and this model is going find the most natural best product according to sequential behavior.</p>
+<h3 id="-networkx-to-appraoch-sequential-model" class="relative group">⚛️ NetworkX to appraoch sequential model <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#-networkx-to-appraoch-sequential-model" aria-label="Anchor">#</a></span></h3><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_135914_hu_91cd131199f2fbba.webp 330w,http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_135914_hu_8002d39d6ae561f8.webp 660w
+            
+              ,http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_135914_hu_2c32719f324c5b45.webp 1024w
+            
+            
+              ,http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_135914_hu_f757c01d10bb72e.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1618"
+        height="894"
+        class="mx-auto my-0 rounded-md"
+        alt="image"
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_135914_hu_e9642c4593acfc99.png" srcset="http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_135914_hu_e908216416f5c69c.png 330w,http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_135914_hu_e9642c4593acfc99.png 660w
+          
+            ,http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_135914_hu_ea309500e576bb52.png 1024w
+          
+          
+            ,http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_135914_hu_14063a5a804d0b07.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>In this article, we are going to use <a href="https://networkx.org/documentation/stable/" target="_blank" rel="noreferrer">NetworkX</a>, a branch of graph theory, to explain natural behavior how customers decide purchasing an item accoring to their past behavior of choosing the others.</p>
+<p>The analysis that will be discussed are the nodes, meaning the products including how frequent they are purchased, and the edge that refers to the best path of the next products. It is important to notes, in the calculation, only customers who made more than two transactions are involved to show natural transition moving from a product to another.</p>
+<h2 id="-implementing-real-scenario" class="relative group">🛒 Implementing real scenario <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#-implementing-real-scenario" aria-label="Anchor">#</a></span></h2><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_140301_hu_e991ea247f210e29.webp 330w,http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_140301_hu_47a1102055bbbb96.webp 660w
+            
+              ,http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_140301_hu_68806215c0e19129.webp 1024w
+            
+            
+              ,http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_140301_hu_35da93225b947360.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="2880"
+        height="1468"
+        class="mx-auto my-0 rounded-md"
+        alt="image"
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_140301_hu_237e9f21997bed77.png" srcset="http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_140301_hu_436ec9601d2a46ea.png 330w,http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_140301_hu_237e9f21997bed77.png 660w
+          
+            ,http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_140301_hu_f3e99dd80d6262c1.png 1024w
+          
+          
+            ,http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_140301_hu_f6ecdb43708c96e5.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The use case is retail products, covering three categories (clothes, electronic, and furniture) with total 17 disticnt products. The data has been cleansed in sql which then transformed into graph model. Therefor, for technical details, I suggest you to visit my github.</p>
 <a
   class="inline-block !rounded-md bg-primary-600 px-4 py-1 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700"
-  href="../second-post/"
-  
+  href="https://github.com/azkarohbiya/sequential_recommender"
+  target="_blank"
   
   role="button"
 >
   
-Second post
+View on GitHub
 
 </a>
 
-<p>This is <strong>bold</strong> text</p>
-<ul>
-<li>how to be a billionare</li>
-<li>how to be a billionare</li>
-<li>how to be a billionare</li>
-<li>how to be a billionare</li>
-</ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">  <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hello world&#39;</span><span class="p">)</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="k">table_name</span><span class="w">
-</span></span></span></code></pre></div><h1 id="background" class="relative group">Background <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#background" aria-label="Anchor">#</a></span></h1><div class="flex rounded-md bg-primary-100 px-4 py-3 dark:bg-primary-900">
-  <span class="pe-3 text-primary-400">
-    <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
-</span>
-  </span>
-  <span class="dark:text-neutral-300"><strong>Warning!</strong> This action is destructive!</span>
-</div>
+<h3 id="-graph-result" class="relative group">📈 Graph result <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#-graph-result" aria-label="Anchor">#</a></span></h3><p>
 
-<hr>
-<div class="flex rounded-md bg-primary-100 px-4 py-3 dark:bg-primary-900">
-  <span class="pe-3 text-primary-400">
-    <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
-</span>
-  </span>
-  <span class="dark:text-neutral-300">Don&rsquo;t forget to <a href="https://x.com/jpanther" target="_blank" rel="noreferrer">follow me</a> on X.</span>
-</div>
 
-<hr>
-<p><span class="flex">
-  <span
-    class="ms-1 rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400"
-  >
+
+
+
+<figure>
     
-Others
-
-  </span>
-</span>
-
-
-<span class="flex">
-  <span
-    class="ms-1 rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400"
-  >
     
-Follow
 
-  </span>
-</span>
 
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_140439_hu_f1e6d39157834518.webp 330w,http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_140439_hu_d7dfd407868ba4cd.webp 660w
+            
+              ,http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_140439_hu_8f1519bdea333b0d.webp 1024w
+            
+            
+              ,http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_140439_hu_fbac020dd7d7208f.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="2826"
+        height="1482"
+        class="mx-auto my-0 rounded-md"
+        alt="image"
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_140439_hu_2b255fc245584777.png" srcset="http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_140439_hu_8a3f25b07caedee1.png 330w,http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_140439_hu_2b255fc245584777.png 660w
+          
+            ,http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_140439_hu_b4b316c048294b59.png 1024w
+          
+          
+            ,http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_140439_hu_7d729d4e3544bf39.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
 </p>
-<hr>
+<p>The graph shows that almost all products related with each others, drawn by the scattered points that are connected. In addition, the hightlighted lines are configured to refer the most frequent transitin that is regarded as the highest occurance path of the next products. For eample, after choosing accessories, customers are most likelye purchase printers.</p>
+<p>Overall, there are three products that are potentially purchased repeatedly, namely phones, hankerchief and saree. Yet, the other products tend to transitioning to the other. Most transition happened in Stole to Hankercief, calculated around 3.6% of total transition.</p>
+<h3 id="-incresing-the-probability" class="relative group">⬆️ Incresing the probability <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#-incresing-the-probability" aria-label="Anchor">#</a></span></h3><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_140140_hu_ef58ec9623c2db6f.webp 330w,http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_140140_hu_42a5a4f78fd74282.webp 660w
+            
+              ,http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_140140_hu_c20ea6071445f581.webp 1024w
+            
+            
+              ,http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_140140_hu_b6b786a33569b0ed.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="2880"
+        height="1618"
+        class="mx-auto my-0 rounded-md"
+        alt="image"
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_140140_hu_c766d081838cab31.png" srcset="http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_140140_hu_1b00fe06f8c15915.png 330w,http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_140140_hu_c766d081838cab31.png 660w
+          
+            ,http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_140140_hu_4ded8a2a6da3e2b5.png 1024w
+          
+          
+            ,http://localhost:1313/posts/sequential_recommender/screenshot_20260104_at_140140_hu_3c08c05b5d6cdde0.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>To enhance probability, instead of offering one product accoridng to the graph, it&rsquo;s also possible to offer other possible option by sorting the several highest possible products. The table above depicts the card that consist some options that are best to offer according each last transaction.</p>
+<h2 id="-further-improvements" class="relative group">🎯 Further improvements <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#-further-improvements" aria-label="Anchor">#</a></span></h2><p>It is important to note that the application of this model depends on what types of the business. Consequently, it is suggested to support the model using test and learn, so the impact can be more reliable.</p>
+<p>Moreover, this model can also be used to understand customer journey, that can be applied for helping customers finding products they want through personalized approach, such as product placement in application.</p>
 
       </div>
     </section>
@@ -621,7 +900,7 @@ Follow
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="group flex" href="http://localhost:1313/posts/digital_dna/">
+            <a class="group flex" href="http://localhost:1313/posts/propensity_score_matching/">
               <span
                 class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
                 ><span class="ltr:inline rtl:hidden">&larr;</span
@@ -630,11 +909,11 @@ Follow
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Digital DNA</span
+                  >Propensity Score Matching</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-12-26 17:16:04 &#43;0700 WIB">26 December 2025</time>
+                    <time datetime="2025-12-01 00:00:00 &#43;0000 UTC">1 December 2025</time>
                   
                 </span>
               </span>

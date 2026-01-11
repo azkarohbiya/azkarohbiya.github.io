@@ -12,11 +12,13 @@ I have over 5 years of experience working with data works, focusing in predictiv
 
 ## 🔬 Field of Interests
 
+![fields](field_of_interests.png)
+
 In analytics, I'm really into grasping the domain knowledge first over the technical tools, focusing the clarity in order to address the real problems. Therefore, my experience ranges in these fields:
 
 - Marketing (Customer Journey and Behaviors)
 - Science (Mostly in Physics and Chemistry)
-- Environmental (I'm into environmental strategies to enchance the quality of live)
+- Environment (I'm into environmental strategies to enchance the quality of live)
 - Engineering (Interested in renewable energy, autopilot cars)
 - Economic (Stock Analysis, Cryptocurrency)
 

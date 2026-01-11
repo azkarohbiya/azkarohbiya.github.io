@@ -1,0 +1,952 @@
+
+
+
+
+
+
+
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="false"
+><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#000000" />
+  
+  <title>Sentiment Annotation &middot; azkarohbiya</title>
+    <meta name="title" content="Sentiment Annotation &middot; azkarohbiya" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="http://localhost:1313/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="http://localhost:1313/css/main.bundle.min.1f95f331e9eaea36354fe18adc5169801c39e5538f4b682f175749fd4ac81f2e.css"
+    integrity="sha256-H5XzMenq6jY1T&#43;GK3FFpgBw55VOPS2gvF1dJ/UrIHy4="
+  />
+  
+  
+  
+  
+  
+  
+  
+  <meta
+    name="description"
+    content="
+      
+        This model was used to enhance collaborative filtering approach, offering digital subscription products. The model was able to introduce niche and seasonal products, which are more personalized
+      
+    "
+  />
+  
+  
+  
+  
+    <link rel="canonical" href="http://localhost:1313/posts/sentiment_annotation/" />
+  
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="http://localhost:1313/posts/sentiment_annotation/">
+  <meta property="og:site_name" content="azkarohbiya">
+  <meta property="og:title" content="Sentiment Annotation">
+  <meta property="og:description" content="This model was used to enhance collaborative filtering approach, offering digital subscription products. The model was able to introduce niche and seasonal products, which are more personalized">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-12-26T17:16:04+07:00">
+    <meta property="article:modified_time" content="2025-12-26T17:16:04+07:00">
+    <meta property="og:image" content="http://localhost:1313/posts/sentiment_annotation/cover.jpeg">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/posts/sentiment_annotation/cover.jpeg">
+  <meta name="twitter:title" content="Sentiment Annotation">
+  <meta name="twitter:description" content="This model was used to enhance collaborative filtering approach, offering digital subscription products. The model was able to introduce niche and seasonal products, which are more personalized">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Projects",
+    "name": "Sentiment Annotation",
+    "headline": "Sentiment Annotation",
+    
+    "abstract": "This model was used to enhance collaborative filtering approach, offering digital subscription products. The model was able to introduce niche and seasonal products, which are more personalized",
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/posts\/sentiment_annotation\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Azka Rohbiya Ramadani"
+    },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-12-26T17:16:04\u002b07:00",
+    "datePublished": "2025-12-26T17:16:04\u002b07:00",
+    
+    "dateModified": "2025-12-26T17:16:04\u002b07:00",
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "261"
+  }
+  </script>
+    
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/",
+       "name": "Azka Rohbiya",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/posts/",
+       "name": "Projects",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "name": "Sentiment Annotation",
+       "position": 3
+     }
+   ]
+ }
+  </script>
+
+  
+  
+    <meta name="author" content="Azka Rohbiya Ramadani" />
+  
+  
+    
+      <link href="mailto:azkarohbiya@gmail.com" rel="me" />
+    
+      <link href="https://github.com/azkarohbiya" rel="me" />
+    
+      <link href="https://www.linkedin.com/in/azka-rohbiya-21587a145" rel="me" />
+    
+  
+  
+  
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >azkarohbiya</a
+  >
+
+    </div>
+    
+    
+      <ul class="flex list-none flex-col text-end sm:flex-row">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/about/"
+                  title="Introduction"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >About</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/posts/"
+                  title="Projects"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Projects</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/journey/"
+                  title="Journey"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Journey</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/contact/"
+                  title="Contact"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Contact</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+          
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Sentiment Annotation
+      </h1>
+      
+        <div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+          
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-12-26 17:16:04 &#43;0700 WIB">26 December 2025</time>
+    
+
+    
+    
+  </div>
+
+  
+  
+
+
+        </div>
+      
+      
+        <div class="prose">
+          
+          
+          
+          
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mb-6 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/sentiment_annotation/cover_hu_dfb9a6ebbad3fedb.webp 330w,http://localhost:1313/posts/sentiment_annotation/cover_hu_51363ba54be570c8.webp 660w
+            
+              ,http://localhost:1313/posts/sentiment_annotation/cover_hu_88875b350f0b9568.webp 1024w
+            
+            
+              ,http://localhost:1313/posts/sentiment_annotation/cover_hu_4cc422a6a6cb90d7.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1630"
+        height="1120"
+        class="mb-6 rounded-md"
+        
+        
+        
+          src="http://localhost:1313/posts/sentiment_annotation/cover_hu_dec0dfd6be8310b1.jpeg" srcset="http://localhost:1313/posts/sentiment_annotation/cover_hu_cd0b96671d0dfd1e.jpeg 330w,http://localhost:1313/posts/sentiment_annotation/cover_hu_dec0dfd6be8310b1.jpeg 660w
+          
+            ,http://localhost:1313/posts/sentiment_annotation/cover_hu_a8195146a4365ce7.jpeg 1024w
+          
+          
+            ,http://localhost:1313/posts/sentiment_annotation/cover_hu_f914866c580d5721.jpeg 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+          
+        </div>
+      
+    </header>
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8">
+          <div class="toc pe-5 lg:sticky lg:top-10 print:hidden">
+            <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
+  <summary
+    class="block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    Table of Contents
+  </summary>
+  <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#-background">❓ Background</a>
+      <ul>
+        <li><a href="#why-you-cant-use-llm-to-decide-positive-or-negative-feedbacks">Why you can&rsquo;t use LLM to decide positive or negative feedbacks.</a></li>
+      </ul>
+    </li>
+    <li><a href="#real-scenario">Real Scenario</a>
+      <ul>
+        <li><a href="#imdb-internet-movie-database-ratings">IMDb (Internet Movie Database) ratings</a></li>
+        <li><a href="#word-frequency-by-wordcloud">Word Frequency by WordCloud</a></li>
+        <li><a href="#data-cleansing">Data Cleansing</a></li>
+      </ul>
+    </li>
+    <li><a href="#word-cloud">Word Cloud</a></li>
+    <li><a href="#connecting-all-words">Connecting all words</a></li>
+    <li><a href="#further-improvement">Further Improvement</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <h2 id="-background" class="relative group">❓ Background <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#-background" aria-label="Anchor">#</a></span></h2><h3 id="why-you-cant-use-llm-to-decide-positive-or-negative-feedbacks" class="relative group">Why you can&rsquo;t use LLM to decide positive or negative feedbacks. <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#why-you-cant-use-llm-to-decide-positive-or-negative-feedbacks" aria-label="Anchor">#</a></span></h3><p>Tagging sentiment of feedbacks can be exhausting especially dealing with large amount of feedbacks. In addition, some companies might restrict the use of AI because of potentially revealing the secrets, unless you totally trust to AI CEO&rsquo;s. In another case, probably you want to train AI by creating reliable raw data. Therefore, this article is going to discuss how to annotate text sentiment by combining word-cloud and graph in python.</p>
+<h2 id="real-scenario" class="relative group">Real Scenario <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#real-scenario" aria-label="Anchor">#</a></span></h2><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145445_hu_c361f323ac7ba5a7.webp 330w,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145445_hu_4c3191008ca7a559.webp 660w
+            
+              ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145445_hu_373a7af44deea906.webp 1024w
+            
+            
+              ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145445_hu_1d798009b38e4745.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="2880"
+        height="1616"
+        class="mx-auto my-0 rounded-md"
+        alt="image3"
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145445_hu_6246d1e0baa67c31.png" srcset="http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145445_hu_26f7d1f81aedac1e.png 330w,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145445_hu_6246d1e0baa67c31.png 660w
+          
+            ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145445_hu_d96451430894dca2.png 1024w
+          
+          
+            ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145445_hu_6ec41301571c5ffc.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+
+
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145501_hu_b52c8b0e92982086.webp 330w,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145501_hu_833ab8bc371a88a9.webp 660w
+            
+              ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145501_hu_e2440d8298512d89.webp 1024w
+            
+            
+              ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145501_hu_209b53d2c290e025.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="2880"
+        height="1616"
+        class="mx-auto my-0 rounded-md"
+        alt="image4"
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145501_hu_499ea1812e9547ab.png" srcset="http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145501_hu_dd6be6c851fbeb1.png 330w,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145501_hu_499ea1812e9547ab.png 660w
+          
+            ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145501_hu_ffb154ecea0ad87e.png 1024w
+          
+          
+            ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145501_hu_6ff7ec85e5471dd5.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="imdb-internet-movie-database-ratings" class="relative group">IMDb (Internet Movie Database) ratings <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#imdb-internet-movie-database-ratings" aria-label="Anchor">#</a></span></h3><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145417_hu_77a24d18696ddce9.webp 330w,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145417_hu_54bd51433fefe4dc.webp 660w
+            
+              ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145417_hu_f9db638ac2ed23f1.webp 1024w
+            
+            
+              ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145417_hu_50c899a6a204f3bb.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="2880"
+        height="1614"
+        class="mx-auto my-0 rounded-md"
+        alt="image1"
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145417_hu_bd5150bd50f3b256.png" srcset="http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145417_hu_bc52a06356b5f842.png 330w,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145417_hu_bd5150bd50f3b256.png 660w
+          
+            ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145417_hu_790c6e0587ff3d9f.png 1024w
+          
+          
+            ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145417_hu_59ce4f11e9e8acf.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>In this case, there are around 400K feedbacks, giving comments about their experience watching various movies. Yet, these feedbacks still require further cleansing since they are extracted using machine before directly analyzing it. To resolve this issue, I used three following methods.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Method</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Stopwords</td>
+          <td>Several words do not contain useful meaning, and they are typically used in every phase so they might interfere the most frequent words. Therefore, this step skips those words</td>
+      </tr>
+      <tr>
+          <td>HTML syntax</td>
+          <td>as these comments are generated by machine, some coding words are detected. So, this process removes them.</td>
+      </tr>
+      <tr>
+          <td>Lemmitizer</td>
+          <td>Grammatical rules make english words having so many branches, even though the meanings remain the same. For example, &ldquo;ate&rdquo; and &ldquo;eaten&rdquo; come from &ldquo;eat&rdquo;. Therefor, this part returns all the braches to the root.</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="word-frequency-by-wordcloud" class="relative group">Word Frequency by WordCloud <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#word-frequency-by-wordcloud" aria-label="Anchor">#</a></span></h3><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145431_hu_a42dc43b1b48ce35.webp 330w,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145431_hu_256763fd66d5bdc8.webp 660w
+            
+              ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145431_hu_89b76c2dae1c9361.webp 1024w
+            
+            
+              ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145431_hu_3f83b2bcebd00653.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="2880"
+        height="1614"
+        class="mx-auto my-0 rounded-md"
+        alt="image2"
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145431_hu_daf844a7fc3f8cdf.png" srcset="http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145431_hu_1d14795da75850f7.png 330w,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145431_hu_daf844a7fc3f8cdf.png 660w
+          
+            ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145431_hu_9e63c14e7d1378fa.png 1024w
+          
+          
+            ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145431_hu_2ddaff26d1f5e269.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Word-Cloud : Word freq
+Bridging word frequency is not enough
+Graph : connection word, strong connection</p>
+<p>Kaggle
+See on github</p>
+<h3 id="data-cleansing" class="relative group">Data Cleansing <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#data-cleansing" aria-label="Anchor">#</a></span></h3><p>Stopwords,
+HTML syntax,
+lemmitizer</p>
+<h2 id="word-cloud" class="relative group">Word Cloud <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#word-cloud" aria-label="Anchor">#</a></span></h2><p>Result</p>
+<h2 id="connecting-all-words" class="relative group">Connecting all words <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#connecting-all-words" aria-label="Anchor">#</a></span></h2><p>Result</p>
+<h2 id="further-improvement" class="relative group">Further Improvement <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#further-improvement" aria-label="Anchor">#</a></span></h2>
+      </div>
+    </section>
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+  <div class="flex">
+    
+    
+    
+      
+      
+        
+        
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+      
+    >
+      
+      
+      
+      
+      <img
+        width="1024"
+        height="1024"
+        class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+        alt="Azka Rohbiya Ramadani"
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/img/01_profile_hu_eb2701c18d5b1cbf.png" srcset="http://localhost:1313/img/01_profile_hu_f9c4e5b01a74c1f6.png 330w,http://localhost:1313/img/01_profile_hu_eb2701c18d5b1cbf.png 660w
+          
+            ,http://localhost:1313/img/01_profile.png 1024w
+          
+          
+            ,http://localhost:1313/img/01_profile.png 1024w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+      
+    
+    <div class="place-self-center">
+      
+        <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+          Author
+        </div>
+        <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+          Azka Rohbiya Ramadani
+        </div>
+      
+      
+      <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="mailto:azkarohbiya@gmail.com"
+          target="_blank"
+          aria-label="Email"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://github.com/azkarohbiya"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://www.linkedin.com/in/azka-rohbiya-21587a145"
+          target="_blank"
+          aria-label="Linkedin"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+</span></a
+        >
+      
+    
+  </div>
+
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="group flex" href="http://localhost:1313/posts/digital_dna/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Digital DNA</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2025-12-07 00:00:00 &#43;0000 UTC">7 December 2025</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="group flex text-right" href="http://localhost:1313/posts/propensity_score_matching/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Propensity Score Matching</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2025-12-01 00:00:00 &#43;0000 UTC">1 December 2025</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[-2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&rarr;</span
+                ><span class="ltr:hidden rtl:inline">&larr;</span></span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            &copy;
+            2026
+            Azka Rohbiya Ramadani
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+    </div>
+  </div>
+  
+  
+</footer>
+
+    </div>
+  </body>
+</html>

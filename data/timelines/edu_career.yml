@@ -1,11 +1,21 @@
 items:
   - date: "2016 - 2020"
     title: "Universitas Pertamina"
-    text: "Final Projects : Computational Chemistry : Molecular Dynamics Simulation in the Delignification Process by Low Transition Temperature Mixtures (LTTM) Solvents Using the GROMACS Application (Linux-based Apps). GPA : 3.8"
+    text: |
+      **GPA**
+      3.8
+
+      **Thesis**
+      Computational Chemistry, Molecular Dynamics Simulation in the Delignification Process by Low Transition Temperature Mixtures (LTTM) Solvents Using the GROMACS Application (Linux-based Apps).  [Read more >> ](https://library.universitaspertamina.ac.id/xmlui/handle/123456789/1362?show=full)
+
+      **Publication**
+      Clove Oil Extraction by Steam Distillation and Utilization of Clove Buds Waste as Potential Candidate for Eco-Friendly Packaging [Read more>> ](https://journal.unnes.ac.id/nju/index.php/jbat/article/view/24935)
     link: "https://universitaspertamina.ac.id/profile/sejarah"
-    # linkText: "Read more"
+    linkText: "About the University"
 
   - date: "2019"
     title: "Universiti Teknologi Petronas"
-    text: "in Exchange Student Program"
+    text: |
+      Malaysia, the Student Exchange Program
     link: "https://www.utp.edu.my/Pages/The-University/About-Us.aspx"
+    linkText: "About the University"

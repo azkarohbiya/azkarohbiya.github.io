@@ -11,21 +11,22 @@
   
     
       <url>
-            <loc>http://localhost:1313/posts/digital_dna/</loc>
+            <loc>http://localhost:1313/posts/propensity_score_matching/</loc>
+            <lastmod>2025-12-01T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/posts/sentiment_annotation/</loc>
             <lastmod>2025-12-26T17:16:04+07:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>http://localhost:1313/posts/propensity_score_matching/</loc>
-            <lastmod>2023-12-01T00:00:00+00:00</lastmod>
-          </url>
-    
-  
-    
-      <url>
-            <loc>http://localhost:1313/posts/forth-post/</loc>
+            <loc>http://localhost:1313/posts/digital_dna/</loc>
+            <lastmod>2025-12-07T00:00:00+00:00</lastmod>
           </url>
     
   
