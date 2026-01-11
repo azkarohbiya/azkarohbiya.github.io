@@ -122,7 +122,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "261"
+    "wordCount": "637"
   }
   </script>
     
@@ -414,19 +414,19 @@
   <ul>
     <li><a href="#-background">❓ Background</a>
       <ul>
-        <li><a href="#why-you-cant-use-llm-to-decide-positive-or-negative-feedbacks">Why you can&rsquo;t use LLM to decide positive or negative feedbacks.</a></li>
+        <li><a href="#-why-you-cant-use-llm-to-decide-positive-or-negative-feedbacks">👍 Why you can&rsquo;t use LLM to decide positive or negative feedbacks.</a></li>
       </ul>
     </li>
     <li><a href="#real-scenario">Real Scenario</a>
       <ul>
-        <li><a href="#imdb-internet-movie-database-ratings">IMDb (Internet Movie Database) ratings</a></li>
-        <li><a href="#word-frequency-by-wordcloud">Word Frequency by WordCloud</a></li>
-        <li><a href="#data-cleansing">Data Cleansing</a></li>
+        <li><a href="#-imdb-internet-movie-database-ratings">📽️ IMDb (Internet Movie Database) ratings</a></li>
+        <li><a href="#-word-frequency-by-wordcloud">☁️ Word Frequency by WordCloud</a></li>
       </ul>
     </li>
-    <li><a href="#word-cloud">Word Cloud</a></li>
-    <li><a href="#connecting-all-words">Connecting all words</a></li>
-    <li><a href="#further-improvement">Further Improvement</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#-further-improvement">⚙️ Further Improvement</a></li>
   </ul>
 </nav>
   </div>
@@ -436,134 +436,8 @@
         </div>
       
       <div class="min-h-0 min-w-0 max-w-prose grow">
-        <h2 id="-background" class="relative group">❓ Background <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#-background" aria-label="Anchor">#</a></span></h2><h3 id="why-you-cant-use-llm-to-decide-positive-or-negative-feedbacks" class="relative group">Why you can&rsquo;t use LLM to decide positive or negative feedbacks. <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#why-you-cant-use-llm-to-decide-positive-or-negative-feedbacks" aria-label="Anchor">#</a></span></h3><p>Tagging sentiment of feedbacks can be exhausting especially dealing with large amount of feedbacks. In addition, some companies might restrict the use of AI because of potentially revealing the secrets, unless you totally trust to AI CEO&rsquo;s. In another case, probably you want to train AI by creating reliable raw data. Therefore, this article is going to discuss how to annotate text sentiment by combining word-cloud and graph in python.</p>
-<h2 id="real-scenario" class="relative group">Real Scenario <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#real-scenario" aria-label="Anchor">#</a></span></h2><p>
-
-
-
-
-
-<figure>
-    
-    
-
-
-
-
-
-
-
-
-  
-    <picture
-      class="mx-auto my-0 rounded-md"
-      
-    >
-      
-      
-      
-      
-        <source
-          
-            srcset="http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145445_hu_c361f323ac7ba5a7.webp 330w,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145445_hu_4c3191008ca7a559.webp 660w
-            
-              ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145445_hu_373a7af44deea906.webp 1024w
-            
-            
-              ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145445_hu_1d798009b38e4745.webp 1320w
-            "
-          
-          sizes="100vw"
-          type="image/webp"
-        />
-      
-      <img
-        width="2880"
-        height="1616"
-        class="mx-auto my-0 rounded-md"
-        alt="image3"
-        loading="lazy" decoding="async"
-        
-          src="http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145445_hu_6246d1e0baa67c31.png" srcset="http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145445_hu_26f7d1f81aedac1e.png 330w,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145445_hu_6246d1e0baa67c31.png 660w
-          
-            ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145445_hu_d96451430894dca2.png 1024w
-          
-          
-            ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145445_hu_6ec41301571c5ffc.png 1320w
-          "
-          sizes="100vw"
-        
-      />
-    </picture>
-  
-
-
-</figure>
-
-
-
-
-
-
-
-<figure>
-    
-    
-
-
-
-
-
-
-
-
-  
-    <picture
-      class="mx-auto my-0 rounded-md"
-      
-    >
-      
-      
-      
-      
-        <source
-          
-            srcset="http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145501_hu_b52c8b0e92982086.webp 330w,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145501_hu_833ab8bc371a88a9.webp 660w
-            
-              ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145501_hu_e2440d8298512d89.webp 1024w
-            
-            
-              ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145501_hu_209b53d2c290e025.webp 1320w
-            "
-          
-          sizes="100vw"
-          type="image/webp"
-        />
-      
-      <img
-        width="2880"
-        height="1616"
-        class="mx-auto my-0 rounded-md"
-        alt="image4"
-        loading="lazy" decoding="async"
-        
-          src="http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145501_hu_499ea1812e9547ab.png" srcset="http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145501_hu_dd6be6c851fbeb1.png 330w,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145501_hu_499ea1812e9547ab.png 660w
-          
-            ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145501_hu_ffb154ecea0ad87e.png 1024w
-          
-          
-            ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145501_hu_6ff7ec85e5471dd5.png 1320w
-          "
-          sizes="100vw"
-        
-      />
-    </picture>
-  
-
-
-</figure>
-</p>
-<h3 id="imdb-internet-movie-database-ratings" class="relative group">IMDb (Internet Movie Database) ratings <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#imdb-internet-movie-database-ratings" aria-label="Anchor">#</a></span></h3><p>
+        <h2 id="-background" class="relative group">❓ Background <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#-background" aria-label="Anchor">#</a></span></h2><h3 id="-why-you-cant-use-llm-to-decide-positive-or-negative-feedbacks" class="relative group">👍 Why you can&rsquo;t use LLM to decide positive or negative feedbacks. <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#-why-you-cant-use-llm-to-decide-positive-or-negative-feedbacks" aria-label="Anchor">#</a></span></h3><p>Tagging sentiment of feedbacks can be exhausting especially dealing with large amount of feedbacks. In addition, some companies might restrict the use of AI because of potentially revealing the secrets, unless you totally trust to AI CEO&rsquo;s. In another case, probably you want to train AI by creating reliable raw data. Therefore, this article is going to discuss how to annotate text sentiment by combining word-cloud and graph in python.</p>
+<h2 id="real-scenario" class="relative group">Real Scenario <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#real-scenario" aria-label="Anchor">#</a></span></h2><h3 id="-imdb-internet-movie-database-ratings" class="relative group">📽️ IMDb (Internet Movie Database) ratings <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#-imdb-internet-movie-database-ratings" aria-label="Anchor">#</a></span></h3><p>
 
 
 
@@ -649,7 +523,7 @@
       </tr>
   </tbody>
 </table>
-<h3 id="word-frequency-by-wordcloud" class="relative group">Word Frequency by WordCloud <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#word-frequency-by-wordcloud" aria-label="Anchor">#</a></span></h3><p>
+<h3 id="-word-frequency-by-wordcloud" class="relative group">☁️ Word Frequency by WordCloud <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#-word-frequency-by-wordcloud" aria-label="Anchor">#</a></span></h3><p>
 
 
 
@@ -712,17 +586,139 @@
 
 </figure>
 </p>
-<p>Word-Cloud : Word freq
-Bridging word frequency is not enough
-Graph : connection word, strong connection</p>
-<p>Kaggle
-See on github</p>
-<h3 id="data-cleansing" class="relative group">Data Cleansing <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#data-cleansing" aria-label="Anchor">#</a></span></h3><p>Stopwords,
-HTML syntax,
-lemmitizer</p>
-<h2 id="word-cloud" class="relative group">Word Cloud <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#word-cloud" aria-label="Anchor">#</a></span></h2><p>Result</p>
-<h2 id="connecting-all-words" class="relative group">Connecting all words <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#connecting-all-words" aria-label="Anchor">#</a></span></h2><p>Result</p>
-<h2 id="further-improvement" class="relative group">Further Improvement <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#further-improvement" aria-label="Anchor">#</a></span></h2>
+<p>WordCloud is a common method to understand overall feedback by analyzing the frequent words appearing in all feedbacks. The picture shows that film, movie, and one reveal many times, which are also indicated by the large font size. Focusing on positive and negative sentiment, the word &ldquo;good&rdquo; is identified as the fifth most frequent word (23.9 K), meanwhile the &ldquo;bad&rdquo; word comprises 14.6K. Therefore, initial insight is that IMDB ratings positive feedbacks compared to bad feedbacks according to the frequency.</p>
+<p>On the other hand, &ldquo;good&rdquo; and &ldquo;bad&rdquo; words are not enough to conclude the sentiment as the context might be different, especially when the feedbacks containing both words at the same time. Likewise, those words probably refer to other aspects not directly on the movie. For instance, the feedback of &ldquo;Even though the quality of the video was bad, I&rsquo;d say it is a good movie as the actress &hellip;..&rdquo; shows that &ldquo;bad&rdquo; does not refer to the movie, which can be misleading in representing the sentiment. Therefore, analyzing the relation between words is required to resolve this problem.</p>
+<h1 id="-graph-analysis" class="relative group">🕸️ Graph Analysis <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#-graph-analysis" aria-label="Anchor">#</a></span></h1><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145445_hu_c361f323ac7ba5a7.webp 330w,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145445_hu_4c3191008ca7a559.webp 660w
+            
+              ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145445_hu_373a7af44deea906.webp 1024w
+            
+            
+              ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145445_hu_1d798009b38e4745.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="2880"
+        height="1616"
+        class="mx-auto my-0 rounded-md"
+        alt="image3"
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145445_hu_6246d1e0baa67c31.png" srcset="http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145445_hu_26f7d1f81aedac1e.png 330w,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145445_hu_6246d1e0baa67c31.png 660w
+          
+            ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145445_hu_d96451430894dca2.png 1024w
+          
+          
+            ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145445_hu_6ec41301571c5ffc.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Looking at the intersection, there are about 5.1K feedbacks containing both &ldquo;good&rdquo; and &ldquo;bad&rdquo; in the sentences. These feedbacks are going to be analyzed further by analyzing the correlation among other words.</p>
+<p>Before connecting the words, it is important to note the weight rule is applied in this analysis. The weight gives a level for every connection, indicating how close enough two words appeared in a sentences. In this case, high weight assumes that &ldquo;good&rdquo; or &ldquo;bad&rdquo; close enough to the &ldquo;movie&rdquo;, so it can be assumed to decide the final sentiment.</p>
+<p>According to the graph, the connection between nodes indicates that the words are in the same feedback, and the width of lines represets the weight rule. The result shows for the feedbacks containing both words, connection between movie and bad is strong, meaning that the feedbacks are more likely to have negative sentiment over the positive ones. Nevertheless, this would be better to return this weight to individual feedbacks for annotating purposes. In addition, the sample of feedbacks are also provided to quick check the validation like in the picture below.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145501_hu_b52c8b0e92982086.webp 330w,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145501_hu_833ab8bc371a88a9.webp 660w
+            
+              ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145501_hu_e2440d8298512d89.webp 1024w
+            
+            
+              ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145501_hu_209b53d2c290e025.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="2880"
+        height="1616"
+        class="mx-auto my-0 rounded-md"
+        alt="image4"
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145501_hu_499ea1812e9547ab.png" srcset="http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145501_hu_dd6be6c851fbeb1.png 330w,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145501_hu_499ea1812e9547ab.png 660w
+          
+            ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145501_hu_ffb154ecea0ad87e.png 1024w
+          
+          
+            ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145501_hu_6ff7ec85e5471dd5.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="-further-improvement" class="relative group">⚙️ Further Improvement <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#-further-improvement" aria-label="Anchor">#</a></span></h2><p>Further development should be considered especially handling negation phrases like “not a good movie”, and synonyms like film and movie. Such examples demonstrate that the despite strong relation but can’t affect the actual meanings whether a feedback is positive or negative.</p>
+
       </div>
     </section>
     <footer class="max-w-prose pt-8 print:hidden">
