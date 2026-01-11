@@ -4,11 +4,16 @@ draft : false
 title : 'Sentiment Annotation'
 description : ""
 highlight: true
-result: "Growing the digital revenue around 150% percent"
-summary: "This model was used to enhance collaborative filtering approach, offering digital subscription products. The model was able to introduce niche and seasonal products, which are more personalized"
+result: "Accelerated textual data to determine sentiment tagging. This has potential for analyzing confidential information that AI could not handle or preparing training data."
+summary: "WordCloud and Graph are used mainly in this analysis in order to understand word frequency and how strong the relation among them."
 weight : 3
 showTableOfContents: true
 ---
+
+{{< alert >}}
+**Note** To keep it confidential, all company-specific metrics has been replaced by public dataset. 
+{{< /alert >}}
+
 
 ## ❓ Background
 
@@ -16,11 +21,11 @@ showTableOfContents: true
 
 Tagging sentiment of feedbacks can be exhausting especially dealing with large amount of feedbacks. In addition, some companies might restrict the use of AI because of potentially revealing the secrets, unless you totally trust to AI CEO's. In another case, probably you want to train AI by creating reliable raw data. Therefore, this article is going to discuss how to annotate text sentiment by combining word-cloud and graph in python.
 
-## Real Scenario
+## 💼 Real Scenario
 
 ### 📽️ IMDb (Internet Movie Database) ratings
 
-![image1](screenshot_20260107_at_145417.png)
+![image](screenshot_20260111_at_211839.png)
 
 In this case, there are around 400K feedbacks, giving comments about their experience watching various movies. Yet, these feedbacks still require further cleansing since they are extracted using machine before directly analyzing it. To resolve this issue, I used three following methods.
 
@@ -32,7 +37,7 @@ In this case, there are around 400K feedbacks, giving comments about their exper
 
 ### ☁️ Word Frequency by WordCloud
 
-![image2](screenshot_20260107_at_145431.png)
+![image](screenshot_20260111_at_211901.png)
 
 WordCloud is a common method to understand overall feedback by analyzing the frequent words appearing in all feedbacks. The picture shows that film, movie, and one reveal many times, which are also indicated by the large font size. Focusing on positive and negative sentiment, the word "good" is identified as the fifth most frequent word (23.9 K), meanwhile the "bad" word comprises 14.6K. Therefore, initial insight is that IMDB ratings positive feedbacks compared to bad feedbacks according to the frequency.
 
@@ -40,7 +45,7 @@ On the other hand, "good" and "bad" words are not enough to conclude the sentime
 
 # 🕸️ Graph Analysis
 
-![image3](screenshot_20260107_at_145445.png)
+![image](screenshot_20260111_at_211916.png)
 
 Looking at the intersection, there are about 5.1K feedbacks containing both "good" and "bad" in the sentences. These feedbacks are going to be analyzed further by analyzing the correlation among other words. 
 
@@ -48,8 +53,13 @@ Before connecting the words, it is important to note the weight rule is applied 
 
 According to the graph, the connection between nodes indicates that the words are in the same feedback, and the width of lines represets the weight rule. The result shows for the feedbacks containing both words, connection between movie and bad is strong, meaning that the feedbacks are more likely to have negative sentiment over the positive ones. Nevertheless, this would be better to return this weight to individual feedbacks for annotating purposes. In addition, the sample of feedbacks are also provided to quick check the validation like in the picture below.
 
-![image4](screenshot_20260107_at_145501.png)
+![image](screenshot_20260111_at_211931.png)
 
 ## ⚙️ Further Improvement
 
 Further development should be considered especially handling negation phrases like “not a good movie”, and synonyms like film and movie. Such examples demonstrate that the despite strong relation but can’t affect the actual meanings whether a feedback is positive or negative.
+To find out more about technical details, you can explore in my github below
+
+{{< button href="https://github.com/azkarohbiya/sentiment_annotation" target="_blank" >}}
+View on GitHub
+{{< /button >}}

@@ -56,7 +56,7 @@
     name="description"
     content="
       
-        This model was used to enhance collaborative filtering approach, offering digital subscription products. The model was able to introduce niche and seasonal products, which are more personalized
+        WordCloud and Graph are used mainly in this analysis in order to understand word frequency and how strong the relation among them.
       
     "
   />
@@ -83,7 +83,7 @@
   <meta property="og:url" content="http://localhost:1313/posts/sentiment_annotation/">
   <meta property="og:site_name" content="azkarohbiya">
   <meta property="og:title" content="Sentiment Annotation">
-  <meta property="og:description" content="This model was used to enhance collaborative filtering approach, offering digital subscription products. The model was able to introduce niche and seasonal products, which are more personalized">
+  <meta property="og:description" content="WordCloud and Graph are used mainly in this analysis in order to understand word frequency and how strong the relation among them.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -95,7 +95,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="http://localhost:1313/posts/sentiment_annotation/cover.jpeg">
   <meta name="twitter:title" content="Sentiment Annotation">
-  <meta name="twitter:description" content="This model was used to enhance collaborative filtering approach, offering digital subscription products. The model was able to introduce niche and seasonal products, which are more personalized">
+  <meta name="twitter:description" content="WordCloud and Graph are used mainly in this analysis in order to understand word frequency and how strong the relation among them.">
 
   
   <script type="application/ld+json">
@@ -106,7 +106,7 @@
     "name": "Sentiment Annotation",
     "headline": "Sentiment Annotation",
     
-    "abstract": "This model was used to enhance collaborative filtering approach, offering digital subscription products. The model was able to introduce niche and seasonal products, which are more personalized",
+    "abstract": "WordCloud and Graph are used mainly in this analysis in order to understand word frequency and how strong the relation among them.",
     "inLanguage": "en",
     "url" : "http:\/\/localhost:1313\/posts\/sentiment_annotation\/",
     "author" : {
@@ -122,7 +122,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "637"
+    "wordCount": "669"
   }
   </script>
     
@@ -417,7 +417,7 @@
         <li><a href="#-why-you-cant-use-llm-to-decide-positive-or-negative-feedbacks">👍 Why you can&rsquo;t use LLM to decide positive or negative feedbacks.</a></li>
       </ul>
     </li>
-    <li><a href="#real-scenario">Real Scenario</a>
+    <li><a href="#-real-scenario">💼 Real Scenario</a>
       <ul>
         <li><a href="#-imdb-internet-movie-database-ratings">📽️ IMDb (Internet Movie Database) ratings</a></li>
         <li><a href="#-word-frequency-by-wordcloud">☁️ Word Frequency by WordCloud</a></li>
@@ -436,8 +436,16 @@
         </div>
       
       <div class="min-h-0 min-w-0 max-w-prose grow">
-        <h2 id="-background" class="relative group">❓ Background <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#-background" aria-label="Anchor">#</a></span></h2><h3 id="-why-you-cant-use-llm-to-decide-positive-or-negative-feedbacks" class="relative group">👍 Why you can&rsquo;t use LLM to decide positive or negative feedbacks. <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#-why-you-cant-use-llm-to-decide-positive-or-negative-feedbacks" aria-label="Anchor">#</a></span></h3><p>Tagging sentiment of feedbacks can be exhausting especially dealing with large amount of feedbacks. In addition, some companies might restrict the use of AI because of potentially revealing the secrets, unless you totally trust to AI CEO&rsquo;s. In another case, probably you want to train AI by creating reliable raw data. Therefore, this article is going to discuss how to annotate text sentiment by combining word-cloud and graph in python.</p>
-<h2 id="real-scenario" class="relative group">Real Scenario <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#real-scenario" aria-label="Anchor">#</a></span></h2><h3 id="-imdb-internet-movie-database-ratings" class="relative group">📽️ IMDb (Internet Movie Database) ratings <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#-imdb-internet-movie-database-ratings" aria-label="Anchor">#</a></span></h3><p>
+        <div class="flex rounded-md bg-primary-100 px-4 py-3 dark:bg-primary-900">
+  <span class="pe-3 text-primary-400">
+    <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg>
+</span>
+  </span>
+  <span class="dark:text-neutral-300"><strong>Note</strong> To keep it confidential, all company-specific metrics has been replaced by public dataset.</span>
+</div>
+
+<h2 id="-background" class="relative group">❓ Background <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#-background" aria-label="Anchor">#</a></span></h2><h3 id="-why-you-cant-use-llm-to-decide-positive-or-negative-feedbacks" class="relative group">👍 Why you can&rsquo;t use LLM to decide positive or negative feedbacks. <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#-why-you-cant-use-llm-to-decide-positive-or-negative-feedbacks" aria-label="Anchor">#</a></span></h3><p>Tagging sentiment of feedbacks can be exhausting especially dealing with large amount of feedbacks. In addition, some companies might restrict the use of AI because of potentially revealing the secrets, unless you totally trust to AI CEO&rsquo;s. In another case, probably you want to train AI by creating reliable raw data. Therefore, this article is going to discuss how to annotate text sentiment by combining word-cloud and graph in python.</p>
+<h2 id="-real-scenario" class="relative group">💼 Real Scenario <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#-real-scenario" aria-label="Anchor">#</a></span></h2><h3 id="-imdb-internet-movie-database-ratings" class="relative group">📽️ IMDb (Internet Movie Database) ratings <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#-imdb-internet-movie-database-ratings" aria-label="Anchor">#</a></span></h3><p>
 
 
 
@@ -465,12 +473,12 @@
       
         <source
           
-            srcset="http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145417_hu_77a24d18696ddce9.webp 330w,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145417_hu_54bd51433fefe4dc.webp 660w
+            srcset="http://localhost:1313/posts/sentiment_annotation/screenshot_20260111_at_211839_hu_2f82b90d8540d827.webp 330w,http://localhost:1313/posts/sentiment_annotation/screenshot_20260111_at_211839_hu_9fa135d7e7c1954d.webp 660w
             
-              ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145417_hu_f9db638ac2ed23f1.webp 1024w
+              ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260111_at_211839_hu_6406e556857cb72.webp 1024w
             
             
-              ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145417_hu_50c899a6a204f3bb.webp 1320w
+              ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260111_at_211839_hu_6686e90545b26e12.webp 1320w
             "
           
           sizes="100vw"
@@ -478,18 +486,18 @@
         />
       
       <img
-        width="2880"
-        height="1614"
+        width="2559"
+        height="1437"
         class="mx-auto my-0 rounded-md"
-        alt="image1"
+        alt="image"
         loading="lazy" decoding="async"
         
-          src="http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145417_hu_bd5150bd50f3b256.png" srcset="http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145417_hu_bc52a06356b5f842.png 330w,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145417_hu_bd5150bd50f3b256.png 660w
+          src="http://localhost:1313/posts/sentiment_annotation/screenshot_20260111_at_211839_hu_e2ad01d889f81869.png" srcset="http://localhost:1313/posts/sentiment_annotation/screenshot_20260111_at_211839_hu_585e50f2f9214681.png 330w,http://localhost:1313/posts/sentiment_annotation/screenshot_20260111_at_211839_hu_e2ad01d889f81869.png 660w
           
-            ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145417_hu_790c6e0587ff3d9f.png 1024w
+            ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260111_at_211839_hu_a7326e54c883168c.png 1024w
           
           
-            ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145417_hu_59ce4f11e9e8acf.png 1320w
+            ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260111_at_211839_hu_ae2aeb2dd436163b.png 1320w
           "
           sizes="100vw"
         
@@ -551,12 +559,12 @@
       
         <source
           
-            srcset="http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145431_hu_a42dc43b1b48ce35.webp 330w,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145431_hu_256763fd66d5bdc8.webp 660w
+            srcset="http://localhost:1313/posts/sentiment_annotation/screenshot_20260111_at_211901_hu_3884d09be2aec099.webp 330w,http://localhost:1313/posts/sentiment_annotation/screenshot_20260111_at_211901_hu_9779d47a724fa160.webp 660w
             
-              ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145431_hu_89b76c2dae1c9361.webp 1024w
+              ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260111_at_211901_hu_5562c62113c888cd.webp 1024w
             
             
-              ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145431_hu_3f83b2bcebd00653.webp 1320w
+              ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260111_at_211901_hu_5e25283c3ef20381.webp 1320w
             "
           
           sizes="100vw"
@@ -564,18 +572,18 @@
         />
       
       <img
-        width="2880"
-        height="1614"
+        width="2560"
+        height="1440"
         class="mx-auto my-0 rounded-md"
-        alt="image2"
+        alt="image"
         loading="lazy" decoding="async"
         
-          src="http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145431_hu_daf844a7fc3f8cdf.png" srcset="http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145431_hu_1d14795da75850f7.png 330w,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145431_hu_daf844a7fc3f8cdf.png 660w
+          src="http://localhost:1313/posts/sentiment_annotation/screenshot_20260111_at_211901_hu_2473f04c20ef32e8.png" srcset="http://localhost:1313/posts/sentiment_annotation/screenshot_20260111_at_211901_hu_fddc3d4083cefc24.png 330w,http://localhost:1313/posts/sentiment_annotation/screenshot_20260111_at_211901_hu_2473f04c20ef32e8.png 660w
           
-            ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145431_hu_9e63c14e7d1378fa.png 1024w
+            ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260111_at_211901_hu_b48fed2ef24dcae1.png 1024w
           
           
-            ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145431_hu_2ddaff26d1f5e269.png 1320w
+            ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260111_at_211901_hu_68b1715b607ef29d.png 1320w
           "
           sizes="100vw"
         
@@ -616,12 +624,12 @@
       
         <source
           
-            srcset="http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145445_hu_c361f323ac7ba5a7.webp 330w,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145445_hu_4c3191008ca7a559.webp 660w
+            srcset="http://localhost:1313/posts/sentiment_annotation/screenshot_20260111_at_211916_hu_8fbd2ea1ac275142.webp 330w,http://localhost:1313/posts/sentiment_annotation/screenshot_20260111_at_211916_hu_383a76c7ecb15197.webp 660w
             
-              ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145445_hu_373a7af44deea906.webp 1024w
+              ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260111_at_211916_hu_127e220b3cd63eeb.webp 1024w
             
             
-              ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145445_hu_1d798009b38e4745.webp 1320w
+              ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260111_at_211916_hu_35bffe0c23299765.webp 1320w
             "
           
           sizes="100vw"
@@ -629,18 +637,18 @@
         />
       
       <img
-        width="2880"
-        height="1616"
+        width="2560"
+        height="1440"
         class="mx-auto my-0 rounded-md"
-        alt="image3"
+        alt="image"
         loading="lazy" decoding="async"
         
-          src="http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145445_hu_6246d1e0baa67c31.png" srcset="http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145445_hu_26f7d1f81aedac1e.png 330w,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145445_hu_6246d1e0baa67c31.png 660w
+          src="http://localhost:1313/posts/sentiment_annotation/screenshot_20260111_at_211916_hu_55721e2833677971.png" srcset="http://localhost:1313/posts/sentiment_annotation/screenshot_20260111_at_211916_hu_d1505a0be363dab.png 330w,http://localhost:1313/posts/sentiment_annotation/screenshot_20260111_at_211916_hu_55721e2833677971.png 660w
           
-            ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145445_hu_d96451430894dca2.png 1024w
+            ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260111_at_211916_hu_85ea020b6490c019.png 1024w
           
           
-            ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145445_hu_6ec41301571c5ffc.png 1320w
+            ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260111_at_211916_hu_b9c8eacb492a2d7a.png 1320w
           "
           sizes="100vw"
         
@@ -682,12 +690,12 @@
       
         <source
           
-            srcset="http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145501_hu_b52c8b0e92982086.webp 330w,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145501_hu_833ab8bc371a88a9.webp 660w
+            srcset="http://localhost:1313/posts/sentiment_annotation/screenshot_20260111_at_211931_hu_7dce99688a66410b.webp 330w,http://localhost:1313/posts/sentiment_annotation/screenshot_20260111_at_211931_hu_e607308882fb39cb.webp 660w
             
-              ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145501_hu_e2440d8298512d89.webp 1024w
+              ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260111_at_211931_hu_5007a0d28c5a0043.webp 1024w
             
             
-              ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145501_hu_209b53d2c290e025.webp 1320w
+              ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260111_at_211931_hu_ffd10118561cd1a1.webp 1320w
             "
           
           sizes="100vw"
@@ -695,18 +703,18 @@
         />
       
       <img
-        width="2880"
-        height="1616"
+        width="2560"
+        height="1440"
         class="mx-auto my-0 rounded-md"
-        alt="image4"
+        alt="image"
         loading="lazy" decoding="async"
         
-          src="http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145501_hu_499ea1812e9547ab.png" srcset="http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145501_hu_dd6be6c851fbeb1.png 330w,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145501_hu_499ea1812e9547ab.png 660w
+          src="http://localhost:1313/posts/sentiment_annotation/screenshot_20260111_at_211931_hu_12d593340d483c1.png" srcset="http://localhost:1313/posts/sentiment_annotation/screenshot_20260111_at_211931_hu_1498930549b18f2a.png 330w,http://localhost:1313/posts/sentiment_annotation/screenshot_20260111_at_211931_hu_12d593340d483c1.png 660w
           
-            ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145501_hu_ffb154ecea0ad87e.png 1024w
+            ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260111_at_211931_hu_7206712bd4934961.png 1024w
           
           
-            ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260107_at_145501_hu_6ff7ec85e5471dd5.png 1320w
+            ,http://localhost:1313/posts/sentiment_annotation/screenshot_20260111_at_211931_hu_48cd8dac8bdb06d3.png 1320w
           "
           sizes="100vw"
         
@@ -717,7 +725,20 @@
 
 </figure>
 </p>
-<h2 id="-further-improvement" class="relative group">⚙️ Further Improvement <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#-further-improvement" aria-label="Anchor">#</a></span></h2><p>Further development should be considered especially handling negation phrases like “not a good movie”, and synonyms like film and movie. Such examples demonstrate that the despite strong relation but can’t affect the actual meanings whether a feedback is positive or negative.</p>
+<h2 id="-further-improvement" class="relative group">⚙️ Further Improvement <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#-further-improvement" aria-label="Anchor">#</a></span></h2><p>Further development should be considered especially handling negation phrases like “not a good movie”, and synonyms like film and movie. Such examples demonstrate that the despite strong relation but can’t affect the actual meanings whether a feedback is positive or negative.
+To find out more about technical details, you can explore in my github below</p>
+<a
+  class="inline-block !rounded-md bg-primary-600 px-4 py-1 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700"
+  href="https://github.com/azkarohbiya/sentiment_annotation"
+  target="_blank"
+  
+  role="button"
+>
+  
+View on GitHub
+
+</a>
+
 
       </div>
     </section>
@@ -749,18 +770,18 @@
       
       
       <img
-        width="1024"
-        height="1024"
+        width="800"
+        height="800"
         class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
         alt="Azka Rohbiya Ramadani"
         loading="lazy" decoding="async"
         
-          src="http://localhost:1313/img/01_profile_hu_eb2701c18d5b1cbf.png" srcset="http://localhost:1313/img/01_profile_hu_f9c4e5b01a74c1f6.png 330w,http://localhost:1313/img/01_profile_hu_eb2701c18d5b1cbf.png 660w
+          src="http://localhost:1313/img/01_profile_hu_3932bae2cedc493.png" srcset="http://localhost:1313/img/01_profile_hu_8bdd62ec3139c8a0.png 330w,http://localhost:1313/img/01_profile_hu_3932bae2cedc493.png 660w
           
-            ,http://localhost:1313/img/01_profile.png 1024w
+            ,http://localhost:1313/img/01_profile.png 800w
           
           
-            ,http://localhost:1313/img/01_profile.png 1024w
+            ,http://localhost:1313/img/01_profile.png 800w
           "
           sizes="100vw"
         

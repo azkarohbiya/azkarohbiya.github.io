@@ -2,11 +2,15 @@
 title: "Propensity Score Matching"
 highlight: true
 date : "2025-12-01"
-result: "Think the impact"
-summary: "The algorithm that helps to find artificial control group for apple-to-apple comparison, avoiding bias in measurement impacts"
+result: "Improved Above-the-Line (ATL) campaign measurement, identifying approximately ~$300K/month at-risk-revenue."
+summary: "The method is a brach of causal models, improving clarity in impact measurement for non-control experiments, by making artificial apple-to-apple comparable groups."
 weight: 2
 showTableOfContents: true
 ---
+
+{{< alert >}}
+**Note** To keep it confidential, all company-specific metrics has been replaced by public dataset. 
+{{< /alert >}}
 
 ## ❓ What does it matter?
 

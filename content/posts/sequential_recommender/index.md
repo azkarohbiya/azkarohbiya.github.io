@@ -4,11 +4,16 @@ draft : false
 title : 'Sequential Recommender System'
 description : ""
 highlight: true
-result: "Growing the digital revenue around 150% percent"
-summary: "This model was used to enhance collaborative filtering approach, offering digital subscription products. The model was able to introduce niche and seasonal products, which are more personalized"
+result: "Developed the Digital Recommendation increasing around ~150% revenue compared to Collaborative Filtering model."
+summary: "By using sequential approach, it helps reveal niche and seasonal products, avoiding saturated offers that are commonly driven by massive transaction."
 weight : 1
 showTableOfContents: true
 ---
+
+{{< alert >}}
+**Note** To keep it confidential, all company-specific metrics has been replaced by public dataset. 
+{{< /alert >}}
+
 
 ## Background
 ### 💰 The revenue gap after a purchase

@@ -13,21 +13,21 @@
       <link>http://localhost:1313/posts/sequential_recommender/</link>
       <pubDate>Fri, 26 Dec 2025 17:16:04 +0700</pubDate>
       <guid>http://localhost:1313/posts/sequential_recommender/</guid>
-      <description>This model was used to enhance collaborative filtering approach, offering digital subscription products. The model was able to introduce niche and seasonal products, which are more personalized</description>
+      <description>By using sequential approach, it helps reveal niche and seasonal products, avoiding saturated offers that are commonly driven by massive transaction.</description>
     </item>
     <item>
       <title>Propensity Score Matching</title>
       <link>http://localhost:1313/posts/propensity_score_matching/</link>
       <pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/propensity_score_matching/</guid>
-      <description>The algorithm that helps to find artificial control group for apple-to-apple comparison, avoiding bias in measurement impacts</description>
+      <description>The method is a brach of causal models, improving clarity in impact measurement for non-control experiments, by making artificial apple-to-apple comparable groups.</description>
     </item>
     <item>
       <title>Sentiment Annotation</title>
       <link>http://localhost:1313/posts/sentiment_annotation/</link>
       <pubDate>Fri, 26 Dec 2025 17:16:04 +0700</pubDate>
       <guid>http://localhost:1313/posts/sentiment_annotation/</guid>
-      <description>This model was used to enhance collaborative filtering approach, offering digital subscription products. The model was able to introduce niche and seasonal products, which are more personalized</description>
+      <description>WordCloud and Graph are used mainly in this analysis in order to understand word frequency and how strong the relation among them.</description>
     </item>
     <item>
       <title>Digital DNA</title>
