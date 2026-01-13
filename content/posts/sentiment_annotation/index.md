@@ -4,7 +4,7 @@ draft : false
 title : 'Sentiment Annotation'
 description : ""
 highlight: true
-result: "Accelerated textual data to determine sentiment tagging. This has potential for analyzing confidential information that AI could not handle or preparing training data."
+result: "Accelerates textual data to determine sentiment tagging. This has potential for analyzing confidential information that AI could not handle or preparing training data."
 summary: "WordCloud and Graph are used mainly in this analysis in order to understand word frequency and how strong the relation among them."
 weight : 3
 showTableOfContents: true

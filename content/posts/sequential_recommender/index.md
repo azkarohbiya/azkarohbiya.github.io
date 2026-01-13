@@ -1,10 +1,10 @@
 ---
 date : '2025-12-26T17:16:04+07:00'
 draft : false
-title : 'Sequential Recommender System'
+title : 'Sequential Recommender'
 description : ""
 highlight: true
-result: "Developed the Digital Recommendation increasing around ~150% revenue compared to Collaborative Filtering model."
+result: "Developed the Digital Recommendation increasing by around ~150% revenue compared to Collaborative Filtering model."
 summary: "By using sequential approach, it helps reveal niche and seasonal products, avoiding saturated offers that are commonly driven by massive transaction."
 weight : 1
 showTableOfContents: true

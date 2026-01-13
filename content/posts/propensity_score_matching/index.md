@@ -2,7 +2,7 @@
 title: "Propensity Score Matching"
 highlight: true
 date : "2025-12-01"
-result: "Improved Above-the-Line (ATL) campaign measurement, identifying approximately ~$300K/month at-risk-revenue."
+result: "Improved Above-the-Line (ATL) campaign measurement in a loyalty program, identifying approximately ~$300K/month at-risk-revenue."
 summary: "The method is a brach of causal models, improving clarity in impact measurement for non-control experiments, by making artificial apple-to-apple comparable groups."
 weight: 2
 showTableOfContents: true
