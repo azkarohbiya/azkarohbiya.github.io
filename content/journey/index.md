@@ -22,10 +22,9 @@ showTableOfContents: true
 {{< info_card
   title="IELTS"
   text="Score 6.5 (CERF B2)<br> Issued by IDP IELTS <br> Date 5 Dec 2025"
-  href="https://drive.google.com/file/d/1Gfn7t9jXF9w9COKOZiw_GC-WEDmD4Z0d/view?usp=sharing"
+  href="https://drive.google.com/file/d/1MT459nDsu6ZNQkxvjXTEnzAvGsHtS_vP/view?usp=sharing"
   cta="Preview Certificate"
 >}}
-
 
 ---
 
@@ -56,6 +55,6 @@ showTableOfContents: true
 
 ## 📝 Resume
 
-{{< button href="https://drive.google.com/file/d/11HV_9gbh0mcDd2ZK9qHwuD6cF4b4mOEM/view?usp=share_link" >}}
+{{< button href="https://drive.google.com/file/d/1_ywu7ghIFRmTSssU3cjFKJFrrb4VNlql/view?usp=sharing" >}}
 Resume
 {{< /button >}}

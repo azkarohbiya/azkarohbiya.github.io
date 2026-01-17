@@ -8,7 +8,8 @@ showTableOfContents: true
 
 ## 👤 About Me
 
-I have over 5 years of experience working with data works, focusing in predictive modeling, reporting, marketing analytics, and data pitch decks.  Moreover, I'm really into communicative insights, making scattered numbers to be concise charts, so ultimately they can be readily grasped by any team with various backgrounds. Now, I continuously seek more journey to help more teams solving their challenges through sophisticated analysis.
+With over 5 years of experience with data, focus on solving business problems through data approaches by utilizing advanced algorithm, building predictive models, reporting insights, arranging strategies, and pitching cross-functional teams. Strongly skilled in collaborative projects, especially dealing with revenue-related cases by aligning technical strategies that can be applicable in real business challenges. Now, I continuously seek more journey to help more teams solving their challenges through sophisticated analysis.
+
 
 ## 🔬 Field of Interests
 
@@ -26,6 +27,6 @@ In analytics, I'm really into grasping the domain knowledge first over the techn
 
 To see more about professional journey, please refer to my resume!
 
-{{< button href="https://drive.google.com/file/d/11HV_9gbh0mcDd2ZK9qHwuD6cF4b4mOEM/view?usp=share_link" >}}
+{{< button href="https://drive.google.com/file/d/1_ywu7ghIFRmTSssU3cjFKJFrrb4VNlql/view?usp=sharing" >}}
 Resume
 {{< /button >}}
