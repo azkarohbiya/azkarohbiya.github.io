@@ -55,6 +55,6 @@ showTableOfContents: true
 
 ## 📝 Resume
 
-{{< button href="https://drive.google.com/file/d/1AWPzD3QRk-KdfndzeT5zM4SuvNe7JhDt/view?usp=sharing" >}}
+{{< button href="https://drive.google.com/file/d/1KwKiJ7dPL_VH5_NKKcWPLZegbaaUdbqX/view?usp=sharing" >}}
 Resume
 {{< /button >}}
