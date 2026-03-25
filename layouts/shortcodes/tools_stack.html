@@ -1,0 +1,54 @@
+{{/* tools_stack shortcode
+     Usage: {{< tools_stack bg="white" title="Tools & Stack" >}}
+     Params:
+       bg    — "white" | "gray" (wraps in a section-band if provided)
+       title — optional heading text rendered inside the band
+*/}}
+
+{{- $bg    := .Get "bg" -}}
+{{- $title := .Get "title" -}}
+
+{{- if $bg -}}
+<section class="section-band section-band--{{ $bg }}">
+  {{- if $title -}}<h2 class="band-heading">{{ $title }}</h2>{{- end -}}
+{{- end -}}
+
+<div class="tools-row not-prose">
+
+  {{/* Core languages */}}
+  <div class="tools-group">
+    <span class="tools-group-label">Languages</span>
+    <div class="tools-tags">
+      <span class="tool-tag">Python</span>
+      <span class="tool-tag">SQL</span>
+    </div>
+  </div>
+
+  {{/* Libraries */}}
+  <div class="tools-group">
+    <span class="tools-group-label">Libraries</span>
+    <div class="tools-tags">
+      <span class="tool-tag">pandas</span>
+      <span class="tool-tag">scikit-learn</span>
+      <span class="tool-tag">NetworkX</span>
+      <span class="tool-tag">NLTK</span>
+      <span class="tool-tag">matplotlib</span>
+    </div>
+  </div>
+
+  {{/* Methods */}}
+  <div class="tools-group">
+    <span class="tools-group-label">Methods</span>
+    <div class="tools-tags">
+      <span class="tool-tag">Causal Inference</span>
+      <span class="tool-tag">Graph Theory</span>
+      <span class="tool-tag">A/B Testing</span>
+      <span class="tool-tag">Logistic Regression</span>
+    </div>
+  </div>
+
+</div>
+
+{{- if $bg -}}
+</section>
+{{- end -}}

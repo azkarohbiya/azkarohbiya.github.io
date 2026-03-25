@@ -1,0 +1,18 @@
+{{/*
+  Full-bleed section band with alternating background.
+
+  Usage (use percent delimiters so inner markdown + shortcodes are processed):
+    {{% band bg="white" %}}
+    ## Section Title
+    {{< some_shortcode >}}
+    {{% /band %}}
+
+  Parameters:
+    bg  — "white" (default) or "gray"
+*/}}
+
+{{- $bg := .Get "bg" | default "white" -}}
+
+<section class="section-band section-band--{{ $bg }}">
+  {{ .Inner }}
+</section>

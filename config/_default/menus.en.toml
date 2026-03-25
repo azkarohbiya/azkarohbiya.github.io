@@ -48,6 +48,12 @@
   pageRef = "contact"
   weight = 4
 
+[[main]]
+  weight = 5
+  [main.params]
+    action = "appearance"
+    showName = false
+
 
 # -- Footer Menu --
 # The footer menu is displayed at the bottom of the page, just before

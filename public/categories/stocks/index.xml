@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stocks on azkarohbiya</title>
+    <link>http://localhost:1313/categories/stocks/</link>
+    <description>Recent content in Stocks on azkarohbiya</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 15 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/stocks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>S&amp;P Energy Stocks after Iran Conflict, Feb&#39;26</title>
+      <link>http://localhost:1313/posts/20260315_cnt_1/</link>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/20260315_cnt_1/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

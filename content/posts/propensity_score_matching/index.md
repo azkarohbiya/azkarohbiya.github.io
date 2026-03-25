@@ -1,6 +1,7 @@
 ---
 title: "Propensity Score Matching"
 highlight: true
+categories: ["work"]
 date : "2025-12-01"
 result: "Improved Above-the-Line (ATL) campaign measurement in a loyalty program, identifying approximately ~$300K/month at-risk-revenue."
 summary: "The method is a brach of causal models, improving clarity in impact measurement for non-control experiments, by making artificial apple-to-apple comparable groups."
@@ -61,17 +62,17 @@ From the data, there are three terminologies that are important to remember, con
 ### 🖥️ Matching
 
 
-![image](screenshot_20260103_at_195341.png)
+![Distribution comparison of smokers vs non-smokers before propensity score matching, showing imbalanced feature profiles](screenshot_20260103_at_195341.png)
 
 Before applying the algorithm, the data shows that both smokers and non-smokers have different profile. One of the noticable one is that the total of non-smokers are far larger than the smokers. Again, the distribution of all confounders are different, heart disease status for example, that there are 18.9% of smokers out of total heart disease sufferers, meanwhile in negative group, the smokers only makes 15.1%. The imbalance might interfere the conclusion because smokers group mostly suffering heart disease.
 
-![image](screenshot_20260103_at_195351.png)
+![Distribution comparison of smokers vs non-smokers after propensity score matching, showing balanced 50:50 feature profiles](screenshot_20260103_at_195351.png)
 
 Compared to data after matching process, the distribution of smokers and non-smokers are similar almost in every feature. For example, in hypertension, the ratio of smokers and non-smokers in the positive hypertension group is 50:50, and so the negative one is. As a result, measuring stroke status between the two groups can be much more reliable as both have already similar.
 
 ### 🔎 Evaluation
 
-![image](screenshot_20260103_at_145324.png)
+![Standardised Mean Difference (SMD) chart comparing feature balance before and after propensity score matching](screenshot_20260103_at_145324.png)
 
 To support distribution analysis, Standard Mean Difference ([SMD](https://onlinelibrary.wiley.com/doi/10.1002/cesm.12047)) is used as the indicators whether two values of distribution are similar or not. In simple explanation, smaller SMD value means that two groups are in common. 
 

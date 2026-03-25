@@ -1,12 +1,13 @@
 ---
-date : '2025-12-26T17:16:04+07:00'
-draft : false
-title : 'Sequential Recommender'
-description : ""
+date: "2025-12-26"
+draft: false
+title: "Sequential Recommender"
+description: "A graph-based sequential product recommender built with NetworkX that reveals niche and seasonal purchase patterns — delivering ~150% revenue uplift over collaborative filtering."
 highlight: true
+categories: ["work"]
 result: "Developed the Digital Recommendation increasing by around ~150% revenue compared to Collaborative Filtering model."
 summary: "By using sequential approach, it helps reveal niche and seasonal products, avoiding saturated offers that are commonly driven by massive transaction."
-weight : 1
+weight: 1
 showTableOfContents: true
 ---
 
@@ -22,14 +23,14 @@ One of the effective campaigns to customers is introducing other products during
 
 ### 🗺️ Invisible pattern: products come in sequence
 
-![image](screenshot_20260104_at_140656.png)
+![Illustration showing that customers who buy a phone are sequentially more likely to buy a phone case next](screenshot_20260104_at_140656.png)
 
 
 Surprisingly, some stores are smart enough to guess what the next products that the customers are morelikely to buy. For example, after purchasing a phone, storekeepers are going to offer phone case. In addition, if a customer comes to buy a case, then the next product wouldn't be a phone, but probably other gadget accessories. Therefore, customers choose items sequentially, and this model is going find the most natural best product according to sequential behavior.
 
 ### ⚛️ NetworkX to appraoch sequential model
 
-![image](screenshot_20260104_at_135914.png)
+![NetworkX graph showing product transition paths, with node sizes representing purchase frequency and edge widths representing transition probability](screenshot_20260104_at_135914.png)
 
 In this article, we are going to use [NetworkX](https://networkx.org/documentation/stable/), a branch of graph theory, to explain natural behavior how customers decide purchasing an item accoring to their past behavior of choosing the others.
 
@@ -37,7 +38,7 @@ The analysis that will be discussed are the nodes, meaning the products includin
 
 ## 🛒 Implementing real scenario
 
-![image](screenshot_20260104_at_140301.png)
+![Retail product dataset covering clothes, electronics, and furniture used to build the sequential recommender model](screenshot_20260104_at_140301.png)
 
 The use case is retail products, covering three categories (clothes, electronic, and furniture) with total 17 disticnt products. The data has been cleansed in sql which then transformed into graph model. Therefor, for technical details, I suggest you to visit my github.
 
@@ -47,7 +48,7 @@ View on GitHub
 
 ### 📈 Graph result
 
-![image](screenshot_20260104_at_140439.png)
+![Full NetworkX product transition graph with highlighted edges showing the highest-frequency purchase paths across all 17 products](screenshot_20260104_at_140439.png)
 
 The graph shows that almost all products related with each others, drawn by the scattered points that are connected. In addition, the hightlighted lines are configured to refer the most frequent transitin that is regarded as the highest occurance path of the next products. For eample, after choosing accessories, customers are most likelye purchase printers.
 
@@ -55,7 +56,7 @@ Overall, there are three products that are potentially purchased repeatedly, nam
 
 ### ⬆️ Incresing the probability
 
-![image](screenshot_20260104_at_140140.png)
+![Recommendation card table showing the top next-product suggestions ranked by transition probability for each last-purchased item](screenshot_20260104_at_140140.png)
 
 To enhance probability, instead of offering one product accoridng to the graph, it's also possible to offer other possible option by sorting the several highest possible products. The table above depicts the card that consist some options that are best to offer according each last transaction.
 

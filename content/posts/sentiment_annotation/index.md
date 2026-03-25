@@ -1,12 +1,13 @@
 ---
-date : '2025-12-26T17:16:04+07:00'
-draft : false
-title : 'Sentiment Annotation'
-description : ""
+date: "2025-12-26"
+draft: false
+title: "Sentiment Annotation"
+description: "How to annotate text sentiment at scale using WordCloud and graph analysis in Python — without relying on LLMs or exposing confidential data."
 highlight: true
+categories: ["work"]
 result: "Accelerates textual data to determine sentiment tagging. This has potential for analyzing confidential information that AI could not handle or preparing training data."
 summary: "WordCloud and Graph are used mainly in this analysis in order to understand word frequency and how strong the relation among them."
-weight : 3
+weight: 3
 showTableOfContents: true
 ---
 
@@ -25,7 +26,7 @@ Tagging sentiment of feedbacks can be exhausting especially dealing with large a
 
 ### 📽️ IMDb (Internet Movie Database) ratings
 
-![image](screenshot_20260111_at_211839.png)
+![Sample of IMDb movie review feedbacks dataset used for sentiment analysis](screenshot_20260111_at_211839.png)
 
 In this case, there are around 400K feedbacks, giving comments about their experience watching various movies. Yet, these feedbacks still require further cleansing since they are extracted using machine before directly analyzing it. To resolve this issue, I used three following methods.
 
@@ -37,7 +38,7 @@ In this case, there are around 400K feedbacks, giving comments about their exper
 
 ### ☁️ Word Frequency by WordCloud
 
-![image](screenshot_20260111_at_211901.png)
+![WordCloud visualisation showing the most frequent words in IMDb reviews, with film, movie, and one appearing most prominently](screenshot_20260111_at_211901.png)
 
 WordCloud is a common method to understand overall feedback by analyzing the frequent words appearing in all feedbacks. The picture shows that film, movie, and one reveal many times, which are also indicated by the large font size. Focusing on positive and negative sentiment, the word "good" is identified as the fifth most frequent word (23.9 K), meanwhile the "bad" word comprises 14.6K. Therefore, initial insight is that IMDB ratings positive feedbacks compared to bad feedbacks according to the frequency.
 
@@ -45,7 +46,7 @@ On the other hand, "good" and "bad" words are not enough to conclude the sentime
 
 # 🕸️ Graph Analysis
 
-![image](screenshot_20260111_at_211916.png)
+![Graph showing word co-occurrence network for feedbacks containing both "good" and "bad", with edge widths representing connection weight](screenshot_20260111_at_211916.png)
 
 Looking at the intersection, there are about 5.1K feedbacks containing both "good" and "bad" in the sentences. These feedbacks are going to be analyzed further by analyzing the correlation among other words. 
 
@@ -53,7 +54,7 @@ Before connecting the words, it is important to note the weight rule is applied 
 
 According to the graph, the connection between nodes indicates that the words are in the same feedback, and the width of lines represets the weight rule. The result shows for the feedbacks containing both words, connection between movie and bad is strong, meaning that the feedbacks are more likely to have negative sentiment over the positive ones. Nevertheless, this would be better to return this weight to individual feedbacks for annotating purposes. In addition, the sample of feedbacks are also provided to quick check the validation like in the picture below.
 
-![image](screenshot_20260111_at_211931.png)
+![Sample feedback rows with annotated sentiment scores used to validate the graph analysis results](screenshot_20260111_at_211931.png)
 
 ## ⚙️ Further Improvement
 

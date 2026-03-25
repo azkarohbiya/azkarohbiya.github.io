@@ -1,6 +1,7 @@
 ---
 title: "Digital DNA"
 highlight: true
+categories: ["work"]
 draft : true
 date : "2025-12-07"
 result: "Think the impact"

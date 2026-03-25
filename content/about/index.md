@@ -1,7 +1,8 @@
 ---
-title : "Introduction"
-menu : "about"
-date : "2025-12-27"
+title: "Introduction"
+description: "Azka Rohbiya Ramadani — Data Analyst with 5+ years of experience in marketing analytics, causal modelling, and predictive systems."
+menu: "about"
+date: "2025-12-27"
 showTableOfContents: true
 ---
 
@@ -13,7 +14,7 @@ With over 5 years of experience with data, focus on solving business problems th
 
 ## 🔬 Field of Interests
 
-![fields](field_of_interests.png)
+![Diagram showing fields of interest: Marketing, Science, Environment, Engineering, and Economics](field_of_interests.png)
 
 In analytics, I'm really into grasping the domain knowledge first over the technical tools, focusing the clarity in order to address the real problems. Therefore, my experience ranges in these fields:
 

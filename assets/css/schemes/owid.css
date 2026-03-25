@@ -1,0 +1,53 @@
+/* =============================================================
+   OWID-inspired color scheme for Congo theme
+   Palette: steel blue primary, slate neutral, deep navy dark bg
+   ============================================================= */
+
+:root {
+  /* Page background (pure white in light mode) */
+  --color-neutral: 255, 255, 255;
+
+  /* Neutral scale — blue-tinted slate grays.
+     Used for: backgrounds, borders, secondary text, dark mode bg.
+     neutral-200 = card/block backgrounds (light mode)
+     neutral-800 = PAGE background (dark mode) → deep navy */
+  --color-neutral-50:  248, 250, 252;   /* barely-there blue-gray bg */
+  --color-neutral-100: 241, 245, 249;   /* subtle card bg */
+  --color-neutral-200: 226, 232, 240;   /* dividers, table stripes */
+  --color-neutral-300: 203, 213, 225;   /* borders */
+  --color-neutral-400: 148, 163, 184;   /* placeholder / icon muted */
+  --color-neutral-500: 100, 116, 139;   /* secondary text (light mode) */
+  --color-neutral-600:  71,  85, 105;   /* body text (light mode) */
+  --color-neutral-700:  51,  65,  85;   /* stronger body (light mode) */
+  --color-neutral-800:  20,  33,  55;   /* ← DARK MODE PAGE BG (deep navy) */
+  --color-neutral-900:  12,  20,  37;   /* darker navy surfaces */
+  --color-neutral-950:   6,  12,  22;   /* near-black navy */
+
+  /* Primary scale — OWID steel blue (#1a6496 at 600).
+     Used for: links, buttons, accent borders, active states. */
+  --color-primary-50:  240, 247, 252;
+  --color-primary-100: 217, 237, 247;
+  --color-primary-200: 179, 213, 237;
+  --color-primary-300: 125, 185, 218;
+  --color-primary-400:  76, 157, 204;
+  --color-primary-500:  40, 130, 183;
+  --color-primary-600:  26, 100, 150;   /* ← MAIN ACCENT (#1a6496) */
+  --color-primary-700:  19,  78, 118;
+  --color-primary-800:  13,  57,  88;
+  --color-primary-900:   9,  38,  59;
+  --color-primary-950:   5,  22,  37;
+
+  /* Secondary scale — warm slate gray.
+     Used for: taxonomy tags, subdued labels, table headers. */
+  --color-secondary-50:  249, 250, 251;
+  --color-secondary-100: 243, 244, 246;
+  --color-secondary-200: 229, 231, 235;
+  --color-secondary-300: 209, 213, 219;
+  --color-secondary-400: 156, 163, 175;
+  --color-secondary-500: 107, 114, 128;
+  --color-secondary-600:  75,  85,  99;
+  --color-secondary-700:  55,  65,  81;
+  --color-secondary-800:  31,  41,  55;
+  --color-secondary-900:  17,  24,  39;
+  --color-secondary-950:   9,  14,  25;
+}

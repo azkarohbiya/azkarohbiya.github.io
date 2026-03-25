@@ -1,3 +1,151 @@
+/* =============================================================
+   Layout custom properties
+   --cpx  = horizontal content padding (mirrors baseof.html breakpoints)
+   ============================================================= */
+
+:root { --cpx: 1.5rem; }
+@media (min-width: 640px)  { :root { --cpx: 3.5rem; } }
+@media (min-width: 768px)  { :root { --cpx: 6rem;   } }
+@media (min-width: 1024px) { :root { --cpx: 8rem;   } }
+
+/* Prevent horizontal scrollbar from full-bleed elements */
+html, body { overflow-x: hidden; }
+
+/* =============================================================
+   OWID-style Site Header
+   Dark navy band, white nav links, steel-blue accent stripe
+   ============================================================= */
+
+/* ── Outer header band ── */
+.owid-header {
+  /* Deep navy — same family as OWID */
+  background: rgb(10, 26, 50);
+  /* Thin steel-blue accent line along the top */
+  border-top: 3px solid rgb(26, 100, 150);
+  /* NOT sticky — scrolls away with the page */
+  /* Subtle bottom shadow to separate from page content */
+  box-shadow: 0 2px 16px rgba(0, 0, 0, .35);
+  /* Padding mirrors content wrapper: base --cpx, plus centering gutter on wide screens */
+  padding: 0 max(var(--cpx), calc((100vw - 80rem) / 2 + var(--cpx)));
+  /* Force white text regardless of light/dark mode */
+  color: rgba(255, 255, 255, .9) !important;
+}
+
+/* ── Inner nav row ── */
+.owid-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  gap: 16px;
+}
+
+/* ── Site title / logo ── */
+.owid-logo a {
+  color: #fff !important;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -.01em;
+  text-decoration: none !important;
+  white-space: nowrap;
+}
+
+.owid-logo a:hover {
+  color: rgba(255, 255, 255, .75) !important;
+  text-decoration: none !important;
+}
+
+/* ── Menu list ── */
+.owid-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 4px;
+  flex-wrap: nowrap;
+}
+
+.owid-menu-item {
+  display: flex;
+  align-items: center;
+}
+
+/* ── Nav links ── */
+.owid-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, .78) !important;
+  text-decoration: none !important;
+  transition: background .15s ease, color .15s ease;
+  white-space: nowrap;
+}
+
+.owid-nav-link:hover {
+  background: rgba(255, 255, 255, .1);
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+/* Active page highlight */
+.owid-nav-link[aria-current="page"],
+.owid-nav-link.active {
+  color: #fff !important;
+  background: rgba(26, 100, 150, .45);
+}
+
+/* ── Icon buttons (appearance switcher, search) ── */
+.owid-nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 8px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, .78) !important;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease;
+}
+
+.owid-nav-btn:hover {
+  background: rgba(255, 255, 255, .1);
+  color: #fff !important;
+}
+
+.owid-nav-btn svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  fill: none;
+}
+
+/* Appearance toggle: slightly larger icon */
+.owid-appearance-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Focus ring for accessibility */
+.owid-nav-link:focus-visible,
+.owid-nav-btn:focus-visible {
+  outline: 2px solid rgb(100, 170, 220);
+  outline-offset: 2px;
+}
+
+/* Dark mode: header stays the same dark navy (it's always dark) */
+.dark .owid-header {
+  background: rgb(10, 26, 50);
+  border-top-color: rgb(26, 100, 150);
+}
+
 /* =========================
    Timeline
    ========================= */
@@ -30,13 +178,25 @@
   justify-content: center;
 
   border: 1px solid rgba(120,120,120,.35);
-  background: rgba(198, 147, 253, 0.14);
+  /* Light mode: steel blue tint */
+  background: rgba(26, 100, 150, 0.10);
 }
 
-.tlv-icon { 
-  width: 12px; 
-  height: 12px; 
-  color: rgba(191, 147, 253, 0.95); 
+.dark .tlv-dot {
+  /* Dark mode: lighter steel blue tint */
+  background: rgba(125, 185, 218, 0.14);
+}
+
+.tlv-icon {
+  width: 12px;
+  height: 12px;
+  /* Light mode: OWID steel blue */
+  color: rgb(26, 100, 150);
+}
+
+.dark .tlv-icon {
+  /* Dark mode: lighter steel blue */
+  color: rgba(125, 185, 218, 0.95);
 }
 
 .tlv-line {
@@ -68,8 +228,14 @@
 .tlv-card:hover {
   transform: translateY(-2px);
   background: rgba(120,120,120,.12);
-  border-color: rgba(170, 147, 253, 0.28);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+  /* Light mode: OWID steel blue accent */
+  border-color: rgba(26, 100, 150, 0.35);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.10);
+}
+
+.dark .tlv-card:hover {
+  border-color: rgba(125, 185, 218, 0.30);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
 }
 
 .tlv-time {
@@ -103,7 +269,7 @@
   border-radius: 10px;
   border: 1px solid rgba(120,120,120,.28);
   background: rgba(120,120,120,.10);
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 /* Hover for button */
@@ -235,9 +401,14 @@
 /* text */
 .lg-name{
   font-weight: 700;
-  color: rgba(255,255,255,.92);
+  /* Light mode: near-black */
+  color: rgba(20, 20, 20, .92);
   line-height: 1.05;
   letter-spacing: -0.01em;
+}
+
+.dark .lg-name {
+  color: rgba(255, 255, 255, .92);
 }
 
 .lg-sub{
@@ -245,7 +416,12 @@
   font-size: .85rem;
   line-height: 1.15;
   opacity: .82;
-  color: rgba(209,206,206,.92);
+  /* Light mode: medium dark gray */
+  color: rgba(70, 70, 70, .92);
+}
+
+.dark .lg-sub {
+  color: rgba(209, 206, 206, .92);
 }
 
 /* date pill */
@@ -256,11 +432,929 @@
   border-radius: 999px;
   border: 1px solid rgba(120,120,120,.25);
   background: rgba(120,120,120,.10);
-  color: rgba(209,206,206,.92);
+  /* Light mode: readable dark gray */
+  color: rgba(70, 70, 70, .92);
   font-size: .75rem;
   white-space: nowrap;
 }
 
+.dark .lg-date {
+  color: rgba(209, 206, 206, .92);
+}
+
 .lg-row:hover .lg-date{
   border-color: rgba(147,197,253,.25);
+}
+
+/* =========================
+   Contact Page
+   ========================= */
+
+.contact-hero {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 32px 16px;
+}
+
+.contact-heading {
+  margin: 0;
+}
+
+.contact-sub {
+  margin: 12px 0 0;
+  opacity: .85;
+}
+
+.contact-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  text-decoration: none !important;
+  border: 1px solid rgba(120, 120, 120, .28);
+  background: rgba(120, 120, 120, .10);
+  transition: background .15s ease, border-color .15s ease;
+}
+
+.contact-btn:hover {
+  background: rgba(120, 120, 120, .18);
+  border-color: rgba(147, 197, 253, .35);
+}
+
+/* =============================================================
+   Project Cards (pc-*)
+   OWID article-card style: image → badge → title → summary → result → cta
+   ============================================================= */
+
+/* ── Strip all prose link decoration unconditionally ── */
+.pc-card,
+.pc-card *,
+.prose .pc-grid a,
+.prose .pc-grid a * {
+  text-decoration: none !important;
+}
+
+/* ── Grid ── */
+.pc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+@media (max-width: 860px) {
+  .pc-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 560px) {
+  .pc-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Card shell ── */
+.pc-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, .07);
+  overflow: hidden;
+  background: #fff;
+  /* two-layer shadow: tight ambient + soft diffuse */
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, .06),
+    0 6px 20px rgba(0, 0, 0, .07);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  color: inherit;
+}
+
+.dark .pc-card {
+  background: rgb(22, 36, 58);
+  border-color: rgba(255, 255, 255, .07);
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, .2),
+    0 6px 20px rgba(0, 0, 0, .3);
+}
+
+.pc-card:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, .06),
+    0 16px 40px rgba(26, 100, 150, .14);
+  border-color: rgba(26, 100, 150, .28);
+}
+
+.dark .pc-card:hover {
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, .25),
+    0 16px 40px rgba(0, 0, 0, .45);
+  border-color: rgba(100, 170, 220, .28);
+}
+
+/* ── Thumbnail ── */
+.pc-thumb {
+  width: 100%;
+  height: 196px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: rgb(14, 60, 95);   /* fallback colour while image loads */
+}
+
+.pc-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+  transition: transform .45s ease;
+}
+
+.pc-card:hover .pc-thumb img {
+  transform: scale(1.06);
+}
+
+/* Gradient placeholder when no thumbnail exists */
+.pc-thumb-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    145deg,
+    rgb(10, 40, 80)  0%,
+    rgb(26, 100, 150) 60%,
+    rgb(14, 60, 95)  100%
+  );
+}
+
+/* ── Card body ── */
+.pc-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 20px 22px 18px;
+}
+
+/* Badge / category label */
+.pc-label {
+  display: inline-flex;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .10em;
+  text-transform: uppercase;
+  color: rgb(26, 100, 150);
+  background: rgba(26, 100, 150, .09);
+  border-radius: 4px;
+  padding: 3px 8px;
+  margin-bottom: 11px;
+  width: fit-content;
+}
+
+.dark .pc-label {
+  color: rgb(100, 170, 220);
+  background: rgba(100, 170, 220, .12);
+}
+
+/* Title */
+.pc-title {
+  font-size: 16.5px;
+  font-weight: 800;
+  line-height: 1.35;
+  margin: 0 0 10px;
+  color: rgb(12, 24, 46);
+  /* Clamp to 2 lines — keeps all cards visually aligned */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.dark .pc-title {
+  color: rgb(225, 237, 252);
+}
+
+/* Summary */
+.pc-summary {
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgb(80, 95, 115);
+  /* Grows to fill remaining space → pushes result + CTA to bottom */
+  flex: 1;
+  margin-bottom: 14px;
+  /* Clamp to 3 lines */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.dark .pc-summary {
+  color: rgb(148, 168, 195);
+}
+
+/* Result stat — separated by a thin rule, clamped to 2 lines */
+.pc-result {
+  font-size: 12px;
+  font-style: italic;
+  line-height: 1.5;
+  color: rgb(45, 72, 110);
+  border-top: 1px solid rgba(0, 0, 0, .08);
+  padding-top: 11px;
+  margin-bottom: 13px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.dark .pc-result {
+  color: rgb(120, 160, 205);
+  border-top-color: rgba(255, 255, 255, .08);
+}
+
+/* CTA — arrow animates right on hover */
+.pc-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  font-weight: 700;
+  color: rgb(26, 100, 150);
+  letter-spacing: .01em;
+  margin-top: auto;
+}
+
+.pc-cta::after {
+  content: '→';
+  display: inline-block;
+  transition: transform .2s ease;
+}
+
+.pc-card:hover .pc-cta::after {
+  transform: translateX(4px);
+}
+
+.dark .pc-cta {
+  color: rgb(100, 170, 220);
+}
+
+/* Empty state */
+.pc-empty {
+  opacity: .75;
+  padding: 14px 0;
+  font-style: italic;
+}
+
+/* "View all projects" link below the grid */
+.section-band--gray .prose a[href="/posts"],
+.section-band--white .prose a[href="/posts"] {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(26, 100, 150);
+  text-decoration: none !important;
+  border-bottom: 2px solid rgba(26, 100, 150, .25);
+  padding-bottom: 1px;
+  transition: border-color .15s ease, color .15s ease;
+}
+
+.section-band--gray .prose a[href="/posts"]:hover,
+.section-band--white .prose a[href="/posts"]:hover {
+  border-color: rgb(26, 100, 150);
+}
+
+.dark .section-band--gray .prose a[href="/posts"],
+.dark .section-band--white .prose a[href="/posts"] {
+  color: rgb(100, 170, 220);
+  border-bottom-color: rgba(100, 170, 220, .3);
+}
+
+/* =========================
+   Timeline empty state
+   ========================= */
+
+.tlv-empty {
+  opacity: .8;
+}
+
+/* =========================
+   Accessibility: Focus styles
+   ========================= */
+
+/* Light mode: solid blue, good contrast on white */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid rgb(59, 130, 246);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.contact-btn:focus-visible,
+.pc-card:focus-visible,
+.tlv-btn:focus-visible {
+  outline: 2px solid rgb(59, 130, 246);
+  outline-offset: 3px;
+}
+
+/* Dark mode: lighter blue, good contrast on dark */
+.dark a:focus-visible,
+.dark button:focus-visible {
+  outline-color: rgba(147, 197, 253, .9);
+}
+
+.dark .contact-btn:focus-visible,
+.dark .pc-card:focus-visible,
+.dark .tlv-btn:focus-visible {
+  outline-color: rgba(147, 197, 253, .9);
+}
+
+/* =============================================================
+   OWID Academic Texture
+   Clean borders, dividers, typography hierarchy, table polish
+   ============================================================= */
+
+/* ---- Section heading dividers (h2) ---- */
+/* Adds a thin bottom rule under every h2, like OWID's section breaks */
+.prose h2 {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgb(226, 232, 240);
+}
+
+.dark .prose h2 {
+  border-bottom-color: rgba(51, 65, 85, 0.8);
+}
+
+/* ---- Horizontal rules ---- */
+/* OWID uses clean thin dividers between sections */
+.prose hr {
+  border: none;
+  border-top: 1px solid rgb(226, 232, 240);
+  margin: 2.5rem 0;
+}
+
+.dark .prose hr {
+  border-top-color: rgba(51, 65, 85, 0.8);
+}
+
+/* ---- Blockquote: left-border academic style ---- */
+.prose blockquote {
+  border-left: 3px solid rgb(26, 100, 150);
+  background: rgb(240, 247, 252);
+  padding: 0.75rem 1.25rem;
+  border-radius: 0 8px 8px 0;
+  font-style: normal;
+  color: rgb(51, 65, 85);
+}
+
+.dark .prose blockquote {
+  border-left-color: rgba(125, 185, 218, 0.7);
+  background: rgba(26, 100, 150, 0.08);
+  color: rgb(203, 213, 225);
+}
+
+/* ---- Tables: OWID academic style ---- */
+/* Light header band + alternating row stripes */
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.prose thead tr {
+  background: rgb(241, 245, 249);
+  border-bottom: 2px solid rgb(203, 213, 225);
+}
+
+.dark .prose thead tr {
+  background: rgba(51, 65, 85, 0.5);
+  border-bottom-color: rgba(100, 116, 139, 0.4);
+}
+
+.prose th {
+  font-weight: 600;
+  color: rgb(51, 65, 85);
+  padding: 0.6rem 0.85rem;
+  text-align: left;
+}
+
+.dark .prose th {
+  color: rgb(203, 213, 225);
+}
+
+.prose td {
+  padding: 0.55rem 0.85rem;
+  border-bottom: 1px solid rgb(226, 232, 240);
+}
+
+.dark .prose td {
+  border-bottom-color: rgba(51, 65, 85, 0.5);
+}
+
+/* Zebra striping — even rows */
+.prose tbody tr:nth-child(even) {
+  background: rgb(248, 250, 252);
+}
+
+.dark .prose tbody tr:nth-child(even) {
+  background: rgba(51, 65, 85, 0.18);
+}
+
+/* ---- Links: OWID clean underline style ---- */
+/* Visible underline on hover, matching the steel blue accent */
+.prose a {
+  text-decoration: underline;
+  text-decoration-color: rgba(26, 100, 150, 0.35);
+  text-underline-offset: 2px;
+  transition: text-decoration-color 0.15s ease;
+}
+
+.prose a:hover {
+  text-decoration-color: rgb(26, 100, 150);
+}
+
+.dark .prose a {
+  text-decoration-color: rgba(125, 185, 218, 0.35);
+}
+
+.dark .prose a:hover {
+  text-decoration-color: rgba(125, 185, 218, 0.85);
+}
+
+/* ---- Article meta (date, reading time) ---- */
+/* Subtle left-border accent on article metadata, like OWID's data source labels */
+.prose .article-meta,
+article header .meta {
+  border-left: 2px solid rgb(26, 100, 150);
+  padding-left: 0.6rem;
+  font-size: 0.85rem;
+  color: rgb(100, 116, 139);
+}
+
+.dark .prose .article-meta,
+.dark article header .meta {
+  border-left-color: rgba(125, 185, 218, 0.6);
+  color: rgb(148, 163, 184);
+}
+
+/* ---- Page / section background tint ---- */
+/* OWID uses a barely-perceptible off-white for their content area */
+.not-prose,
+article {
+  background: transparent;
+}
+
+/* ---- Custom component hover accents — update to steel blue ---- */
+.ic-card:hover {
+  border-color: rgba(26, 100, 150, 0.30);
+}
+
+.dark .ic-card:hover {
+  border-color: rgba(125, 185, 218, 0.25);
+}
+
+.lg-card:hover {
+  border-color: rgba(26, 100, 150, 0.25);
+}
+
+.dark .lg-card:hover {
+  border-color: rgba(125, 185, 218, 0.22);
+}
+
+
+.contact-btn:hover {
+  border-color: rgba(26, 100, 150, 0.40);
+}
+
+.dark .contact-btn:hover {
+  border-color: rgba(125, 185, 218, 0.35);
+}
+
+/* =============================================================
+   Homepage: Full-bleed dark cover band + hero profile
+   ============================================================= */
+
+/* ── Full-bleed cover wrapper ── */
+/* Viewport-unit trick: push to left viewport edge from inside any centered container.
+   margin-left: calc(50% - 50vw)  →  left edge aligns with viewport left.
+   width: 100vw                   →  spans full viewport.
+   The 50% here refers to 50% of the nearest block ancestor width, which equals
+   (min(viewport, 80rem) - 2×--cpx) / 2, so calc(50vw - 50%) reverses perfectly. */
+.homepage-cover {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  background: rgb(10, 26, 50);   /* deep navy — always dark */
+  overflow: hidden;
+  border-bottom: 1px solid rgba(26, 100, 150, 0.35);
+}
+
+/* Optional cover image — absolutely positioned behind hero content */
+.homepage-cover-img {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center 35%;
+  opacity: 0.22;                /* dark overlay effect */
+}
+
+/* ── Hero sits inside the cover band ── */
+.homepage-hero {
+  position: relative;   /* above cover image layer */
+  margin: 0;
+  /* Same alignment formula as section bands */
+  padding: 3.5rem calc(50vw - 50%);
+}
+
+.hero-inner {
+    display: flex;
+    align-items: center;
+    gap: 2.25rem;
+    padding-left: 10rem;
+}
+
+/* Photo — white ring on dark background */
+.hero-photo-wrap {
+  flex-shrink: 0;
+}
+
+.hero-photo-wrap img,
+.hero-photo {
+  width: 120px !important;
+  height: 120px !important;
+  border-radius: 50% !important;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.35);
+  display: block;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+}
+
+/* Text column */
+.hero-text {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Hero text is always on dark background — no separate .dark variant needed */
+.hero-name {
+  font-size: 2.1rem !important;
+  font-weight: 800 !important;
+  line-height: 1.1 !important;
+  margin: 0 0 0.5rem !important;
+  letter-spacing: -0.02em;
+  color: #fff !important;
+}
+
+.hero-role {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgb(100, 170, 220);     /* lighter steel blue — visible on dark */
+  margin: 0 0 0.5rem;
+}
+
+.hero-tagline {
+  font-size: 0.95rem;
+  color: rgba(200, 218, 235, 0.85);
+  line-height: 1.65;
+  margin: 0 0 0.5rem;
+  max-width: 110ch;
+}
+
+.hero-links {
+  margin-top: 0.25rem;
+}
+
+/* Force social link icons/text white on dark cover */
+.homepage-cover .hero-links a,
+.homepage-cover .hero-links svg {
+  color: rgba(255, 255, 255, 0.7) !important;
+  fill: rgba(255, 255, 255, 0.7) !important;
+}
+
+.homepage-cover .hero-links a:hover {
+  color: #fff !important;
+  fill: #fff !important;
+}
+
+/* Stack vertically on small screens */
+@media (max-width: 560px) {
+  .hero-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .homepage-hero {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
+/* =============================================================
+   Homepage: Alternating section bands (full-bleed)
+   ============================================================= */
+
+.section-band {
+  /* Full-bleed: extend to viewport edges from inside centered max-w-7xl */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  /* padding: top/bottom | left/right aligned with page content */
+  padding: 3rem calc(50vw - 50%);
+}
+
+/* White band — primary background */
+.section-band--white {
+  background: #fff;
+}
+
+.dark .section-band--white {
+  background: rgb(20, 33, 55);
+}
+
+/* Gray band — secondary background */
+.section-band--gray {
+  background: rgb(247, 249, 252);
+  border-top: 1px solid rgba(0, 0, 0, .05);
+  border-bottom: 1px solid rgba(0, 0, 0, .05);
+}
+
+.dark .section-band--gray {
+  background: rgb(13, 22, 40);
+  border-top-color: rgba(255, 255, 255, .04);
+  border-bottom-color: rgba(255, 255, 255, .04);
+}
+
+/* Band inner content: heading, description, view-all link */
+.band-heading {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -.02em;
+  color: rgb(10, 26, 50);
+  margin: 0 0 1.25rem;
+  padding: 0;
+  line-height: 1.2;
+}
+
+.dark .band-heading {
+  color: rgba(255, 255, 255, .92);
+}
+
+.band-desc {
+  font-size: 1rem;
+  color: rgb(60, 80, 100);
+  margin: -0.5rem 0 1.5rem;
+  max-width: 110ch;
+  line-height: 1.6;
+}
+
+.dark .band-desc {
+  color: rgba(255, 255, 255, .6);
+}
+
+.band-view-all {
+  margin-top: 1.75rem;
+  text-align: left;
+}
+
+.band-view-all a {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  font-weight: 600;
+  font-size: .95rem;
+  color: rgb(26, 100, 150);
+  text-decoration: none;
+  transition: color .15s ease, gap .15s ease;
+}
+
+.band-view-all a:hover {
+  color: rgb(15, 65, 100);
+  gap: .5rem;
+}
+
+.dark .band-view-all a {
+  color: rgb(125, 185, 218);
+}
+
+.dark .band-view-all a:hover {
+  color: rgb(170, 210, 235);
+}
+
+/* =============================================================
+   Homepage: Impact Stats Row
+   ============================================================= */
+
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgb(226, 232, 240);    /* acts as divider lines between cells */
+  border: 1px solid rgb(226, 232, 240);
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 1.5rem 0;
+}
+
+.dark .stats-row {
+  background: rgba(51, 65, 85, 0.5);
+  border-color: rgba(51, 65, 85, 0.5);
+}
+
+.stat-item {
+  background: rgb(248, 250, 252);    /* neutral-50 */
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+}
+
+.dark .stat-item {
+  background: rgb(20, 33, 55);       /* neutral-800 */
+}
+
+.stat-number {
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: rgb(26, 100, 150);          /* OWID steel blue */
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+
+.dark .stat-number {
+  color: rgba(125, 185, 218, 0.95);
+}
+
+.stat-label {
+  font-size: 0.78rem;
+  color: rgb(100, 116, 139);
+  line-height: 1.35;
+}
+
+.dark .stat-label {
+  color: rgb(148, 163, 184);
+}
+
+/* Stack to 2 cols on tablet, 1 on mobile */
+@media (max-width: 640px) {
+  .stats-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =============================================================
+   Homepage: Specialisation Cards
+   ============================================================= */
+
+.spec-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 1.5rem 0;
+}
+
+@media (max-width: 768px) {
+  .spec-grid { grid-template-columns: 1fr; }
+}
+
+.spec-card {
+  border: 1px solid rgb(226, 232, 240);
+  background: rgb(248, 250, 252);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border-top: 3px solid rgb(26, 100, 150);   /* OWID-style top accent rule */
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+
+.spec-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+}
+
+.dark .spec-card {
+  border-color: rgba(51, 65, 85, 0.6);
+  background: rgba(51, 65, 85, 0.15);
+  border-top-color: rgba(125, 185, 218, 0.55);
+}
+
+.dark .spec-card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+}
+
+.spec-icon {
+  color: rgb(26, 100, 150);
+  margin-bottom: 0.85rem;
+}
+
+.dark .spec-icon {
+  color: rgba(125, 185, 218, 0.85);
+}
+
+.spec-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem !important;
+  color: rgb(15, 23, 42);
+}
+
+.dark .spec-title {
+  color: rgb(226, 232, 240);
+}
+
+.spec-text {
+  font-size: 0.88rem;
+  color: rgb(71, 85, 105);
+  line-height: 1.6;
+  margin: 0 !important;
+}
+
+.dark .spec-text {
+  color: rgb(148, 163, 184);
+}
+
+/* =============================================================
+   Homepage: Tools & Stack
+   ============================================================= */
+
+.tools-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid rgb(226, 232, 240);
+  border-left: 3px solid rgb(26, 100, 150);
+  border-radius: 0 10px 10px 0;
+  background: rgb(248, 250, 252);
+}
+
+.dark .tools-row {
+  border-color: rgba(51, 65, 85, 0.6);
+  border-left-color: rgba(125, 185, 218, 0.55);
+  background: rgba(51, 65, 85, 0.12);
+}
+
+.tools-group {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.tools-group-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: rgb(100, 116, 139);
+  width: 70px;
+  flex-shrink: 0;
+}
+
+.dark .tools-group-label {
+  color: rgb(148, 163, 184);
+}
+
+.tools-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tool-tag {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  border: 1px solid rgb(179, 213, 237);
+  background: rgb(240, 247, 252);
+  color: rgb(26, 100, 150);
+}
+
+.dark .tool-tag {
+  border-color: rgba(26, 100, 150, 0.35);
+  background: rgba(26, 100, 150, 0.08);
+  color: rgba(125, 185, 218, 0.9);
+}
+
+#main-content {
+  padding-top: 1.5rem;
+}
+
+/* Homepage cover band sits flush against the header — no top gap */
+#main-content:has(.homepage-cover) {
+  padding-top: 0;
 }

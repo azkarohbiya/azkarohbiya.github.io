@@ -1,54 +1,89 @@
-{{/* Renders 3 cards in columns from pages flagged with Params.highlight=true.
-     Usage:
-       {{< project_cards section="posts" >}}
-     If section not provided, defaults to "posts".
+{{/* project_cards shortcode
+     Usage: {{< project_cards section="posts" bg="gray" title="Best Projects" desc="..." >}}
+     Params:
+       section — Hugo section to pull pages from (default: "posts")
+       bg      — "white" | "gray" (wraps in a section-band if provided)
+       title   — optional heading text rendered inside the band
+       desc    — optional paragraph rendered below the heading
+     Each highlighted page needs `highlight: true` in its front matter.
+     Cards show: thumbnail → label → title → summary → result → CTA
 */}}
 
-{{- $section := .Get "section" | default "posts" -}}
+{{- $section  := .Get "section"  | default "posts" -}}
+{{- $bg       := .Get "bg" -}}
+{{- $title    := .Get "title" -}}
+{{- $desc     := .Get "desc" -}}
+{{- $category := .Get "category" -}}
+{{- $limit    := .Get "limit" | default 6 | int -}}
 
 {{- $items := where site.RegularPages "Section" $section -}}
-{{- $items = where $items "Params.highlight" true -}}
+{{- $items  = where $items "Params.highlight" true -}}
+{{- if $category -}}
+  {{- $items = where $items "Params.categories" "intersect" (slice $category) -}}
+{{- end -}}
+{{- $items  = sort $items "Weight" "asc" -}}
+{{- $items  = first $limit $items -}}
 
-{{/* Optional ordering: weight first, then date (newest). */}}
-{{- $items = sort $items "Weight" "asc" -}}
-{{- $items = first 3 $items -}}
+{{- if $bg -}}
+<section class="section-band section-band--{{ $bg }}">
+{{- end -}}
 
-{{- if lt (len $items) 1 -}}
-  <div style="opacity:.8; padding:12px 0;">
-    No highlighted pages found in section "<strong>{{ $section }}</strong>".
-    Add <code>highlight: true</code> in the page front matter.
+  {{- if $title -}}<h2 class="band-heading">{{ $title }}</h2>{{- end -}}
+  {{- if $desc  -}}<p  class="band-desc">{{ $desc }}</p>{{- end -}}
+
+  {{- if lt (len $items) 1 -}}
+    <div class="pc-empty">
+      No highlighted pages found in section "<strong>{{ $section }}</strong>".
+      Add <code>highlight: true</code> in the page front matter.
+    </div>
+  {{- else -}}
+
+  <div class="pc-grid not-prose">
+    {{- range $items -}}
+      {{- $thumb := .Resources.GetMatch "thumb*" -}}
+      <a class="pc-card" href="{{ .RelPermalink }}" aria-label="View project: {{ .Title }}">
+
+        {{/* ── Thumbnail ── */}}
+        <div class="pc-thumb">
+          {{- if $thumb -}}
+            <img
+              src="{{ $thumb.RelPermalink }}"
+              alt="{{ .Title }} — project thumbnail"
+              loading="lazy"
+            >
+          {{- else -}}
+            <div class="pc-thumb-placeholder" aria-hidden="true"></div>
+          {{- end -}}
+        </div>
+
+        {{/* ── Card body ── */}}
+        <div class="pc-body">
+
+          <div class="pc-label">{{ $category | default "Project" | title }}</div>
+
+          <div class="pc-title">{{ .Title }}</div>
+
+          {{- with .Params.summary -}}
+            <p class="pc-summary">{{ . }}</p>
+          {{- end -}}
+
+          {{- with .Params.result -}}
+            <p class="pc-result">{{ . }}</p>
+          {{- end -}}
+
+          <div class="pc-cta">Read more</div>
+
+        </div>
+      </a>
+    {{- end -}}
   </div>
-{{- else -}}
 
-<style>
-  .pc-grid { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:16px; margin-top:16px; }
-  @media (max-width: 900px){ .pc-grid{ grid-template-columns:repeat(2, minmax(0, 1fr)); } }
-  @media (max-width: 600px){ .pc-grid{ grid-template-columns:1fr; } }
+  <div class="band-view-all">
+    <a href="/{{ $section }}">View all projects →</a>
+  </div>
 
-  .pc-card { display:block; text-decoration:none; border-radius:16px; border:1px solid rgba(120,120,120,0.25);
-             padding:16px; box-shadow:0 10px 30px rgba(0,0,0,0.12); }
-  .pc-title { font-weight:800; font-size:16px; margin-bottom:8px; }
-  .pc-result { font-weight:700; margin-bottom:8px; opacity:0.95; color: rgb(189, 189, 189); line-height: 1.35;}
-  .pc-summary { opacity:0.85; line-height:1.35; color: rgb(189, 189, 189)}
-  .pc-cta { margin-top:12px; font-weight:300; opacity:0.6; }
-</style>
-
-<div class="pc-grid">
-  {{- range $items -}}
-    <a class="pc-card" href="{{ .RelPermalink }}">
-      <div class="pc-title">{{ .Title }}</div>
-
-      {{- with .Params.result -}}
-        <div class="pc-result">{{ . }}</div>
-      {{- end -}}
-
-      {{- with .Params.summary -}}
-        <div class="pc-summary">{{ . }}</div>
-      {{- end -}}
-
-      <div class="pc-cta">View project →</div>
-    </a>
   {{- end -}}
-</div>
 
+{{- if $bg -}}
+</section>
 {{- end -}}

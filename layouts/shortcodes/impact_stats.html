@@ -1,0 +1,42 @@
+{{/* impact_stats shortcode
+     Usage: {{< impact_stats bg="white" title="Impact" >}}
+     Params:
+       bg    — "white" | "gray" (wraps in a section-band if provided)
+       title — optional heading text rendered inside the band
+*/}}
+
+{{- $bg    := .Get "bg" -}}
+{{- $title := .Get "title" -}}
+
+{{- if $bg -}}
+<section class="section-band section-band--{{ $bg }}">
+  {{- if $title -}}<h2 class="band-heading">{{ $title }}</h2>{{- end -}}
+{{- end -}}
+
+<div class="stats-row not-prose">
+
+  <div class="stat-item">
+    <div class="stat-number">5+</div>
+    <div class="stat-label">Years in Analytics</div>
+  </div>
+
+  <div class="stat-item">
+    <div class="stat-number">~$300K</div>
+    <div class="stat-label">At-risk Revenue Identified / month</div>
+  </div>
+
+  <div class="stat-item">
+    <div class="stat-number">~150%</div>
+    <div class="stat-label">Revenue Uplift Delivered</div>
+  </div>
+
+  <div class="stat-item">
+    <div class="stat-number">3</div>
+    <div class="stat-label">Open-source Projects</div>
+  </div>
+
+</div>
+
+{{- if $bg -}}
+</section>
+{{- end -}}

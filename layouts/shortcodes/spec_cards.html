@@ -1,0 +1,67 @@
+{{/* spec_cards shortcode
+     Usage: {{< spec_cards bg="gray" title="What I Specialise In" >}}
+     Params:
+       bg    — "white" | "gray" (wraps in a section-band if provided)
+       title — optional heading text rendered inside the band
+*/}}
+
+{{- $bg    := .Get "bg" -}}
+{{- $title := .Get "title" -}}
+
+{{- if $bg -}}
+<section class="section-band section-band--{{ $bg }}">
+  {{- if $title -}}<h2 class="band-heading">{{ $title }}</h2>{{- end -}}
+{{- end -}}
+
+<div class="spec-grid not-prose">
+
+  {{/* Card 1: Causal Inference */}}
+  <div class="spec-card">
+    <div class="spec-icon" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+          d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+      </svg>
+    </div>
+    <h3 class="spec-title">Causal Inference</h3>
+    <p class="spec-text">
+      Building reliable measurement frameworks using propensity score matching and causal models —
+      separating true signal from confounding noise in observational data.
+    </p>
+  </div>
+
+  {{/* Card 2: Recommendation Systems */}}
+  <div class="spec-card">
+    <div class="spec-icon" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+          d="M13.5 8H12V3L9.6 5.4M13.5 8c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2ZM7 15h1m8 0h1M3 10h18M5 6H3m18 0h-2M5 18H3m18 0h-2M5 10v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V10"/>
+      </svg>
+    </div>
+    <h3 class="spec-title">Recommendation Systems</h3>
+    <p class="spec-text">
+      Sequential and graph-based recommenders that surface niche and seasonal products —
+      driving measurable revenue uplift beyond what collaborative filtering can achieve.
+    </p>
+  </div>
+
+  {{/* Card 3: NLP & Text Analytics */}}
+  <div class="spec-card">
+    <div class="spec-icon" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+          d="M7 9h10M7 12h6m-6 3h4M5 5h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z"/>
+      </svg>
+    </div>
+    <h3 class="spec-title">NLP &amp; Text Analytics</h3>
+    <p class="spec-text">
+      Scalable sentiment annotation pipelines combining WordCloud and graph analysis —
+      reliable tagging without relying on LLMs or exposing confidential data.
+    </p>
+  </div>
+
+</div>
+
+{{- if $bg -}}
+</section>
+{{- end -}}

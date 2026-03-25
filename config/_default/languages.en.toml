@@ -10,7 +10,8 @@ title = "azkarohbiya"
   dateFormat = "2 January 2006"
 
   # mainSections = ["section1", "section2"]
-  # description = "My awesome website"
+  description = "Azka Rohbiya Ramadani — Data Analyst with 5+ years of experience in causal modelling, recommendation systems, and sentiment analysis. Turning data into business impact."
+  keywords = ["data analyst", "data science", "propensity score matching", "sequential recommender", "sentiment analysis", "causal inference", "analytics", "machine learning"]
 
 [params.author]
   name = "Azka Rohbiya Ramadani"

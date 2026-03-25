@@ -1,0 +1,89 @@
+<header class="owid-header print:hidden" role="banner">
+  <nav class="owid-nav" aria-label="Main navigation">
+
+    {{/* ── Site logo / title ── */}}
+    <div class="owid-logo">
+      {{ partial "logo.html" . }}
+    </div>
+
+    {{/* ── Main menu ── */}}
+    {{ if or .Site.Menus.main (.Site.Params.enableSearch | default false) }}
+      <ul class="owid-menu" role="list">
+        {{ if .Site.Menus.main }}
+          {{ range .Site.Menus.main }}
+            {{ if and (eq .Params.action "locale") (or (not page.IsTranslated) (not hugo.IsMultilingual)) }}
+              {{ continue }}
+            {{ end }}
+            <li class="owid-menu-item">
+              {{ if eq .Params.action "search" }}
+                {{ $.Scratch.Add "searchCount" 1 }}
+                {{ if $.Site.Params.enableSearch | default false }}
+                  <button
+                    id="search-button-{{ $.Scratch.Get "searchCount" }}"
+                    class="owid-nav-btn"
+                    title="{{ .Title | default (i18n "search.open_button_title") }}"
+                    aria-label="{{ i18n "search.open_button_title" }}"
+                  >
+                    {{ with .Params.icon | default "search" }}
+                      {{- partial "icon.html" . -}}
+                    {{- end -}}
+                    {{- if .Params.showName | default true -}}
+                      <span>{{ .Name | markdownify | emojify }}</span>
+                    {{- end -}}
+                  </button>
+                {{ end }}
+
+              {{ else if eq .Params.action "appearance" }}
+                {{ $.Scratch.Add "switchCount" 1 }}
+                <button
+                  id="appearance-switcher-{{ $.Scratch.Get "switchCount" }}"
+                  class="owid-nav-btn owid-appearance-btn"
+                  type="button"
+                  aria-label="appearance switcher"
+                >
+                  {{/* Sun icon: shown in dark mode, click to go light */}}
+                  <span class="hidden dark:inline" title="{{ i18n "footer.light_appearance" }}">
+                    {{ partial "icon.html" (.Params.icon | default "sun") }}
+                  </span>
+                  {{/* Moon icon: shown in light mode, click to go dark */}}
+                  <span class="dark:hidden" title="{{ i18n "footer.dark_appearance" }}">
+                    {{ partial "icon.html" (.Params.icon | default "moon") }}
+                  </span>
+                </button>
+
+              {{ else if eq .Params.action "locale" }}
+                {{ $.Scratch.Add "localeCount" 1 }}
+                {{ partial "translations.html" . }}
+
+              {{ else }}
+                <a
+                  class="owid-nav-link"
+                  href="{{ .URL }}"
+                  title="{{ .Title }}"
+                  {{ with .Params.target }}target="{{ . }}"{{ end }}
+                >
+                  {{- with .Params.icon -}}
+                    <span>{{- partial "icon.html" . -}}</span>
+                  {{- end -}}
+                  {{- if .Params.showName | default true -}}
+                    <span>{{ .Name | markdownify | emojify }}</span>
+                  {{- end -}}
+                </a>
+              {{ end }}
+            </li>
+          {{ end }}
+
+          {{/* Fallback search button if none in menu */}}
+          {{ if and ($.Site.Params.enableSearch | default false) (eq ($.Scratch.Get "searchCount") 0) }}
+            <li class="owid-menu-item">
+              <button id="search-button-m0" class="owid-nav-btn" title="{{ i18n "search.open_button_title" }}" aria-label="{{ i18n "search.open_button_title" }}">
+                {{ partial "icon.html" "search" }}
+              </button>
+            </li>
+          {{ end }}
+        {{ end }}
+      </ul>
+    {{ end }}
+
+  </nav>
+</header>

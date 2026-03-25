@@ -1,0 +1,64 @@
+{{/* =============================================================
+     Custom homepage layout — OWID-inspired
+     ① Full-bleed dark cover band (with optional cover image)
+     ② Hero profile: photo · name · role · tagline · links
+     ③ Page content: shortcodes inject stats, cards, tools
+     ============================================================= */}}
+
+{{/* ---- Full-bleed dark cover band ---- */}}
+<div class="not-prose homepage-cover">
+
+  {{/* Optional cover image — darkened behind the hero */}}
+  {{- $cover := .Page.Resources.GetMatch "cover*" -}}
+  {{- if $cover -}}
+    <div
+      class="homepage-cover-img"
+      style="background-image: url('{{ $cover.RelPermalink }}')"
+      aria-hidden="true"
+    ></div>
+  {{- end -}}
+
+  {{/* Hero content */}}
+  <div class="homepage-hero">
+    <div class="hero-inner">
+
+      {{/* Profile photo — left column */}}
+      {{ $lazy := site.Params.enableImageLazyLoading | default true }}
+      {{ with site.Language.Params.Author.image }}
+        {{ $img := resources.Get . }}
+        {{ if $img }}
+          <div class="hero-photo-wrap">
+            {{ partial "picture.html" (dict "img" $img
+                                           "alt" (site.Language.Params.Author.name | default "Author")
+                                           "class" "hero-photo"
+                                           "lazy" $lazy
+                                           "webp" true) }}
+          </div>
+        {{ end }}
+      {{ end }}
+
+      {{/* Name · role · tagline · links — right column */}}
+      <div class="hero-text">
+        <h1 class="hero-name">
+          {{ .Page.Title | default site.Language.Params.Author.name }}
+        </h1>
+
+        {{ with .Page.Params.role }}<p class="hero-role">{{ . }}</p>{{ end }}
+
+        {{ with .Page.Params.tagline }}
+          <p class="hero-tagline">{{ . }}</p>
+        {{ end }}
+
+        <div class="hero-links">
+          {{ partialCached "author-links.html" . }}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{{/* ---- Page content (band shortcodes render alternating sections) ---- */}}
+<article class="prose max-w-full dark:prose-invert">
+  <section>{{ .Content | emojify }}</section>
+</article>
