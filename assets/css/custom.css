@@ -1309,7 +1309,7 @@ article {
 .tools-group {
   display: flex;
   align-items: center;
-  gap: 0.65rem;
+  gap: 2.75rem;
   flex-wrap: wrap;
 }
 

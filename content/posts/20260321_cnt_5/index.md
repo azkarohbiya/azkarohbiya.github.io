@@ -197,9 +197,9 @@ showTableOfContents: true
   @keyframes sp500FadeIn { to { opacity: 1; transform: translateX(0); } }
 </style>
 
-<div class="not-prose sp500-wrap" id="sp500Wrap">
+<div class="not-prose sp500-wrap light" id="sp500Wrap">
   <div class="toggle-wrap">
-    <button class="toggle-btn" id="sp500ToggleBtn" onclick="sp500ToggleMode()">☀ Light Mode</button>
+    <button class="toggle-btn" id="sp500ToggleBtn" onclick="sp500ToggleMode()">🌙 Dark Mode</button>
   </div>
   <div class="header">
     <h2>S&amp;P 500 Sectors: Winners vs. Losers Since Iran Conflict</h2>
