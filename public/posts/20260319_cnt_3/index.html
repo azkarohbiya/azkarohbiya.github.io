@@ -44,8 +44,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="http://localhost:1313/css/main.bundle.min.19faae828c317e69afa1286312d7a10a83c6fa1e8c2f8c8750d52a2a12d333f5.css"
-    integrity="sha256-GfqugowxfmmvoShjEtehCoPG&#43;h6ML4yHUNUqKhLTM/U="
+    href="http://localhost:1313/css/main.bundle.min.9629040c23aa6152065ce26ccbc285608bca02fd6fd5d8d07561b01b601fb03d.css"
+    integrity="sha256-likEDCOqYVIGXOJsy8KFYIvKAv1v1djQdWGwG2AfsD0="
   />
   
   
@@ -122,7 +122,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "74"
+    "wordCount": "396"
   }
   </script>
     
@@ -365,13 +365,34 @@
     </header>
     <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
       
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8">
+          <div class="toc pe-5 lg:sticky lg:top-10 print:hidden">
+            <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
+  <summary
+    class="block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    Table of Contents
+  </summary>
+  <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#attachment">Attachment</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
       <div class="min-h-0 min-w-0 max-w-prose grow">
         <div class="flex rounded-md bg-primary-100 px-4 py-3 dark:bg-primary-900">
   <span class="pe-3 text-primary-400">
     <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg>
 </span>
   </span>
-  <span class="dark:text-neutral-300"><strong>Note</strong> This project uses data that sources from Yahoo Finance. This content purposes to learn how market react because of global event not as financial advisors</span>
+  <span class="dark:text-neutral-300"><strong>Note</strong>
+Data sourced from Yahoo Finance. This content is for educational purposes only and does not constitute financial advice.</span>
 </div>
 
 <style>
@@ -696,6 +717,42 @@
     conflictRebuildChart();
   })();
 </script>
+<p>Gold has long been a safe haven, the asset investors rush to when the world feels uncertain. But three Middle Eastern conflicts tell a more complicated story.</p>
+<p>Turn the clock back to 2003, the Iraq War had a surprisingly muted impact on markets. The S&amp;P500 held virtually flat at +0.03%, and gold slipped modestly by 3.4%. If anything, financials were quietly were the quiet winner, gaining +2.3% over the two-week window an unusual outcome for a wartime opening.</p>
+<p>The October 7 Gaza Attack in 2023 followed a more familiar patter. Equities sold off broadly, SPY dropped by -3.4%, tech fell -4.4%, and financials declined by -2.9%. Gold, however, did exactly what market sense, it climbed by +7.3%.</p>
+<p>Iran 2026 broke every pattern. The conflict triggered a broad and sharp selloff across all assets. SPY fell -3.6%, financial dropped -4.5%, and tech slipped -2.2%. But the real surprise was gold, which plummeted +7.6.</p>
+<p>Across three conflicts, investors weren&rsquo;t seeking safe haven, but raising cash.</p>
+<h2 id="attachment" class="relative group">Attachment <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#attachment" aria-label="Anchor">#</a></span></h2><table>
+  <thead>
+      <tr>
+          <th>Ticker</th>
+          <th>Name</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>GC=F</td>
+          <td>Gold Futures</td>
+          <td>A futures contract tracking the price of gold. The &ldquo;=F&rdquo; suffix means it&rsquo;s a futures contract, not a stock. Represents the agreed price to buy/sell gold at a future date. Commonly used as a safe haven hedge against inflation and market uncertainty.</td>
+      </tr>
+      <tr>
+          <td>XLF</td>
+          <td>Financial Select Sector SPDR Fund</td>
+          <td>An ETF tracking the financial sector of the S&amp;P 500. Holds banks, insurance companies, and investment firms like JPMorgan, Berkshire Hathaway, and Visa. Good proxy for overall financial sector health.</td>
+      </tr>
+      <tr>
+          <td>QQQ</td>
+          <td>Invesco QQQ Trust</td>
+          <td>An ETF tracking the Nasdaq 100 index — the 100 largest non-financial companies listed on Nasdaq. Heavily weighted toward tech giants like Apple, Microsoft, Nvidia, and Amazon. Considered a pure play on tech and growth stocks.</td>
+      </tr>
+      <tr>
+          <td>SPY</td>
+          <td>SPDR S&amp;P 500 ETF Trust</td>
+          <td>An ETF tracking the S&amp;P 500 index — the 500 largest US companies across all sectors. The most traded ETF in the world. Considered the best single proxy for overall US stock market performance.</td>
+      </tr>
+  </tbody>
+</table>
 
       </div>
     </section>

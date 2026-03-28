@@ -10,8 +10,10 @@ showTableOfContents: true
 ---
 
 {{< alert >}}
-**Note** This project uses data that sources from Yahoo Finance. This content purposes to learn how market react because of global event not as financial advisors
+**Note** 
+Data sourced from Yahoo Finance. This content is for educational purposes only and does not constitute financial advice.
 {{< /alert >}}
+
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
@@ -290,3 +292,17 @@ showTableOfContents: true
     matRebuildChart();
   })();
 </script>
+
+
+Within the materials sector, the selloff was sharp and broadly felt. PPG Industries was the hardest hit, falling 18.2%, followed closely by Smurfit Westrock (-17.9%) and International Paper (-17.6%). Vulcan Materials also declined, shedding 16.7%. Even the sector benchmark, the S&P 500 Materials ETF, was not spared — XLB dropped 9.2% over the two-week period, confirming that the weakness was widespread rather than isolated to individual names. The one outlier was Brent Crude, which surged 48.2% — moving in the opposite direction entirely. While materials companies struggled across the board, oil prices climbed sharply, reflecting how differently the market priced raw energy commodities versus the companies that depend on them.
+
+## Attachment 
+
+| Ticker | Name | Description |
+|--------|------|-------------|
+| PPG | PPG Industries | A global manufacturer of paints, coatings, and specialty materials. Products are used in construction, automotive, aerospace, and industrial applications. One of the largest coatings companies in the world alongside Sherwin-Williams. |
+| SW | Smurfit Westrock | A leading global packaging company formed by the 2024 merger of Smurfit Kappa and WestRock. Specializes in corrugated packaging, cardboard boxes, and paper-based packaging solutions. Major beneficiary of e-commerce growth driving demand for packaging. |
+| IP | International Paper | One of the world's largest paper and packaging companies. Produces containerboard, corrugated packaging, and pulp. Recently went through major restructuring by spinning off its printing papers business into a separate company. |
+| VMC | Vulcan Materials | The largest US producer of construction aggregates — crushed stone, sand, and gravel. Core materials used in roads, highways, bridges, and infrastructure projects. A major beneficiary of US infrastructure spending bills. |
+| XLB | Materials Select Sector SPDR Fund | An ETF tracking the materials sector of the S&P 500. Holds companies across chemicals, mining, paper, packaging, and construction materials. Good proxy for overall materials sector health and commodity demand cycles. |
+| Brent Crude | Brent Crude Oil | Not a stock or ETF — it's a global oil price benchmark. Represents crude oil extracted from the North Sea. Used as the primary international pricing reference for oil. Ticker in yfinance: BZ=F. Directly impacts costs for materials and chemical companies. |

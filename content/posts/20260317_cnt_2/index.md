@@ -10,7 +10,8 @@ showTableOfContents: true
 ---
 
 {{< alert >}}
-**Note** This project uses data that sources from Yahoo Finance. This content purposes to learn how market react because of global event not as financial advisors
+**Note** 
+Data sourced from Yahoo Finance. This content is for educational purposes only and does not constitute financial advice.
 {{< /alert >}}
 
 <style>
@@ -268,7 +269,7 @@ showTableOfContents: true
       svg.appendChild(wm);
 
       const mn = document.createElementNS(ns, 'text');
-      mn.setAttribute('x', xS(X_MIN) + 4); mn.setAttribute('y', yS(Y_MAX) + 14);
+      mn.setAttribute('x', xS(X_MIN) + 4); mn.setAttribute('y', yS(Y_MAX) + 58);
       mn.setAttribute('font-size', '8.5'); mn.setAttribute('fill', getCSSVar('--text-muted'));
       mn.setAttribute('font-family', 'IBM Plex Sans, sans-serif');
       mn.textContent = 'Note: size shows market cap';
@@ -386,3 +387,50 @@ showTableOfContents: true
     window.addEventListener('resize', scatterRebuild);
   })();
 </script>
+
+
+Defense was to another spotlight. Government contracts, military budgets, and geopolitical concerns, but the market didn't choose it.
+
+Almost every defense company fell during the period. GE Aerospace was the biggest loser, dropping 13.2%, followed by BA (-8.6%) and TDG (-7.7%). Even the sector's heavyweights like RTX and LMT slightly went down by -3.6% and -4.5%, respectively. Interestingly, most companies carried low volatility below 30%, suggesting that investors were quietly rotating instead of pancking.
+
+Energy had a different story. The sector surged. Small and mind-cap names led the change (MPX, APA, PSX), while big-caps like CVX and XOM lagged behind, returning under 5%. The pattern suggests that traders were chasing momentum in volatilted companies rather than seeking safety.
+
+## Attachment
+
+| Ticker | Company Name | Category | Subcategory |
+|--------|-------------|----------|-------------|
+| APA | APA Corporation | Energy | Oil & Gas Exploration & Production |
+| BKR | Baker Hughes Company | Energy | Oil & Gas Equipment & Services |
+| COP | ConocoPhillips | Energy | Oil & Gas Exploration & Production |
+| CTRA | Coterra Energy | Energy | Oil & Gas Exploration & Production |
+| CVX | Chevron Corporation | Energy | Integrated Oil & Gas |
+| DVN | Devon Energy | Energy | Oil & Gas Exploration & Production |
+| EOG | EOG Resources | Energy | Oil & Gas Exploration & Production |
+| EQT | EQT Corporation | Energy | Oil & Gas Exploration & Production |
+| EXE | Expand Energy Corporation | Energy | Oil & Gas Exploration & Production |
+| FANG | Diamondback Energy | Energy | Oil & Gas Exploration & Production |
+| HAL | Halliburton Company | Energy | Oil & Gas Equipment & Services |
+| KMI | Kinder Morgan | Energy | Oil & Gas Midstream |
+| MPC | Marathon Petroleum | Energy | Oil & Gas Refining & Marketing |
+| OKE | ONEOK Inc | Energy | Oil & Gas Midstream |
+| OXY | Occidental Petroleum | Energy | Integrated Oil & Gas |
+| PSX | Phillips 66 | Energy | Oil & Gas Refining & Marketing |
+| SLB | SLB (Schlumberger) | Energy | Oil & Gas Equipment & Services |
+| TPL | Texas Pacific Land Corporation | Energy | Oil & Gas Land & Royalties |
+| TRGP | Targa Resources | Energy | Oil & Gas Midstream |
+| VLO | Valero Energy | Energy | Oil & Gas Refining & Marketing |
+| VST | Vistra Corp | Utilities | Independent Power Producer |
+| WMB | Williams Companies | Energy | Oil & Gas Midstream |
+| XOM | Exxon Mobil Corporation | Energy | Integrated Oil & Gas |
+| BA | Boeing Company | Industrials | Aerospace & Defense |
+| GD | General Dynamics | Industrials | Aerospace & Defense |
+| GE | GE Aerospace | Industrials | Aerospace & Defense |
+| HEI | HEICO Corporation | Industrials | Aerospace & Defense Components |
+| HII | Huntington Ingalls Industries | Industrials | Defense — Shipbuilding |
+| HON | Honeywell International | Industrials | Diversified Industrials |
+| LHX | L3Harris Technologies | Industrials | Defense Electronics |
+| LMT | Lockheed Martin | Industrials | Aerospace & Defense |
+| NOC | Northrop Grumman | Industrials | Aerospace & Defense |
+| RTX | RTX Corporation (Raytheon) | Industrials | Aerospace & Defense |
+| TDG | TransDigm Group | Industrials | Aerospace & Defense Components |
+| TXT | Textron Inc | Industrials | Aerospace & Defense |

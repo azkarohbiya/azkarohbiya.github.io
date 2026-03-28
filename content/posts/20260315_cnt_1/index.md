@@ -10,8 +10,10 @@ showTableOfContents: true
 ---
 
 {{< alert >}}
-**Note** This project uses data that sources from Yahoo Finance. This content purposes to learn how market react because of global event not as financial advisors
+**Note** 
+Data sourced from Yahoo Finance. This content is for educational purposes only and does not constitute financial advice.
 {{< /alert >}}
+
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
@@ -143,10 +145,10 @@ showTableOfContents: true
   const HIGHLIGHT   = ['MPC','APA','VLO','PSX'];
   const CONFLICT_DT = '2026-02-28';
   const OFFSET_MAP = {
-    MPC: [-150, 110],
+    MPC: [-150, -60],
     APA: [-70, -100],
-    VLO: [-250, 15],
-    PSX: [-150, 25],
+    VLO: [-250, -25],
+    PSX: [-150, -45],
   };
   const LOSERS_TEXT = `Top Losers\nEXE  -0.3%\nWMB  -1.1%\nHAL  -6.0%\nVST  -8.6%\nSLB  -12.9%\nBKR  -16.8%`;
   const PAD = { top: 20, right: 110, bottom: 44, left: 48 };
@@ -220,7 +222,7 @@ showTableOfContents: true
     svg.appendChild(vl);
     const cl = document.createElementNS(ns, 'text');
     cl.setAttribute('x', conflictX + 5);
-    cl.setAttribute('y', yS(Y_MIN) + 14);
+    cl.setAttribute('y', yS(Y_MIN) - 24);
     cl.setAttribute('font-size', '8.5');
     cl.setAttribute('fill', getCSSVar('--text-muted'));
     cl.setAttribute('font-family', 'IBM Plex Sans, sans-serif');
@@ -375,3 +377,43 @@ showTableOfContents: true
   window.addEventListener('resize', rebuild);
 })();
 </script>
+
+## Insight
+
+When Iran escalation started on 28 February, nearly every sector fell sharply, except energy. The strength was surprising enough to push investors toward this sector. 
+
+17 of 23 energy names closed higher over the two week period, meaning around 75% companies moved in the positive direction. The top gainers were led by MPC (14.1%), APA (+13.5%), VLO (+12.7%), and PSX (+11.9%), all crossing the 10% mark by 13 March. Interestingly, oil refining companies led the charge, suggesting the market expected tighter fuel supply, not just higher oil prices.
+
+Pipeline companies told a more different story. Some, like KMI and OKE, gained small throughout the period.
+
+On the losing side, oil services companies struggled the most, SLB plummeted by 12.9% and BKR fell even harder at 16.8%. Even when the broader sector was rising, some firms could still fall behind.
+
+## Attachment
+
+Table ticker's abbreviation
+
+| Ticker | Company Name | Category | Subcategory |
+|--------|-------------|----------|-------------|
+| APA | APA Corporation | Energy | Oil & Gas Exploration & Production |
+| BKR | Baker Hughes Company | Energy | Oil & Gas Equipment & Services |
+| COP | ConocoPhillips | Energy | Oil & Gas Exploration & Production |
+| CTRA | Coterra Energy | Energy | Oil & Gas Exploration & Production |
+| CVX | Chevron Corporation | Energy | Integrated Oil & Gas |
+| DVN | Devon Energy | Energy | Oil & Gas Exploration & Production |
+| EOG | EOG Resources | Energy | Oil & Gas Exploration & Production |
+| EQT | EQT Corporation | Energy | Oil & Gas Exploration & Production |
+| EXE | Expand Energy Corporation | Energy | Oil & Gas Exploration & Production |
+| FANG | Diamondback Energy | Energy | Oil & Gas Exploration & Production |
+| HAL | Halliburton Company | Energy | Oil & Gas Equipment & Services |
+| KMI | Kinder Morgan | Energy | Oil & Gas Midstream |
+| MPC | Marathon Petroleum | Energy | Oil & Gas Refining & Marketing |
+| OKE | ONEOK Inc | Energy | Oil & Gas Midstream |
+| OXY | Occidental Petroleum | Energy | Integrated Oil & Gas |
+| PSX | Phillips 66 | Energy | Oil & Gas Refining & Marketing |
+| SLB | SLB (Schlumberger) | Energy | Oil & Gas Equipment & Services |
+| TPL | Texas Pacific Land Corporation | Energy | Oil & Gas Land & Royalties |
+| TRGP | Targa Resources | Energy | Oil & Gas Midstream |
+| VLO | Valero Energy | Energy | Oil & Gas Refining & Marketing |
+| VST | Vistra Corp | Utilities | Independent Power Producer |
+| WMB | Williams Companies | Energy | Oil & Gas Midstream |
+| XOM | Exxon Mobil Corporation | Energy | Integrated Oil & Gas |

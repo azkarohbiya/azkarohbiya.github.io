@@ -9,9 +9,12 @@ weight: 9
 showTableOfContents: true
 ---
 
+
 {{< alert >}}
-**Note** This project uses data that sources from Yahoo Finance. This content purposes to learn how market react because of global event not as financial advisors
+**Note** 
+Data sourced from Yahoo Finance. This content is for educational purposes only and does not constitute financial advice.
 {{< /alert >}}
+
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
@@ -335,3 +338,14 @@ showTableOfContents: true
     sp500RebuildChart();
   })();
 </script>
+
+Zooming out across all eleven sectors draws a clear insight, Iran 2026 was a universal selloff, with one sector exception. 
+
+Energy stood alone, 22 of 28 (~79% hit rate) energy companies finished in positive territory over the two week period. No other sector came close. It wasn't just that energy did well, it was that losing was the exception rather than a market rule.
+
+Beyond energy, the story told differently. Tech was the most resilient of the remaining sectors, 15 of 48 companies managing to finish higher, roughly 1/3. Considering the broad risk-off environment, that's a relatively respectable showing, though still firmly a minority.
+
+The hardest hit was financials. Only 1 firm out of 55 finished in positive area. Healthcare told a nearly identical story, with just 2 survivors out of 54. In both sectors, the selloff was deep, broad, and showed very little discrimination between large and small names.
+
+The takeaway is straightforward. Iran 2026 didn't just shake the markets, it rattled virtually every corner of them. Energy was the sole sector gaining. Everywhere else, surviving the two weeks in positive area was the exception.
+

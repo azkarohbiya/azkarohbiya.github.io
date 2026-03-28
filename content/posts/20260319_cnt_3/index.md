@@ -10,8 +10,10 @@ showTableOfContents: true
 ---
 
 {{< alert >}}
-**Note** This project uses data that sources from Yahoo Finance. This content purposes to learn how market react because of global event not as financial advisors
+**Note** 
+Data sourced from Yahoo Finance. This content is for educational purposes only and does not constitute financial advice.
 {{< /alert >}}
+
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&family=DM+Mono:wght@400;500&display=swap');
@@ -337,3 +339,23 @@ showTableOfContents: true
     conflictRebuildChart();
   })();
 </script>
+
+Gold has long been a safe haven, the asset investors rush to when the world feels uncertain. But three Middle Eastern conflicts tell a more complicated story.
+
+Turn the clock back to 2003, the Iraq War had a surprisingly muted impact on markets. The S&P500 held virtually flat at +0.03%, and gold slipped modestly by 3.4%. If anything, financials were quietly were the quiet winner, gaining +2.3% over the two-week window an unusual outcome for a wartime opening.
+
+The October 7 Gaza Attack in 2023 followed a more familiar patter. Equities sold off broadly, SPY dropped by -3.4%, tech fell -4.4%, and financials declined by -2.9%. Gold, however, did exactly what market sense, it climbed by +7.3%.
+
+Iran 2026 broke every pattern. The conflict triggered a broad and sharp selloff across all assets. SPY fell -3.6%, financial dropped -4.5%, and tech slipped -2.2%. But the real surprise was gold, which plummeted +7.6. 
+
+Across three conflicts, investors weren't seeking safe haven, but raising cash.
+
+
+## Attachment 
+
+| Ticker | Name | Description |
+|--------|------|-------------|
+| GC=F | Gold Futures | A futures contract tracking the price of gold. The "=F" suffix means it's a futures contract, not a stock. Represents the agreed price to buy/sell gold at a future date. Commonly used as a safe haven hedge against inflation and market uncertainty. |
+| XLF | Financial Select Sector SPDR Fund | An ETF tracking the financial sector of the S&P 500. Holds banks, insurance companies, and investment firms like JPMorgan, Berkshire Hathaway, and Visa. Good proxy for overall financial sector health. |
+| QQQ | Invesco QQQ Trust | An ETF tracking the Nasdaq 100 index — the 100 largest non-financial companies listed on Nasdaq. Heavily weighted toward tech giants like Apple, Microsoft, Nvidia, and Amazon. Considered a pure play on tech and growth stocks. |
+| SPY | SPDR S&P 500 ETF Trust | An ETF tracking the S&P 500 index — the 500 largest US companies across all sectors. The most traded ETF in the world. Considered the best single proxy for overall US stock market performance. |

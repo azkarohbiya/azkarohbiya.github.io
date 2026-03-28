@@ -44,8 +44,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="http://localhost:1313/css/main.bundle.min.19faae828c317e69afa1286312d7a10a83c6fa1e8c2f8c8750d52a2a12d333f5.css"
-    integrity="sha256-GfqugowxfmmvoShjEtehCoPG&#43;h6ML4yHUNUqKhLTM/U="
+    href="http://localhost:1313/css/main.bundle.min.9629040c23aa6152065ce26ccbc285608bca02fd6fd5d8d07561b01b601fb03d.css"
+    integrity="sha256-likEDCOqYVIGXOJsy8KFYIvKAv1v1djQdWGwG2AfsD0="
   />
   
   
@@ -122,7 +122,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "71"
+    "wordCount": "430"
   }
   </script>
     
@@ -365,13 +365,35 @@
     </header>
     <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
       
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8">
+          <div class="toc pe-5 lg:sticky lg:top-10 print:hidden">
+            <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
+  <summary
+    class="block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    Table of Contents
+  </summary>
+  <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#insight">Insight</a></li>
+    <li><a href="#attachment">Attachment</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
       <div class="min-h-0 min-w-0 max-w-prose grow">
         <div class="flex rounded-md bg-primary-100 px-4 py-3 dark:bg-primary-900">
   <span class="pe-3 text-primary-400">
     <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg>
 </span>
   </span>
-  <span class="dark:text-neutral-300"><strong>Note</strong> This project uses data that sources from Yahoo Finance. This content purposes to learn how market react because of global event not as financial advisors</span>
+  <span class="dark:text-neutral-300"><strong>Note</strong>
+Data sourced from Yahoo Finance. This content is for educational purposes only and does not constitute financial advice.</span>
 </div>
 
 <style>
@@ -502,10 +524,10 @@
   const HIGHLIGHT   = ['MPC','APA','VLO','PSX'];
   const CONFLICT_DT = '2026-02-28';
   const OFFSET_MAP = {
-    MPC: [-150, 110],
+    MPC: [-150, -60],
     APA: [-70, -100],
-    VLO: [-250, 15],
-    PSX: [-150, 25],
+    VLO: [-250, -25],
+    PSX: [-150, -45],
   };
   const LOSERS_TEXT = `Top Losers\nEXE  -0.3%\nWMB  -1.1%\nHAL  -6.0%\nVST  -8.6%\nSLB  -12.9%\nBKR  -16.8%`;
   const PAD = { top: 20, right: 110, bottom: 44, left: 48 };
@@ -579,7 +601,7 @@
     svg.appendChild(vl);
     const cl = document.createElementNS(ns, 'text');
     cl.setAttribute('x', conflictX + 5);
-    cl.setAttribute('y', yS(Y_MIN) + 14);
+    cl.setAttribute('y', yS(Y_MIN) - 24);
     cl.setAttribute('font-size', '8.5');
     cl.setAttribute('fill', getCSSVar('--text-muted'));
     cl.setAttribute('font-family', 'IBM Plex Sans, sans-serif');
@@ -734,6 +756,161 @@
   window.addEventListener('resize', rebuild);
 })();
 </script>
+<h2 id="insight" class="relative group">Insight <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#insight" aria-label="Anchor">#</a></span></h2><p>When Iran escalation started on 28 February, nearly every sector fell sharply, except energy. The strength was surprising enough to push investors toward this sector.</p>
+<p>17 of 23 energy names closed higher over the two week period, meaning around 75% companies moved in the positive direction. The top gainers were led by MPC (14.1%), APA (+13.5%), VLO (+12.7%), and PSX (+11.9%), all crossing the 10% mark by 13 March. Interestingly, oil refining companies led the charge, suggesting the market expected tighter fuel supply, not just higher oil prices.</p>
+<p>Pipeline companies told a more different story. Some, like KMI and OKE, gained small throughout the period.</p>
+<p>On the losing side, oil services companies struggled the most, SLB plummeted by 12.9% and BKR fell even harder at 16.8%. Even when the broader sector was rising, some firms could still fall behind.</p>
+<h2 id="attachment" class="relative group">Attachment <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#attachment" aria-label="Anchor">#</a></span></h2><p>Table ticker&rsquo;s abbreviation</p>
+<table>
+  <thead>
+      <tr>
+          <th>Ticker</th>
+          <th>Company Name</th>
+          <th>Category</th>
+          <th>Subcategory</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>APA</td>
+          <td>APA Corporation</td>
+          <td>Energy</td>
+          <td>Oil &amp; Gas Exploration &amp; Production</td>
+      </tr>
+      <tr>
+          <td>BKR</td>
+          <td>Baker Hughes Company</td>
+          <td>Energy</td>
+          <td>Oil &amp; Gas Equipment &amp; Services</td>
+      </tr>
+      <tr>
+          <td>COP</td>
+          <td>ConocoPhillips</td>
+          <td>Energy</td>
+          <td>Oil &amp; Gas Exploration &amp; Production</td>
+      </tr>
+      <tr>
+          <td>CTRA</td>
+          <td>Coterra Energy</td>
+          <td>Energy</td>
+          <td>Oil &amp; Gas Exploration &amp; Production</td>
+      </tr>
+      <tr>
+          <td>CVX</td>
+          <td>Chevron Corporation</td>
+          <td>Energy</td>
+          <td>Integrated Oil &amp; Gas</td>
+      </tr>
+      <tr>
+          <td>DVN</td>
+          <td>Devon Energy</td>
+          <td>Energy</td>
+          <td>Oil &amp; Gas Exploration &amp; Production</td>
+      </tr>
+      <tr>
+          <td>EOG</td>
+          <td>EOG Resources</td>
+          <td>Energy</td>
+          <td>Oil &amp; Gas Exploration &amp; Production</td>
+      </tr>
+      <tr>
+          <td>EQT</td>
+          <td>EQT Corporation</td>
+          <td>Energy</td>
+          <td>Oil &amp; Gas Exploration &amp; Production</td>
+      </tr>
+      <tr>
+          <td>EXE</td>
+          <td>Expand Energy Corporation</td>
+          <td>Energy</td>
+          <td>Oil &amp; Gas Exploration &amp; Production</td>
+      </tr>
+      <tr>
+          <td>FANG</td>
+          <td>Diamondback Energy</td>
+          <td>Energy</td>
+          <td>Oil &amp; Gas Exploration &amp; Production</td>
+      </tr>
+      <tr>
+          <td>HAL</td>
+          <td>Halliburton Company</td>
+          <td>Energy</td>
+          <td>Oil &amp; Gas Equipment &amp; Services</td>
+      </tr>
+      <tr>
+          <td>KMI</td>
+          <td>Kinder Morgan</td>
+          <td>Energy</td>
+          <td>Oil &amp; Gas Midstream</td>
+      </tr>
+      <tr>
+          <td>MPC</td>
+          <td>Marathon Petroleum</td>
+          <td>Energy</td>
+          <td>Oil &amp; Gas Refining &amp; Marketing</td>
+      </tr>
+      <tr>
+          <td>OKE</td>
+          <td>ONEOK Inc</td>
+          <td>Energy</td>
+          <td>Oil &amp; Gas Midstream</td>
+      </tr>
+      <tr>
+          <td>OXY</td>
+          <td>Occidental Petroleum</td>
+          <td>Energy</td>
+          <td>Integrated Oil &amp; Gas</td>
+      </tr>
+      <tr>
+          <td>PSX</td>
+          <td>Phillips 66</td>
+          <td>Energy</td>
+          <td>Oil &amp; Gas Refining &amp; Marketing</td>
+      </tr>
+      <tr>
+          <td>SLB</td>
+          <td>SLB (Schlumberger)</td>
+          <td>Energy</td>
+          <td>Oil &amp; Gas Equipment &amp; Services</td>
+      </tr>
+      <tr>
+          <td>TPL</td>
+          <td>Texas Pacific Land Corporation</td>
+          <td>Energy</td>
+          <td>Oil &amp; Gas Land &amp; Royalties</td>
+      </tr>
+      <tr>
+          <td>TRGP</td>
+          <td>Targa Resources</td>
+          <td>Energy</td>
+          <td>Oil &amp; Gas Midstream</td>
+      </tr>
+      <tr>
+          <td>VLO</td>
+          <td>Valero Energy</td>
+          <td>Energy</td>
+          <td>Oil &amp; Gas Refining &amp; Marketing</td>
+      </tr>
+      <tr>
+          <td>VST</td>
+          <td>Vistra Corp</td>
+          <td>Utilities</td>
+          <td>Independent Power Producer</td>
+      </tr>
+      <tr>
+          <td>WMB</td>
+          <td>Williams Companies</td>
+          <td>Energy</td>
+          <td>Oil &amp; Gas Midstream</td>
+      </tr>
+      <tr>
+          <td>XOM</td>
+          <td>Exxon Mobil Corporation</td>
+          <td>Energy</td>
+          <td>Integrated Oil &amp; Gas</td>
+      </tr>
+  </tbody>
+</table>
 
       </div>
     </section>
