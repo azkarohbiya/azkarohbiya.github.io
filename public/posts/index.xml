@@ -6,7 +6,7 @@
     <description>Recent content in Projects on azkarohbiya</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 21 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 29 Mar 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Sequential Recommender</title>
@@ -69,6 +69,13 @@
       <link>http://localhost:1313/posts/20260321_cnt_5/</link>
       <pubDate>Sat, 21 Mar 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/20260321_cnt_5/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gross Margin Ranking, AI Competition, Q2 2021 – Q1 202</title>
+      <link>http://localhost:1313/posts/20260329_cnt_6/</link>
+      <pubDate>Sun, 29 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/20260329_cnt_6/</guid>
       <description></description>
     </item>
   </channel>
