@@ -5,7 +5,7 @@ categories: ["general"]
 date : "2026-03-29"
 result: ""
 summary: ""
-weight: 10
+weight: 100
 showTableOfContents: true
 ---
 
@@ -297,9 +297,26 @@ Data sourced from Yahoo Finance. This content is for educational purposes only a
 The chart is clickable object
 {{< /alert >}}
 
-There's a moment in every market cycle where the data stops being noise and starts telling a story. For Nvidia, that moment is hiding in plain sight inside its gross margin history.
-Back in Q2 2021, Nvidia sat comfortably at rank 3 among the fifteen most important tech companies in the AI era. Nothing extraordinary, just a solid chipmaker riding a wave of gaming and crypto demand. Then came Q3 2022. That wave broke hard. Crypto collapsed, gaming softened, and Nvidia's gross margin ranking fell to 13 out of 15. Nearly dead last. The kind of number that makes investors nervous.
-Most people stopped paying attention at exactly the wrong moment.
-Because six months later, ChatGPT launched — and everything changed. Data center orders exploded. Margins recovered. By Q4 2023, Nvidia had climbed back to rank 2, sitting just behind Meta, the only company in this universe with structurally superior margins. It has held that position ever since.
-The fall wasn't a sign of weakness. It was the last quiet moment before the most dramatic margin recovery in modern semiconductor history.
 
+
+There is a cycle market where the data starts telling a story. Nvidia, for example, hides an inside in its gross margin history. Back in Q221, it sat around rank 3 among fifteen tech companies in the AI era. Nothing extraordinary, it's only GPU maker driving games and crypto market. Then came Q322. The company suffers, crypto and gaming industries collapsed, declining to rank 13, nearly the last. Six months later, OpenAI introduced ChatGPT which made everything changed. Data center orders exploded. Margins recoverd. By Q423, NVIDIA had climbed back to rank 2, sitting under Meta, the only company which is staying superior margins. Ever since, it has held the position. The fall wasn't a sign a weakness, but the last quiet moment before margin recover in the new AI era.
+
+## Attachment
+
+| Ticker | Company Description | Market Cap (USD) |
+|--------|-------------------|-----------------|
+| NVDA | NVIDIA — designs GPUs and AI accelerators, dominant in data center AI compute | ~$2.7T |
+| AMD | Advanced Micro Devices — makes CPUs, GPUs, and data center chips, main rival to Intel and NVIDIA | ~$180B |
+| INTC | Intel — legacy CPU giant, pivoting to foundry business and catching up in AI chips | ~$90B |
+| QCOM | Qualcomm — designs mobile chips (Snapdragon), dominates smartphone SoC market | ~$160B |
+| AVGO | Broadcom — designs networking, storage, and custom AI chips (Google TPU), also owns VMware | ~$870B |
+| MRVL | Marvell Technology — designs custom AI silicon and data center networking chips | ~$50B |
+| TSM | TSMC — world's largest contract chip manufacturer, makes chips for NVIDIA, Apple, AMD | ~$850B |
+| ASML | ASML — sole maker of EUV lithography machines, critical monopoly in chip manufacturing | ~$280B |
+| AMAT | Applied Materials — makes semiconductor fabrication equipment used by fabs globally | ~$130B |
+| LRCX | Lam Research — makes wafer fabrication equipment, specializes in etch and deposition | ~$90B |
+| MSFT | Microsoft — cloud (Azure), enterprise software, Office 365, and major OpenAI investor | ~$2.9T |
+| GOOGL | Alphabet — Google Search, YouTube, Google Cloud, and Waymo autonomous driving | ~$1.9T |
+| AMZN | Amazon — e-commerce giant and AWS cloud leader, largest cloud provider globally | ~$2.0T |
+| META | Meta Platforms — owns Facebook, Instagram, WhatsApp, and betting big on AI and AR/VR | ~$1.5T |
+| AAPL | Apple — makes iPhone, Mac, iPad, and Services ecosystem, largest company by market cap | ~$3.1T |

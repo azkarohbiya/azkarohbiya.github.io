@@ -18,6 +18,6 @@ About
 
 {{< project_cards section="posts" category="work" limit="3" bg="gray" title="Best Projects" desc="Listed projects below are the most compelling projects I've experienced, they took years to build through many processes like building deep study for hypothesis, iterating test and learn, building algorithm models. More importantly, we have been tested their visibility to be implemented on real business cases. So glad if you could explore further" >}}
 
-{{< project_cards section="posts" category="general" limit="6" bg="white" title="Weekly Insights" desc="I've been recently obsessed with global markets, stocks in particular. I focus scrappy, scattered data then turn it into clear visual that explains not only what is going on, but also why. Kindly explore the results below" >}}
+{{< project_cards section="posts" category="general" limit="6" bg="white" title="Weekly Insights" desc="I got obsessed with global markets and never really stopped. What started as digging through scattered stock data turned into a habit of building visuals that make complex market stories impossible to ignore. I track current events, connect them to sector moves, and use the charts to sharpen how I screen for opportunity." >}}
 
 {{< tools_stack bg="gray" title="Tools & Stack" >}}
