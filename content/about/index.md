@@ -9,7 +9,7 @@ showTableOfContents: true
 
 ## 👤 About Me
 
-With over 5 years of experience with data, focus on solving business problems through data approaches by utilizing advanced algorithm, building predictive models, reporting insights, arranging strategies, and pitching cross-functional teams. Strongly skilled in collaborative projects, especially dealing with revenue-related cases by aligning technical strategies that can be applicable in real business challenges. Now, I continuously seek more journey to help more teams solving their challenges through sophisticated analysis.
+Data analyst with 5+ years solving business problems end-to-end. I build models, surface insights, and partner across teams to drive revenue impact. Passionate about collaborative work that bridges technical rigor and business reality.
 
 
 ## 🔬 Field of Interests
@@ -24,11 +24,3 @@ In analytics, I'm really into grasping the domain knowledge first over the techn
 - Engineering (Interested in renewable energy, autopilot cars)
 - Economic (Stock Analysis, Cryptocurrency)
 
-## 📝 Resume
-
-To see more about professional journey, please refer to my resume!
-
-
-{{< button href="https://drive.google.com/file/d/1KwKiJ7dPL_VH5_NKKcWPLZegbaaUdbqX/view?usp=sharing" >}}
-Resume
-{{< /button >}}

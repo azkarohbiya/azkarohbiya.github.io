@@ -5,7 +5,7 @@ title: "Sequential Recommender"
 description: "A graph-based sequential product recommender built with NetworkX that reveals niche and seasonal purchase patterns — delivering ~150% revenue uplift over collaborative filtering."
 highlight: true
 categories: ["work"]
-result: "Developed the Digital Recommendation increasing by around ~150% revenue compared to Collaborative Filtering model."
+result: ""
 summary: "By using sequential approach, it helps reveal niche and seasonal products, avoiding saturated offers that are commonly driven by massive transaction."
 weight: 1
 showTableOfContents: true

@@ -17,17 +17,6 @@ showTableOfContents: true
 
 ---
 
-## 📢 Language Proficiency
-
-{{< info_card
-  title="IELTS"
-  text="Score 6.5 (CERF B2)<br> Issued by IDP IELTS <br> Date 5 Dec 2025"
-  href="https://drive.google.com/file/d/1MT459nDsu6ZNQkxvjXTEnzAvGsHtS_vP/view?usp=sharing"
-  cta="Preview Certificate"
->}}
-
----
-
 ## 🧠 Bootcamp
 
 ![bootcamp](bootcamp.png)
@@ -53,8 +42,3 @@ showTableOfContents: true
 | SQL Advanced | 3 May 2022  | Hackerrank |
 | Python       | 18 Oct 2021 | Hackerrank |
 
-## 📝 Resume
-
-{{< button href="https://drive.google.com/file/d/1KwKiJ7dPL_VH5_NKKcWPLZegbaaUdbqX/view?usp=sharing" >}}
-Resume
-{{< /button >}}

@@ -2,7 +2,7 @@
 title: "Azka Rohbiya Ramadani"
 description: "Portfolio of Azka Rohbiya Ramadani — Data Analyst specialising in causal modelling, recommendation systems, and NLP. See selected projects below."
 role: "Analytic Specialist, Business Growth Intelligence"
-tagline: "Data understanding, business clarity, and revenue impact"
+tagline: "Data-driven mindset that reveals opportunity, informs strategy, and delivers results"
 ---
 
 ## **The Brief**

@@ -5,7 +5,7 @@ title: "Sentiment Annotation"
 description: "How to annotate text sentiment at scale using WordCloud and graph analysis in Python — without relying on LLMs or exposing confidential data."
 highlight: true
 categories: ["work"]
-result: "Accelerates textual data to determine sentiment tagging. This has potential for analyzing confidential information that AI could not handle or preparing training data."
+result: ""
 summary: "WordCloud and Graph are used mainly in this analysis in order to understand word frequency and how strong the relation among them."
 weight: 3
 showTableOfContents: true
